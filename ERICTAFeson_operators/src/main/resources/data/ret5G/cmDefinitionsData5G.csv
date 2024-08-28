@@ -1,0 +1,2 @@
+testCaseId,cm_definition_file,pm_definition_file,message-pod,message-container,cm_topic,pm_topic
+IDUN-7785_VerifyRet5G,ret5G/RequiredElements5G.json,ret5G/RequiredCounters5G.json,eric-data-message-bus-kf,messagebuskf,cmMediation,pmMediation

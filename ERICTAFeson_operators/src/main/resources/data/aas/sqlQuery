@@ -1,0 +1,91 @@
+KPI kpi_service_db postgres;
+
+select fdn,guid,oss_id,local_timestamp,utc_timestamp,cgi,lte_accessibility,lte_prb_utilization,name,nr_accessibility from cell_guid_4g_1440_kpis where local_timestamp='%s 00:00:00';cell_guid_4g_1440_kpis;
+
+select fdn,guid,oss_id,local_timestamp,utc_timestamp,cgi_hr,lte_accessibility_hr,lte_prb_utilization_hr,name_hr,nr_accessibility_hr from cell_guid_4g_60_kpis where local_timestamp >= '%s 00:00:00' AND local_timestamp <= '%s 23:59:59';cell_guid_4g_60_kpis;
+
+select fdn,guid,oss_id,local_timestamp,utc_timestamp,dl_prb_utilization,en_dc_setup_sr_gnode_b,high_serving_azimuth,high_serving_distance,
+low_serving_azimuth,low_serving_distance,mid_serving_azimuth,mid_serving_distance,nci,nr_name,nr_rsrp_spatial_grid,nr_sinr_spatial_grid,
+nr_ue_spatial_grid,pdsch_slot_utilization,num_samples_sinr_at_or_above_0,low_serving_rsrp,mid_serving_rsrp,high_serving_rsrp,low_serving_sinr,mid_serving_sinr,high_serving_sinr,
+low_serving_ue_thp,mid_serving_ue_thp,high_serving_ue_thp,low10_serving_ue_thp,sum_cell_serv_rsrp,num_samples_sinr_at_or_below_neg_6,num_samples_sinr_at_or_below_neg_6_and_poor_coverage,nr_droprate from cell_guid_5g_1440_kpis where local_timestamp='%s 00:00:00';cell_guid_5g_1440_kpis;
+
+select fdn,guid,oss_id,local_timestamp,utc_timestamp,num_samples_rsrp_at_or_above_neg_105,num_samples_ctr_rsrp,
+dl_prb_utilization_hr,pdsch_slot_utilization_hr,en_dc_setup_sr_gnode_b_hr,nci_hr,nr_name_hr,high_serving_azimuth_hr,high_serving_distance_hr,
+low_serving_azimuth_hr,low_serving_distance_hr,mid_serving_azimuth_hr,mid_serving_distance_hr,nr_rsrp_spatial_grid_hr,nr_sinr_spatial_grid_hr,
+nr_ue_spatial_grid_hr,num_samples_sinr_at_or_above_0_hr,low_serving_rsrp_hr,mid_serving_rsrp_hr,high_serving_rsrp_hr,low_serving_sinr_hr,mid_serving_sinr_hr,high_serving_sinr_hr,
+low_serving_ue_thp_hr,mid_serving_ue_thp_hr,high_serving_ue_thp_hr,low10_serving_ue_thp_hr,sum_cell_serv_rsrp_hr,num_samples_sinr_at_or_below_neg_6_hr, num_samples_sinr_at_or_below_neg_6_and_poor_coverage_hr,nr_droprate_hr from cell_guid_5g_60_kpis
+where local_timestamp >= '%s 00:00:00' AND local_timestamp <= '%s 23:59:59';cell_guid_5g_60_kpis;
+
+select fdn,guid,oss_id,source_guid,target_guid,local_timestamp,utc_timestamp,num_samples_rsrp,source_nci,source_nr_name,sum_serv_rsrp,sum_serv_sinr,sum_targ_rsrp,target_nci,target_nr_name,
+relational_bad_coverage_count from relation_source_target_guid_5g_1440_kpis where local_timestamp='%s 00:00:00';relation_source_target_guid_5g_1440_kpis;
+
+select fdn,guid,oss_id,source_guid,target_guid,local_timestamp,utc_timestamp,source_nci_hr,source_nr_name_hr,target_nci_hr,target_nr_name_hr,num_samples_rsrp_hr,sum_serv_rsrp_hr,sum_serv_sinr_hr,sum_targ_rsrp_hr,
+relational_bad_coverage_count_hr from relation_source_target_guid_5g_60_kpis where local_timestamp >= '%s 00:00:00' AND local_timestamp <= '%s 23:59:59';relation_source_target_guid_5g_60_kpis;
+
+CM cm_service_db postgres;
+SELECT c.*, cbf.fdn as commonbeamforming_fdn, cbf.\"customComBfwWideBeam\" FROM nr_cell c LEFT JOIN nr_commonbeamforming cbf ON c.fdn=cbf.nr_cell_fdn;nr_cell;
+SELECT * FROM nr_trxpoint;nr_trxpoint;
+SELECT * from nr_cell_nr_trxpoint;nr_cell_nr_trxpoint;
+select
+  nrc_src_tar.cell_arfcn,
+  nrc_src_tar.cell_id,
+  nrc_src_tar.cell_fdn,
+  nrc_src_tar.cell_nci,
+  nrc_src_tar.cell_name,
+  nrc_src_tar.neighbor_cell_id,
+  nrc_src_tar.neighbor_cell_fdn,
+  nrc_src_tar.nci as neighbor_cell_nci,
+  nrc_src_tar.name as neighbor_cell_name,
+  nrc_src_tar.intra_site
+from (
+  (select
+    nr_neighbor.arfcn as cell_arfcn,
+    nr_neighbor.cell_fdn,
+    nr_neighbor.oss_id cell_oss_id,
+    nr_neighbor.cell_id,
+    nrc.nci as cell_nci,
+    nrc.name as cell_name,
+    nr_neighbor.neighbor_cell_fdn,
+    nr_neighbor.neighbor_cell_id,
+    nr_neighbor.intra_site
+  from nr_first_tier_neighbor nr_neighbor
+  left join nr_cell nrc on
+    nr_neighbor.cell_id = nrc.id
+  ) nrc_src
+left join nr_cell nrc_tar on
+  nrc_src.neighbor_cell_id = nrc_tar.id
+) nrc_src_tar
+order by nrc_src_tar.cell_arfcn, nrc_src_tar.cell_id;first_tier_nr_neighbours;
+SELECT * FROM cell;cell;
+SELECT * FROM trxpoint;trxpoint;
+SELECT * from cell_trxpoint;cell_trxpoint;
+select
+  c_src_tar.cell_carrier,
+  c_src_tar.cell_id,
+  c_src_tar.cell_fdn,
+  c_src_tar.cell_cgi,
+  c_src_tar.cell_name,
+  c_src_tar.neighbor_cell_id,
+  c_src_tar.neighbor_cell_fdn,
+  c_src_tar.cgi as neighbor_cell_cgi,
+  c_src_tar.name as neighbor_cell_name,
+  c_src_tar.intra_site
+from (
+  (select
+    neighbor.carrier as cell_carrier,
+    neighbor.cell_fdn,
+    neighbor.oss_id cell_oss_id,
+    neighbor.cell_id,
+    c.cgi as cell_cgi,
+    c.name as cell_name,
+    neighbor.neighbor_cell_fdn,
+    neighbor.neighbor_cell_id,
+    neighbor.intra_site
+  from first_tier_neighbor neighbor
+  left join cell c on
+    neighbor.cell_id = c.id
+  ) c_src
+left join cell c_tar on
+  c_src.neighbor_cell_id = c_tar.id
+) c_src_tar
+order by c_src_tar.cell_carrier, c_src_tar.cell_id;first_tier_neighbours;

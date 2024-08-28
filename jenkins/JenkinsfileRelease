@@ -1,0 +1,149 @@
+@Library('son-dev-utils-shared-library')
+import jenkins.utils.*
+
+logging = new logging() // https://gerrit.ericsson.se/gitweb?p=OSS/com.ericsson.oss.services.sonom/son-dev-utils.git;a=blob_plain;f=src/jenkins/utils/logging.groovy;hb=master
+utils = new utils()     // https://gerrit.ericsson.se/gitweb?p=OSS/com.ericsson.oss.services.sonom/son-dev-utils.git;a=blob_plain;f=src/jenkins/utils/utils.groovy;hb=master
+
+pipeline {
+    agent {
+        node {
+            label SLAVE
+        }
+    }
+    tools {
+        jdk 'jdk8'
+        maven 'maven'
+    }
+    options {
+        skipDefaultCheckout true
+        timestamps()
+        disableConcurrentBuilds()
+        timeout(time: 20, unit: 'MINUTES')
+        buildDiscarder(logRotator(numToKeepStr: '20', artifactNumToKeepStr: '20'))
+    }
+    environment {
+        CREDENTIALS_SEKA_ARTIFACTORY = credentials('ejenksonomArtifactoryApiKey')
+        CREDENTIALS_SEKI_ARTIFACTORY = credentials('ejenksonomArtifactoryApiKeySEKI')
+        CREDENTIALS_SQAPITOKEN_ECSON = credentials ('SQApiToken-ECSON')
+
+        // The mvn-npm-builder Dockerfile can be found in son-dev-utils under src/jenkins/docker-images/mvn-npm-builder-jdk11/Dockerfile
+        DOCKER_MVN_NPM_BUILDER="docker run --rm \
+                                --user lciadm100 \
+                                -w ${WORKSPACE} \
+                                --env SONAR_AUTH_TOKEN=${CREDENTIALS_SQAPITOKEN_ECSON_PSW} \
+                                --env GERRIT_CHANGE_NUMBER=${GERRIT_CHANGE_NUMBER} \
+                                -v ${WORKSPACE}:${WORKSPACE} \
+                                -v /home/lciadm100/.m2:${HOME}/.m2 \
+                                -v /home/lciadm100/.ssh:${HOME}/.ssh \
+                                -v /home/lciadm100/.gitconfig:${HOME}/.gitconfig \
+                                -v /home/lciadm100/jenkins/workspace/ecson-pointfix-testware/jenkins/toolchains.xml:${HOME}/.m2/toolchains.xml \
+                                -v /home/lciadm100/.m2/settings.xml:/usr/share/java/maven-3/conf/settings.xml \
+                                   armdocker.rnd.ericsson.se/proj-ec-son-dev/mvn-npm-builder:jdk11-jdk8-lci7 bash -c"
+    }
+    stages {
+        stage('Cleanup') {
+            steps {
+                script {
+                    sh 'sudo chmod -fR 777 "${WORKSPACE}" && sudo rm -Rf ./*'
+                }
+            }
+        }
+        stage('Init') {
+            steps {
+                script {
+                    utils.injectFiles()
+                }
+            }
+        }
+        stage('SCM') {
+            steps {
+                checkout scm
+                sh 'echo Injecting Maven Settings.xml'
+                configFileProvider([configFile(fileId: "settings_arm1s11.xml", targetLocation: "${HOME}/.m2/settings.xml")]) {
+                }
+            }
+        }
+        stage('Build') {
+            steps {
+                script {
+                    mavenInstallWithStaticAnalysis()
+                }
+            }
+        }
+    }
+    post {
+        always {
+            script {
+                utils.postAlways()
+                utils.staticAnalysisReports()
+            }
+        }
+        success {
+            script {
+                utils.postSuccess()
+            }
+        }
+        failure {
+            step([$class: 'ClaimPublisher'])
+        }
+    }
+}
+
+def mavenInstallWithStaticAnalysis() {
+    script {
+        if (env.STATIC_ANALYSIS_ENABLED == "true") {
+            echo 'Static analysis has been enabled. (i.e. STATIC_ANALYSIS_ENABLED = true)'
+            if (env.RUN_SQ_QUALITYGATE == "true") {
+                echo 'SonarQube Quality gate is enabled. (i.e. RUN_SQ_QUALITYGATE = true)'
+                echo 'Checking the status of SonarQube server availability'
+                URL_STATUS = utils.checkSQserverAvailability()
+                echo "Is SonarQube server reachable? ${URL_STATUS}"
+                withSonarQubeEnv('enterprise-sonarqube') {
+                    if (URL_STATUS == true) {
+                        echo 'SonarQube server is available and Quality gate will run (i.e. URL_STATUS = true)'
+                        echo 'Inject ENM SQ maven settings.xml file'
+                        configFileProvider([configFile(fileId: "enm-sq-settings.xml", targetLocation: "${HOME}/.m2/enm-sq-settings.xml")]) {}
+                        sh "${DOCKER_MVN_NPM_BUILDER} 'mvn -U -V org.jacoco:jacoco-maven-plugin:0.7.7.201606060606:prepare-agent install -s ${HOME}/.m2/enm-sq-settings.xml -gt jenkins/toolchains.xml -DskipTests'"
+                        parallel(
+                           runStaticAnalysis: {
+                               script {
+                                   sh "${DOCKER_MVN_NPM_BUILDER} 'mvn -B -V -P static-analysis jacoco:prepare-agent jacoco:report -gt jenkins/toolchains.xml -DskipTests'"
+                               }
+                           },
+                           runSonarqube: {
+                               script {
+                                   sh '''
+                                       version_number=`cat VERSION_PREFIX`
+                                       echo $version_number
+                                       ${DOCKER_MVN_NPM_BUILDER} 'mvn -s ${HOME}/.m2/enm-sq-settings.xml \
+                                       sonar:sonar \
+                                       -Dsonar.login=${SONAR_AUTH_TOKEN} \
+                                       -Dsonar.java.binaries=target/classes \
+                                       -Dsonar.projectVersion=$version_number-${GERRIT_CHANGE_NUMBER} \
+                                       -Dsonar.branch.name=$version_number-${GERRIT_CHANGE_NUMBER} \
+                                       -Dsonar.surefire.reportsPath=target/surefire-reports \
+                                       -Dsonar.junit.reportsPath=target/surefire-reports \
+                                       -Dsonar.java.coveragePlugin=jacoco \
+                                       -Dsonarcoverage.jacoco.xmlReportPaths=target \
+                                       -gt jenkins/toolchains.xml'
+                                   '''
+                                   utils.getQualityGate()
+                               }
+                           }
+                       )
+                    } else {
+                        echo 'SonarQube server is not available and Quality gate will not run (i.e. URL_STATUS = false)'
+                    }
+                }
+            } else {
+                echo 'Quality Gate will not run as it is disabled (i.e. RUN_SQ_QUALITYGATE = false), continuing with static-analysis'
+                sh "${DOCKER_MVN_NPM_BUILDER} 'mvn install -gt jenkins/toolchains.xml -DskipTests'"
+                sh "${DOCKER_MVN_NPM_BUILDER} 'mvn -B -V -P static-analysis jacoco:prepare-agent jacoco:report -gt jenkins/toolchains.xml -DskipTests'"
+            }
+        } else {
+            echo 'Static analysis has been disabled. (i.e. STATIC_ANALYSIS_ENABLED = false)'
+            sh "${DOCKER_MVN_NPM_BUILDER} 'mvn install -gt jenkins/toolchains.xml -DskipTests'"
+            sh "${DOCKER_MVN_NPM_BUILDER} 'mvn -B -V -P jacoco:prepare-agent jacoco:report -gt jenkins/toolchains.xml -DskipTests'"
+        }
+    }
+}

@@ -1,0 +1,4 @@
+testCaseId,changes_file,message-pod,message-container,topic,execution,open-loop,numExpectedChanges,range,changeType
+SONP-37761_VerifyCommon,CmChanges.json,eric-data-message-bus-kf,messagebuskf,cmChangeMediation,RET_1585148340088,true,1119,100,
+SONP-46092_VerifyFlm,,eric-data-message-bus-kf,messagebuskf,cmChangeMediation,,true,10,0,OPTIMIZATION
+SONP-45983_VerifyFlm,,eric-data-message-bus-kf,messagebuskf,cmChangeMediation,,true,10,0,REVERSION

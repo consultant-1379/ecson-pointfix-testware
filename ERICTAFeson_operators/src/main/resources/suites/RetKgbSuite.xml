@@ -1,0 +1,46 @@
+<suite name="eSON KGB Tests" verbose="2">
+
+    <!-- Reset Environment -->
+    <test name="Truncate relevant tables">
+        <classes>
+            <class name="com.ericsson.oss.services.eson.test.cases.ret.ResetEnvironmentRet"/>
+        </classes>
+    </test>
+
+    <!-- Installation Verification -->
+    <test name="Verify deployment of SON OM Software.">
+        <classes>
+            <class name="com.ericsson.oss.services.eson.test.cases.ret.VerifyRetSuccessfulInstallation"/>
+        </classes>
+    </test>
+
+    <!-- TAF users verification -->
+    <test name="Verify TAF users.">
+        <classes>
+            <class name="com.ericsson.oss.services.eson.test.teststeps.VerifyTAFUsersTestSteps"/>
+        </classes>
+    </test>
+
+    <!-- Verify client -->
+    <test name="Verify client.">
+        <classes>
+            <class name="com.ericsson.oss.services.eson.test.cases.authorization.InitClient"/>
+        </classes>
+    </test>
+
+    <!-- REST End Point Verification -->
+    <test name="Verify REST End Points Are Available.">
+        <classes>
+            <class name="com.ericsson.oss.services.eson.test.cases.ret.VerifyRetRestEndPointsAvailable"/>
+        </classes>
+    </test>
+
+    <!-- RET Algorithm Verification -->
+    <test name="Verify RET Algorithm.">
+        <classes>
+            <class name="com.ericsson.oss.services.eson.test.cases.ret.ScheduleRetAndVerifyProposedChange"/>
+        </classes>
+    </test>
+
+
+</suite>

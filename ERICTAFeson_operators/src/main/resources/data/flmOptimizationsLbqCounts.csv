@@ -1,0 +1,3 @@
+db_connection_details,query_table,where_clause,expected_value,polling_timeout
+flm_service_db;flm_service_user;32111;eric-son-frequency-layer-manager,flm_optimizations,lbq ->> 'sourceCellFdn' !='',67,1
+flm_service_db;flm_service_user;32111;eric-son-frequency-layer-manager,flm_optimizations,lbq ->> 'sourceCellFdn' ='',3647,1

@@ -1,0 +1,12 @@
+PM-STATS pm_stats_service_db postgres;
+
+SELECT * from counters_cell where local_timestamp >= '%s 00:00:00' AND local_timestamp <= '%s 23:59:59';counters_cell;
+SELECT * from counters_cell_5g where local_timestamp >= '%s 00:00:00' AND local_timestamp <= '%s 23:59:59';counters_cell_5g;
+SELECT * from counters_relation where local_timestamp >= '%s 00:00:00' AND local_timestamp <= '%s 23:59:59';counters_relation;
+
+PM-EVENTS pm_events_service_db postgres;
+
+SELECT * from synthetic_counters_cell where local_timestamp >= '%s 00:00:00' AND local_timestamp <= '%s 23:59:59';synthetic_counters_cell;
+SELECT * from synthetic_counters_cell_5g where local_timestamp >= '%s 00:00:00' AND local_timestamp <= '%s 23:59:59';synthetic_counters_cell_5g;
+SELECT * from synthetic_counters_relation where local_timestamp >= '%s 00:00:00' AND local_timestamp <= '%s 23:59:59';synthetic_counters_relation;
+SELECT * from synthetic_counters_relation_5g where local_timestamp >= '%s 00:00:00' AND local_timestamp <= '%s 23:59:59';synthetic_counters_relation_5g;

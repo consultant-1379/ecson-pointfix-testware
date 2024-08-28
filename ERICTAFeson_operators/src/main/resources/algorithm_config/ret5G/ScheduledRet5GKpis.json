@@ -1,0 +1,131 @@
+{
+  "source": "RET_5G",
+  "kpi_definitions": [
+    {
+      "name": "cgi",
+      "alias": "cell_guid",
+      "expression": "cell.cgi FROM cm://cell",
+      "object_type": "STRING",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "cell.id as guid",
+        "cell.oss_id",
+        "cell.fdn"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "num_samples_rsrp",
+      "alias": "cell_guid",
+      "expression": "SUM(synthetic_counters_cell.ctrNumSamplesRsrp) FROM pm_events://synthetic_counters_cell",
+      "object_type": "INTEGER",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "synthetic_counters_cell.guid",
+        "synthetic_counters_cell.oss_id",
+        "synthetic_counters_cell.fdn"
+      ],
+      "is_visible": "true"
+    },
+    {
+      "name": "num_samples_ta",
+      "alias": "cell_guid",
+      "expression": "ARRAY_INDEX_SUM(synthetic_counters_cell.ctrNumSamplesTa) FROM pm_events://synthetic_counters_cell",
+      "object_type": "INTEGER[129]",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "ARRAY_INDEX_SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "synthetic_counters_cell.guid",
+        "synthetic_counters_cell.oss_id",
+        "synthetic_counters_cell.fdn"
+      ],
+      "is_visible": "true"
+    },
+    {
+      "name": "num_samples_bad_rsrp_ta",
+      "alias": "cell_guid",
+      "expression": "ARRAY_INDEX_SUM(synthetic_counters_cell.ctrNumSamplesBadRsrpTa) FROM pm_events://synthetic_counters_cell",
+      "object_type": "INTEGER[129]",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "ARRAY_INDEX_SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "synthetic_counters_cell.guid",
+        "synthetic_counters_cell.oss_id",
+        "synthetic_counters_cell.fdn"
+      ],
+      "is_visible": "true"
+    },
+    {
+      "name": "num_samples_rsrp_ta",
+      "alias": "cell_guid",
+      "expression": "ARRAY_INDEX_SUM(synthetic_counters_cell.ctrNumSamplesRsrpTa) FROM pm_events://synthetic_counters_cell",
+      "object_type": "INTEGER[129]",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "ARRAY_INDEX_SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "synthetic_counters_cell.guid",
+        "synthetic_counters_cell.oss_id",
+        "synthetic_counters_cell.fdn"
+      ],
+      "is_visible": "true"
+    },
+    {
+      "name": "adj_num_times_first_adj",
+      "alias": "relation_guid_source_guid_target_guid",
+      "expression": "SUM(synthetic_counters_relation.ctrNeighborNumTimesFirstNeighbor) FROM pm_events://synthetic_counters_relation",
+      "object_type": "INTEGER",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "synthetic_counters_relation.guid",
+        "synthetic_counters_relation.source_guid",
+        "synthetic_counters_relation.target_guid",
+        "synthetic_counters_relation.oss_id",
+        "synthetic_counters_relation.fdn"
+      ],
+      "is_visible": "false"
+    },
+    {
+      "name": "num_overlapping_samples_when_high_rsrp",
+      "alias": "relation_guid_source_guid_target_guid",
+      "expression": "SUM(synthetic_counters_relation.ctrNumOverlappingSamplesWhenHighRsrp) FROM pm_events://synthetic_counters_relation",
+      "object_type": "INTEGER",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "synthetic_counters_relation.guid",
+        "synthetic_counters_relation.source_guid",
+        "synthetic_counters_relation.target_guid",
+        "synthetic_counters_relation.oss_id",
+        "synthetic_counters_relation.fdn"
+      ],
+      "is_visible": "false"
+    },
+    {
+      "name": "adj_num_times_interf",
+      "alias": "relation_guid_source_guid_target_guid",
+      "expression": "SUM(synthetic_counters_relation.ctrNeighborNumTimesInterf) FROM pm_events://synthetic_counters_relation",
+      "object_type": "INTEGER",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "synthetic_counters_relation.guid",
+        "synthetic_counters_relation.source_guid",
+        "synthetic_counters_relation.target_guid",
+        "synthetic_counters_relation.oss_id",
+        "synthetic_counters_relation.fdn"
+      ],
+      "is_visible": "false"
+    }
+  ]
+}

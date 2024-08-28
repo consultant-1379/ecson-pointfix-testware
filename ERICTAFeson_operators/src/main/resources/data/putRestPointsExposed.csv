@@ -1,0 +1,3 @@
+testCaseId,testCaseTitle,url,httpPutData
+SONP-32623_VerifyRestEndPointsAvailable,"Verify REST Endpoints are working using default ingress",son-om/kpi/v1/kpis/definitions,{}
+SONP-37761_VerifyCommon,"Verify REST Endpoints are working using default ingress",son-om/kpi/v1/kpis/definitions,{}

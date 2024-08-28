@@ -1,0 +1,7 @@
+{
+  "collectionName": "ecson-trxpoint-filter-group",
+  "topologyType": "trxpoint",
+  "criteria": [
+    "azimuth=le=20"
+  ]
+}

@@ -1,0 +1,2 @@
+testCaseId,db_connection_details,db_tables,db_table_count_values,polling_timeout
+SONP-37761_VerifyCommon,pm_stats_service_db;pm_stats_service_user;32106;eric-pm-stats-processor-er,counters_cell;counters_relation,3823;138409,20

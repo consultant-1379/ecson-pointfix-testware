@@ -1,0 +1,2857 @@
+{
+"operation": "UPDATE",
+"physicalTopologies": [
+{
+    "cgi": "234-15-675-10",
+    "trxpAzimuth": 90,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51112136,
+    "trxpLongitude": -0.018798498,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-675-14",
+    "trxpAzimuth": 90,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51112136,
+    "trxpLongitude": -0.018798498,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-675-18",
+    "trxpAzimuth": 90,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51112136,
+    "trxpLongitude": -0.018798498,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-675-20",
+    "trxpAzimuth": 210,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51112136,
+    "trxpLongitude": -0.018798498,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-675-24",
+    "trxpAzimuth": 210,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51112136,
+    "trxpLongitude": -0.018798498,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-675-28",
+    "trxpAzimuth": 210,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51112136,
+    "trxpLongitude": -0.018798498,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-675-30",
+    "trxpAzimuth": 330,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51112136,
+    "trxpLongitude": -0.018798498,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-675-34",
+    "trxpAzimuth": 330,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51112136,
+    "trxpLongitude": -0.018798498,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-675-38",
+    "trxpAzimuth": 330,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51112136,
+    "trxpLongitude": -0.018798498,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-7778-10",
+    "trxpAzimuth": 90,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51632226,
+    "trxpLongitude": -0.033404301,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-7778-14",
+    "trxpAzimuth": 90,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51632226,
+    "trxpLongitude": -0.033404301,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-7778-20",
+    "trxpAzimuth": 210,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51632226,
+    "trxpLongitude": -0.033404301,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-7778-24",
+    "trxpAzimuth": 210,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51632226,
+    "trxpLongitude": -0.033404301,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-7778-30",
+    "trxpAzimuth": 330,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51632226,
+    "trxpLongitude": -0.033404301,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-7778-34",
+    "trxpAzimuth": 330,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51632226,
+    "trxpLongitude": -0.033404301,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-1283-10",
+    "trxpAzimuth": 90,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.52121642,
+    "trxpLongitude": 0.001027993,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-1283-13",
+    "trxpAzimuth": 90,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.52121642,
+    "trxpLongitude": 0.001027993,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-1283-14",
+    "trxpAzimuth": 90,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.52121642,
+    "trxpLongitude": 0.001027993,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-1283-18",
+    "trxpAzimuth": 90,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.52121642,
+    "trxpLongitude": 0.001027993,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-1283-20",
+    "trxpAzimuth": 210,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.52121642,
+    "trxpLongitude": 0.001027993,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-1283-23",
+    "trxpAzimuth": 210,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.52121642,
+    "trxpLongitude": 0.001027993,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-1283-24",
+    "trxpAzimuth": 210,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.52121642,
+    "trxpLongitude": 0.001027993,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-1283-28",
+    "trxpAzimuth": 210,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.52121642,
+    "trxpLongitude": 0.001027993,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-1283-30",
+    "trxpAzimuth": 330,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.52121642,
+    "trxpLongitude": 0.001027993,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-1283-33",
+    "trxpAzimuth": 330,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.52121642,
+    "trxpLongitude": 0.001027993,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-1283-34",
+    "trxpAzimuth": 330,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.52121642,
+    "trxpLongitude": 0.001027993,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-1283-38",
+    "trxpAzimuth": 330,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.52121642,
+    "trxpLongitude": 0.001027993,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-4350-10",
+    "trxpAzimuth": 70,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51253,
+    "trxpLongitude": -0.013822762,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-4350-14",
+    "trxpAzimuth": 70,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51253,
+    "trxpLongitude": -0.013822762,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-4350-18",
+    "trxpAzimuth": 70,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51253,
+    "trxpLongitude": -0.013822762,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-4350-20",
+    "trxpAzimuth": 190,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51253,
+    "trxpLongitude": -0.013822762,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-4350-24",
+    "trxpAzimuth": 190,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51253,
+    "trxpLongitude": -0.013822762,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-4350-28",
+    "trxpAzimuth": 190,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51253,
+    "trxpLongitude": -0.013822762,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-4350-30",
+    "trxpAzimuth": 310,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51253,
+    "trxpLongitude": -0.013822762,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-4350-34",
+    "trxpAzimuth": 310,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51253,
+    "trxpLongitude": -0.013822762,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-4350-38",
+    "trxpAzimuth": 310,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51253,
+    "trxpLongitude": -0.013822762,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-802-10",
+    "trxpAzimuth": 30,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51267592,
+    "trxpLongitude": 0.010857649,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-802-12",
+    "trxpAzimuth": 30,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51267592,
+    "trxpLongitude": 0.010857649,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-802-14",
+    "trxpAzimuth": 30,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51267592,
+    "trxpLongitude": 0.010857649,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-802-18",
+    "trxpAzimuth": 30,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51267592,
+    "trxpLongitude": 0.010857649,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-802-20",
+    "trxpAzimuth": 140,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51267592,
+    "trxpLongitude": 0.010857649,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-802-22",
+    "trxpAzimuth": 140,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51267592,
+    "trxpLongitude": 0.010857649,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-802-24",
+    "trxpAzimuth": 140,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51267592,
+    "trxpLongitude": 0.010857649,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-802-28",
+    "trxpAzimuth": 140,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51267592,
+    "trxpLongitude": 0.010857649,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-802-30",
+    "trxpAzimuth": 280,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51267592,
+    "trxpLongitude": 0.010857649,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-802-32",
+    "trxpAzimuth": 280,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51267592,
+    "trxpLongitude": 0.010857649,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-802-34",
+    "trxpAzimuth": 280,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51267592,
+    "trxpLongitude": 0.010857649,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-802-38",
+    "trxpAzimuth": 280,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51267592,
+    "trxpLongitude": 0.010857649,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-93-10",
+    "trxpAzimuth": 100,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51254814,
+    "trxpLongitude": -0.043251943,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-93-14",
+    "trxpAzimuth": 100,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51254814,
+    "trxpLongitude": -0.043251943,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-93-18",
+    "trxpAzimuth": 100,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51254814,
+    "trxpLongitude": -0.043251943,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-93-20",
+    "trxpAzimuth": 210,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51254814,
+    "trxpLongitude": -0.043251943,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-93-23",
+    "trxpAzimuth": 210,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51254814,
+    "trxpLongitude": -0.043251943,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-93-24",
+    "trxpAzimuth": 210,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51254814,
+    "trxpLongitude": -0.043251943,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-93-28",
+    "trxpAzimuth": 210,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51254814,
+    "trxpLongitude": -0.043251943,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-93-30",
+    "trxpAzimuth": 0,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51254814,
+    "trxpLongitude": -0.043251943,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-93-33",
+    "trxpAzimuth": 0,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51254814,
+    "trxpLongitude": -0.043251943,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-93-34",
+    "trxpAzimuth": 0,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51254814,
+    "trxpLongitude": -0.043251943,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-93-38",
+    "trxpAzimuth": 0,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51254814,
+    "trxpLongitude": -0.043251943,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-14322-13",
+    "trxpAzimuth": 90,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51149277,
+    "trxpLongitude": -0.009400155,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-14322-18",
+    "trxpAzimuth": 90,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51149277,
+    "trxpLongitude": -0.009400155,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-14322-23",
+    "trxpAzimuth": 210,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51149277,
+    "trxpLongitude": -0.009400155,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-14322-28",
+    "trxpAzimuth": 210,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51149277,
+    "trxpLongitude": -0.009400155,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-14322-33",
+    "trxpAzimuth": 330,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51149277,
+    "trxpLongitude": -0.009400155,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-14322-38",
+    "trxpAzimuth": 330,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51149277,
+    "trxpLongitude": -0.009400155,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-14915-13",
+    "trxpAzimuth": 180,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51161977,
+    "trxpLongitude": -0.030234443,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-14915-18",
+    "trxpAzimuth": 180,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51161977,
+    "trxpLongitude": -0.030234443,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-14915-23",
+    "trxpAzimuth": 270,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51161977,
+    "trxpLongitude": -0.030234443,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-14915-28",
+    "trxpAzimuth": 270,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51161977,
+    "trxpLongitude": -0.030234443,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-14915-33",
+    "trxpAzimuth": 0,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51161977,
+    "trxpLongitude": -0.030234443,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-14915-38",
+    "trxpAzimuth": 0,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51161977,
+    "trxpLongitude": -0.030234443,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-1552-10",
+    "trxpAzimuth": 80,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51131184,
+    "trxpLongitude": -0.050554113,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-1552-12",
+    "trxpAzimuth": 80,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51131184,
+    "trxpLongitude": -0.050554113,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-1552-13",
+    "trxpAzimuth": 80,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51131184,
+    "trxpLongitude": -0.050554113,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-1552-14",
+    "trxpAzimuth": 80,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51131184,
+    "trxpLongitude": -0.050554113,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-1552-18",
+    "trxpAzimuth": 80,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51131184,
+    "trxpLongitude": -0.050554113,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-1552-20",
+    "trxpAzimuth": 170,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51131184,
+    "trxpLongitude": -0.050554113,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-1552-22",
+    "trxpAzimuth": 170,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51131184,
+    "trxpLongitude": -0.050554113,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-1552-23",
+    "trxpAzimuth": 170,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51131184,
+    "trxpLongitude": -0.050554113,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-1552-24",
+    "trxpAzimuth": 170,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51131184,
+    "trxpLongitude": -0.050554113,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-1552-28",
+    "trxpAzimuth": 170,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51131184,
+    "trxpLongitude": -0.050554113,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-2351-10",
+    "trxpAzimuth": 130,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51138347,
+    "trxpLongitude": 0.019606485,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-2351-12",
+    "trxpAzimuth": 130,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51138347,
+    "trxpLongitude": 0.019606485,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-2351-14",
+    "trxpAzimuth": 130,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51138347,
+    "trxpLongitude": 0.019606485,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-2351-18",
+    "trxpAzimuth": 130,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51138347,
+    "trxpLongitude": 0.019606485,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-2351-20",
+    "trxpAzimuth": 250,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51138347,
+    "trxpLongitude": 0.019606485,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-2351-22",
+    "trxpAzimuth": 250,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51138347,
+    "trxpLongitude": 0.019606485,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-2351-24",
+    "trxpAzimuth": 250,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51138347,
+    "trxpLongitude": 0.019606485,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-2351-28",
+    "trxpAzimuth": 250,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51138347,
+    "trxpLongitude": 0.019606485,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-2351-30",
+    "trxpAzimuth": 10,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51138347,
+    "trxpLongitude": 0.019606485,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-2351-32",
+    "trxpAzimuth": 10,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51138347,
+    "trxpLongitude": 0.019606485,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-2351-34",
+    "trxpAzimuth": 10,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51138347,
+    "trxpLongitude": 0.019606485,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-2351-38",
+    "trxpAzimuth": 10,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51138347,
+    "trxpLongitude": 0.019606485,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-4774-10",
+    "trxpAzimuth": 100,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51409594,
+    "trxpLongitude": -0.051415301,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-4774-14",
+    "trxpAzimuth": 100,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51409594,
+    "trxpLongitude": -0.051415301,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-4774-18",
+    "trxpAzimuth": 100,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51409594,
+    "trxpLongitude": -0.051415301,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-4774-20",
+    "trxpAzimuth": 220,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51409594,
+    "trxpLongitude": -0.051415301,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-4774-24",
+    "trxpAzimuth": 220,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51409594,
+    "trxpLongitude": -0.051415301,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-4774-28",
+    "trxpAzimuth": 220,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51409594,
+    "trxpLongitude": -0.051415301,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-4774-30",
+    "trxpAzimuth": 330,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51409594,
+    "trxpLongitude": -0.051415301,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-4774-34",
+    "trxpAzimuth": 330,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51409594,
+    "trxpLongitude": -0.051415301,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-4774-38",
+    "trxpAzimuth": 330,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51409594,
+    "trxpLongitude": -0.051415301,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-5712-10",
+    "trxpAzimuth": 110,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.50430574,
+    "trxpLongitude": -0.041875952,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-5712-13",
+    "trxpAzimuth": 110,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.50430574,
+    "trxpLongitude": -0.041875952,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-5712-14",
+    "trxpAzimuth": 110,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.50430574,
+    "trxpLongitude": -0.041875952,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-5712-18",
+    "trxpAzimuth": 110,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.50430574,
+    "trxpLongitude": -0.041875952,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-5712-20",
+    "trxpAzimuth": 220,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.50430574,
+    "trxpLongitude": -0.041875952,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-5712-23",
+    "trxpAzimuth": 220,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.50430574,
+    "trxpLongitude": -0.041875952,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-5712-24",
+    "trxpAzimuth": 220,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.50430574,
+    "trxpLongitude": -0.041875952,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-5712-28",
+    "trxpAzimuth": 220,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.50430574,
+    "trxpLongitude": -0.041875952,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-5712-30",
+    "trxpAzimuth": 330,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.50430574,
+    "trxpLongitude": -0.041875952,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-5712-33",
+    "trxpAzimuth": 330,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.50430574,
+    "trxpLongitude": -0.041875952,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-5712-34",
+    "trxpAzimuth": 330,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.50430574,
+    "trxpLongitude": -0.041875952,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-5712-38",
+    "trxpAzimuth": 330,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.50430574,
+    "trxpLongitude": -0.041875952,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-6413-10",
+    "trxpAzimuth": 60,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.52042284,
+    "trxpLongitude": -0.026971598,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-6413-14",
+    "trxpAzimuth": 60,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.52042284,
+    "trxpLongitude": -0.026971598,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-6413-20",
+    "trxpAzimuth": 180,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.52042284,
+    "trxpLongitude": -0.026971598,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-6413-24",
+    "trxpAzimuth": 180,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.52042284,
+    "trxpLongitude": -0.026971598,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-6413-30",
+    "trxpAzimuth": 300,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.52042284,
+    "trxpLongitude": -0.026971598,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-6413-34",
+    "trxpAzimuth": 300,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.52042284,
+    "trxpLongitude": -0.026971598,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-88-10",
+    "trxpAzimuth": 90,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51859267,
+    "trxpLongitude": 0.013511072,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-88-13",
+    "trxpAzimuth": 90,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51859267,
+    "trxpLongitude": 0.013511072,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-88-14",
+    "trxpAzimuth": 90,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51859267,
+    "trxpLongitude": 0.013511072,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-88-18",
+    "trxpAzimuth": 90,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51859267,
+    "trxpLongitude": 0.013511072,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-88-20",
+    "trxpAzimuth": 210,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51859267,
+    "trxpLongitude": 0.013511072,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-88-23",
+    "trxpAzimuth": 210,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51859267,
+    "trxpLongitude": 0.013511072,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-88-24",
+    "trxpAzimuth": 210,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51859267,
+    "trxpLongitude": 0.013511072,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-88-28",
+    "trxpAzimuth": 210,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51859267,
+    "trxpLongitude": 0.013511072,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-88-30",
+    "trxpAzimuth": 330,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51859267,
+    "trxpLongitude": 0.013511072,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-88-33",
+    "trxpAzimuth": 330,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51859267,
+    "trxpLongitude": 0.013511072,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-88-34",
+    "trxpAzimuth": 330,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51859267,
+    "trxpLongitude": 0.013511072,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-88-38",
+    "trxpAzimuth": 330,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51859267,
+    "trxpLongitude": 0.013511072,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-1560-10",
+    "trxpAzimuth": 90,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.52014751,
+    "trxpLongitude": -0.009613729,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-1560-14",
+    "trxpAzimuth": 90,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.52014751,
+    "trxpLongitude": -0.009613729,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-1560-18",
+    "trxpAzimuth": 90,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.52014751,
+    "trxpLongitude": -0.009613729,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-1560-20",
+    "trxpAzimuth": 210,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.52014751,
+    "trxpLongitude": -0.009613729,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-1560-24",
+    "trxpAzimuth": 210,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.52014751,
+    "trxpLongitude": -0.009613729,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-1560-28",
+    "trxpAzimuth": 210,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.52014751,
+    "trxpLongitude": -0.009613729,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-1560-30",
+    "trxpAzimuth": 330,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.52014751,
+    "trxpLongitude": -0.009613729,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-1560-34",
+    "trxpAzimuth": 330,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.52014751,
+    "trxpLongitude": -0.009613729,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-1560-38",
+    "trxpAzimuth": 330,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.52014751,
+    "trxpLongitude": -0.009613729,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-10114-10",
+    "trxpAzimuth": 120,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.5222548,
+    "trxpLongitude": -0.041841153,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-10114-14",
+    "trxpAzimuth": 120,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.5222548,
+    "trxpLongitude": -0.041841153,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-10114-18",
+    "trxpAzimuth": 120,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.5222548,
+    "trxpLongitude": -0.041841153,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-10114-20",
+    "trxpAzimuth": 240,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.5222548,
+    "trxpLongitude": -0.041841153,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-10114-24",
+    "trxpAzimuth": 240,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.5222548,
+    "trxpLongitude": -0.041841153,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-10114-28",
+    "trxpAzimuth": 240,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.5222548,
+    "trxpLongitude": -0.041841153,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-10114-30",
+    "trxpAzimuth": 0,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.5222548,
+    "trxpLongitude": -0.041841153,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-10114-34",
+    "trxpAzimuth": 0,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.5222548,
+    "trxpLongitude": -0.041841153,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-10114-38",
+    "trxpAzimuth": 0,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.5222548,
+    "trxpLongitude": -0.041841153,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-10757-10",
+    "trxpAzimuth": 90,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51497018,
+    "trxpLongitude": -0.019856585,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-10757-14",
+    "trxpAzimuth": 90,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51497018,
+    "trxpLongitude": -0.019856585,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-10757-18",
+    "trxpAzimuth": 90,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51497018,
+    "trxpLongitude": -0.019856585,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-10757-20",
+    "trxpAzimuth": 210,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51497018,
+    "trxpLongitude": -0.019856585,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-10757-24",
+    "trxpAzimuth": 210,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51497018,
+    "trxpLongitude": -0.019856585,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-10757-28",
+    "trxpAzimuth": 210,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51497018,
+    "trxpLongitude": -0.019856585,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-10757-30",
+    "trxpAzimuth": 330,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51497018,
+    "trxpLongitude": -0.019856585,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-10757-34",
+    "trxpAzimuth": 330,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51497018,
+    "trxpLongitude": -0.019856585,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-10757-38",
+    "trxpAzimuth": 330,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51497018,
+    "trxpLongitude": -0.019856585,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-13762-30",
+    "trxpAzimuth": 260,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51131184,
+    "trxpLongitude": -0.050554113,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-13762-32",
+    "trxpAzimuth": 260,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51131184,
+    "trxpLongitude": -0.050554113,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-13762-33",
+    "trxpAzimuth": 260,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51131184,
+    "trxpLongitude": -0.050554113,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-13762-34",
+    "trxpAzimuth": 260,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51131184,
+    "trxpLongitude": -0.050554113,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-13762-38",
+    "trxpAzimuth": 260,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51131184,
+    "trxpLongitude": -0.050554113,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-13762-40",
+    "trxpAzimuth": 350,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51131184,
+    "trxpLongitude": -0.050554113,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-13762-42",
+    "trxpAzimuth": 350,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51131184,
+    "trxpLongitude": -0.050554113,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-13762-43",
+    "trxpAzimuth": 350,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51131184,
+    "trxpLongitude": -0.050554113,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-13762-44",
+    "trxpAzimuth": 350,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51131184,
+    "trxpLongitude": -0.050554113,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-13762-48",
+    "trxpAzimuth": 350,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51131184,
+    "trxpLongitude": -0.050554113,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-3738-10",
+    "trxpAzimuth": 110,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.52974319,
+    "trxpLongitude": -0.029336803,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-3738-14",
+    "trxpAzimuth": 110,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.52974319,
+    "trxpLongitude": -0.029336803,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-3738-18",
+    "trxpAzimuth": 110,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.52974319,
+    "trxpLongitude": -0.029336803,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-3738-20",
+    "trxpAzimuth": 220,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.52974319,
+    "trxpLongitude": -0.029336803,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-3738-24",
+    "trxpAzimuth": 220,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.52974319,
+    "trxpLongitude": -0.029336803,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-3738-28",
+    "trxpAzimuth": 220,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.52974319,
+    "trxpLongitude": -0.029336803,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-3738-30",
+    "trxpAzimuth": 340,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.52974319,
+    "trxpLongitude": -0.029336803,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-3738-34",
+    "trxpAzimuth": 340,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.52974319,
+    "trxpLongitude": -0.029336803,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-3738-38",
+    "trxpAzimuth": 340,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.52974319,
+    "trxpLongitude": -0.029336803,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-4489-10",
+    "trxpAzimuth": 90,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51458528,
+    "trxpLongitude": -0.029573213,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-4489-14",
+    "trxpAzimuth": 90,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51458528,
+    "trxpLongitude": -0.029573213,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-4489-18",
+    "trxpAzimuth": 90,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51458528,
+    "trxpLongitude": -0.029573213,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-4489-20",
+    "trxpAzimuth": 210,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51458528,
+    "trxpLongitude": -0.029573213,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-4489-24",
+    "trxpAzimuth": 210,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51458528,
+    "trxpLongitude": -0.029573213,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-4489-28",
+    "trxpAzimuth": 210,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51458528,
+    "trxpLongitude": -0.029573213,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-4489-30",
+    "trxpAzimuth": 330,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51458528,
+    "trxpLongitude": -0.029573213,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-4489-34",
+    "trxpAzimuth": 330,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51458528,
+    "trxpLongitude": -0.029573213,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-4489-38",
+    "trxpAzimuth": 330,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51458528,
+    "trxpLongitude": -0.029573213,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-5681-10",
+    "trxpAzimuth": 31,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51145351,
+    "trxpLongitude": 0.023889971,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-5681-13",
+    "trxpAzimuth": 31,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51145351,
+    "trxpLongitude": 0.023889971,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-5681-14",
+    "trxpAzimuth": 30,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51145351,
+    "trxpLongitude": 0.023889971,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-5681-18",
+    "trxpAzimuth": 31,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51145351,
+    "trxpLongitude": 0.023889971,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-5681-20",
+    "trxpAzimuth": 152,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51145351,
+    "trxpLongitude": 0.023889971,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-5681-23",
+    "trxpAzimuth": 152,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51145351,
+    "trxpLongitude": 0.023889971,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-5681-24",
+    "trxpAzimuth": 150,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51145351,
+    "trxpLongitude": 0.023889971,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-5681-28",
+    "trxpAzimuth": 152,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51145351,
+    "trxpLongitude": 0.023889971,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-5681-30",
+    "trxpAzimuth": 270,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51145351,
+    "trxpLongitude": 0.023889971,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-5681-33",
+    "trxpAzimuth": 270,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51145351,
+    "trxpLongitude": 0.023889971,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-5681-34",
+    "trxpAzimuth": 270,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51145351,
+    "trxpLongitude": 0.023889971,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-5681-38",
+    "trxpAzimuth": 270,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51145351,
+    "trxpLongitude": 0.023889971,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-6568-10",
+    "trxpAzimuth": 120,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51196903,
+    "trxpLongitude": -0.0072608,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-6568-14",
+    "trxpAzimuth": 120,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51196903,
+    "trxpLongitude": -0.0072608,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-6568-18",
+    "trxpAzimuth": 120,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51196903,
+    "trxpLongitude": -0.0072608,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-6568-20",
+    "trxpAzimuth": 240,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51196903,
+    "trxpLongitude": -0.0072608,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-6568-24",
+    "trxpAzimuth": 240,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51196903,
+    "trxpLongitude": -0.0072608,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-6568-28",
+    "trxpAzimuth": 240,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51196903,
+    "trxpLongitude": -0.0072608,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-6568-30",
+    "trxpAzimuth": 0,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51196903,
+    "trxpLongitude": -0.0072608,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-6568-34",
+    "trxpAzimuth": 0,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51196903,
+    "trxpLongitude": -0.0072608,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-6568-38",
+    "trxpAzimuth": 0,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51196903,
+    "trxpLongitude": -0.0072608,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-7506-10",
+    "trxpAzimuth": 110,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.50564994,
+    "trxpLongitude": 0.017811011,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-7506-14",
+    "trxpAzimuth": 110,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.50564994,
+    "trxpLongitude": 0.017811011,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-7506-18",
+    "trxpAzimuth": 110,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.50564994,
+    "trxpLongitude": 0.017811011,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-7506-20",
+    "trxpAzimuth": 210,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.50564994,
+    "trxpLongitude": 0.017811011,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-7506-24",
+    "trxpAzimuth": 210,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.50564994,
+    "trxpLongitude": 0.017811011,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-7506-28",
+    "trxpAzimuth": 210,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.50564994,
+    "trxpLongitude": 0.017811011,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-7506-30",
+    "trxpAzimuth": 320,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.50564994,
+    "trxpLongitude": 0.017811011,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-7506-34",
+    "trxpAzimuth": 320,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.50564994,
+    "trxpLongitude": 0.017811011,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-7506-38",
+    "trxpAzimuth": 320,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.50564994,
+    "trxpLongitude": 0.017811011,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-8700-10",
+    "trxpAzimuth": 180,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51161977,
+    "trxpLongitude": -0.030234443,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-8700-14",
+    "trxpAzimuth": 180,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51161977,
+    "trxpLongitude": -0.030234443,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-8700-20",
+    "trxpAzimuth": 270,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51161977,
+    "trxpLongitude": -0.030234443,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-8700-24",
+    "trxpAzimuth": 270,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51161977,
+    "trxpLongitude": -0.030234443,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-8700-30",
+    "trxpAzimuth": 0,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51161977,
+    "trxpLongitude": -0.030234443,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-8700-34",
+    "trxpAzimuth": 0,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51161977,
+    "trxpLongitude": -0.030234443,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-7090-10",
+    "trxpAzimuth": 0,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51172049,
+    "trxpLongitude": -0.036239925,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-7090-14",
+    "trxpAzimuth": 0,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51172049,
+    "trxpLongitude": -0.036239925,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-7090-16",
+    "trxpAzimuth": 0,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51172049,
+    "trxpLongitude": -0.036239925,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-12913-10",
+    "trxpAzimuth": 90,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51149277,
+    "trxpLongitude": -0.009400155,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-12913-12",
+    "trxpAzimuth": 90,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51149277,
+    "trxpLongitude": -0.009400155,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-12913-14",
+    "trxpAzimuth": 90,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51149277,
+    "trxpLongitude": -0.009400155,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-12913-20",
+    "trxpAzimuth": 210,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51149277,
+    "trxpLongitude": -0.009400155,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-12913-22",
+    "trxpAzimuth": 210,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51149277,
+    "trxpLongitude": -0.009400155,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-12913-24",
+    "trxpAzimuth": 210,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51149277,
+    "trxpLongitude": -0.009400155,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-12913-30",
+    "trxpAzimuth": 330,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51149277,
+    "trxpLongitude": -0.009400155,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-12913-32",
+    "trxpAzimuth": 330,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51149277,
+    "trxpLongitude": -0.009400155,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-12913-34",
+    "trxpAzimuth": 330,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51149277,
+    "trxpLongitude": -0.009400155,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-4094-10",
+    "trxpAzimuth": 90,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51876844,
+    "trxpLongitude": -0.030733168,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-4094-14",
+    "trxpAzimuth": 90,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51876844,
+    "trxpLongitude": -0.030733168,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-4094-18",
+    "trxpAzimuth": 90,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51876844,
+    "trxpLongitude": -0.030733168,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-4094-20",
+    "trxpAzimuth": 210,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51876844,
+    "trxpLongitude": -0.030733168,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-4094-24",
+    "trxpAzimuth": 210,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51876844,
+    "trxpLongitude": -0.030733168,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-4094-28",
+    "trxpAzimuth": 210,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51876844,
+    "trxpLongitude": -0.030733168,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-4094-30",
+    "trxpAzimuth": 330,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51876844,
+    "trxpLongitude": -0.030733168,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-4094-34",
+    "trxpAzimuth": 330,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51876844,
+    "trxpLongitude": -0.030733168,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-4094-38",
+    "trxpAzimuth": 330,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51876844,
+    "trxpLongitude": -0.030733168,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-4435-10",
+    "trxpAzimuth": 90,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.5227497,
+    "trxpLongitude": -0.016174659,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-4435-14",
+    "trxpAzimuth": 90,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.5227497,
+    "trxpLongitude": -0.016174659,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-4435-20",
+    "trxpAzimuth": 210,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.5227497,
+    "trxpLongitude": -0.016174659,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-4435-24",
+    "trxpAzimuth": 210,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.5227497,
+    "trxpLongitude": -0.016174659,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-4435-30",
+    "trxpAzimuth": 330,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.5227497,
+    "trxpLongitude": -0.016174659,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-4435-34",
+    "trxpAzimuth": 330,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.5227497,
+    "trxpLongitude": -0.016174659,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-4789-10",
+    "trxpAzimuth": 90,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.52464155,
+    "trxpLongitude": -0.033997282,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-4789-14",
+    "trxpAzimuth": 90,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.52464155,
+    "trxpLongitude": -0.033997282,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-4789-20",
+    "trxpAzimuth": 210,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.52464155,
+    "trxpLongitude": -0.033997282,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-4789-24",
+    "trxpAzimuth": 210,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.52464155,
+    "trxpLongitude": -0.033997282,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-4789-30",
+    "trxpAzimuth": 330,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.52464155,
+    "trxpLongitude": -0.033997282,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-4789-34",
+    "trxpAzimuth": 330,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.52464155,
+    "trxpLongitude": -0.033997282,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-6492-10",
+    "trxpAzimuth": 60,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.50864107,
+    "trxpLongitude": -0.016773271,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-6492-13",
+    "trxpAzimuth": 60,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.50864107,
+    "trxpLongitude": -0.016773271,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-6492-14",
+    "trxpAzimuth": 60,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.50864107,
+    "trxpLongitude": -0.016773271,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-6492-18",
+    "trxpAzimuth": 60,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.50864107,
+    "trxpLongitude": -0.016773271,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-6492-20",
+    "trxpAzimuth": 210,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.50864107,
+    "trxpLongitude": -0.016773271,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-6492-23",
+    "trxpAzimuth": 210,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.50864107,
+    "trxpLongitude": -0.016773271,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-6492-24",
+    "trxpAzimuth": 210,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.50864107,
+    "trxpLongitude": -0.016773271,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-6492-28",
+    "trxpAzimuth": 210,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.50864107,
+    "trxpLongitude": -0.016773271,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-6492-30",
+    "trxpAzimuth": 310,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.50864107,
+    "trxpLongitude": -0.016773271,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-6492-33",
+    "trxpAzimuth": 310,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.50864107,
+    "trxpLongitude": -0.016773271,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-6492-34",
+    "trxpAzimuth": 310,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.50864107,
+    "trxpLongitude": -0.016773271,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-6492-38",
+    "trxpAzimuth": 310,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.50864107,
+    "trxpLongitude": -0.016773271,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-7505-10",
+    "trxpAzimuth": 90,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51830931,
+    "trxpLongitude": -0.041981584,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-7505-13",
+    "trxpAzimuth": 90,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51830931,
+    "trxpLongitude": -0.041981584,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-7505-14",
+    "trxpAzimuth": 90,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51830931,
+    "trxpLongitude": -0.041981584,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-7505-18",
+    "trxpAzimuth": 90,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51830931,
+    "trxpLongitude": -0.041981584,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-7505-20",
+    "trxpAzimuth": 210,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51830931,
+    "trxpLongitude": -0.041981584,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-7505-23",
+    "trxpAzimuth": 210,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51830931,
+    "trxpLongitude": -0.041981584,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-7505-24",
+    "trxpAzimuth": 210,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51830931,
+    "trxpLongitude": -0.041981584,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-7505-28",
+    "trxpAzimuth": 210,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51830931,
+    "trxpLongitude": -0.041981584,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-7505-30",
+    "trxpAzimuth": 330,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51830931,
+    "trxpLongitude": -0.041981584,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-7505-33",
+    "trxpAzimuth": 330,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51830931,
+    "trxpLongitude": -0.041981584,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-7505-34",
+    "trxpAzimuth": 330,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51830931,
+    "trxpLongitude": -0.041981584,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-7505-38",
+    "trxpAzimuth": 330,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51830931,
+    "trxpLongitude": -0.041981584,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-8289-10",
+    "trxpAzimuth": 90,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51060386,
+    "trxpLongitude": -0.043681148,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-8289-14",
+    "trxpAzimuth": 90,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51060386,
+    "trxpLongitude": -0.043681148,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-8289-18",
+    "trxpAzimuth": 90,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51060386,
+    "trxpLongitude": -0.043681148,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-8289-20",
+    "trxpAzimuth": 240,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51060386,
+    "trxpLongitude": -0.043681148,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-8289-24",
+    "trxpAzimuth": 240,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51060386,
+    "trxpLongitude": -0.043681148,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-8289-28",
+    "trxpAzimuth": 240,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51060386,
+    "trxpLongitude": -0.043681148,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-8289-30",
+    "trxpAzimuth": 340,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51060386,
+    "trxpLongitude": -0.043681148,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-8289-34",
+    "trxpAzimuth": 340,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51060386,
+    "trxpLongitude": -0.043681148,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-8289-38",
+    "trxpAzimuth": 340,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51060386,
+    "trxpLongitude": -0.043681148,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-9068-10",
+    "trxpAzimuth": 90,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51099189,
+    "trxpLongitude": -0.026586513,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-9068-14",
+    "trxpAzimuth": 90,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51099189,
+    "trxpLongitude": -0.026586513,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-9068-18",
+    "trxpAzimuth": 90,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51099189,
+    "trxpLongitude": -0.026586513,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-9068-20",
+    "trxpAzimuth": 210,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51099189,
+    "trxpLongitude": -0.026586513,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-9068-24",
+    "trxpAzimuth": 210,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51099189,
+    "trxpLongitude": -0.026586513,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-9068-28",
+    "trxpAzimuth": 210,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51099189,
+    "trxpLongitude": -0.026586513,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-9068-30",
+    "trxpAzimuth": 330,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51099189,
+    "trxpLongitude": -0.026586513,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-9068-34",
+    "trxpAzimuth": 330,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51099189,
+    "trxpLongitude": -0.026586513,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-9068-38",
+    "trxpAzimuth": 330,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51099189,
+    "trxpLongitude": -0.026586513,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-14868-13",
+    "trxpAzimuth": 40,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51197499,
+    "trxpLongitude": -0.001798319,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-14868-18",
+    "trxpAzimuth": 40,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51197499,
+    "trxpLongitude": -0.001798319,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-14868-23",
+    "trxpAzimuth": 150,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51197499,
+    "trxpLongitude": -0.001798319,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-14868-28",
+    "trxpAzimuth": 150,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51197499,
+    "trxpLongitude": -0.001798319,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-14868-33",
+    "trxpAzimuth": 280,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51197499,
+    "trxpLongitude": -0.001798319,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-14868-38",
+    "trxpAzimuth": 280,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51197499,
+    "trxpLongitude": -0.001798319,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-685-10",
+    "trxpAzimuth": 40,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51197499,
+    "trxpLongitude": -0.001798319,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-685-12",
+    "trxpAzimuth": 40,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51197499,
+    "trxpLongitude": -0.001798319,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-685-14",
+    "trxpAzimuth": 40,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51197499,
+    "trxpLongitude": -0.001798319,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-685-20",
+    "trxpAzimuth": 150,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51197499,
+    "trxpLongitude": -0.001798319,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-685-22",
+    "trxpAzimuth": 150,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51197499,
+    "trxpLongitude": -0.001798319,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-685-24",
+    "trxpAzimuth": 150,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51197499,
+    "trxpLongitude": -0.001798319,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-685-30",
+    "trxpAzimuth": 280,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51197499,
+    "trxpLongitude": -0.001798319,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-685-32",
+    "trxpAzimuth": 280,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51197499,
+    "trxpLongitude": -0.001798319,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-685-34",
+    "trxpAzimuth": 280,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51197499,
+    "trxpLongitude": -0.001798319,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-13762-42",
+    "trxpAzimuth": 350,
+    "trxpHbw": 0,
+    "trxpInstallation": "outdoor",
+    "trxpLatitude": 51.51131184,
+    "trxpLongitude": -0.050554113,
+    "trxpType": "Macro"
+},
+{
+    "cgi": "234-15-8700-12",
+    "trxpAzimuth": 180,
+     "trxpHbw": 0,
+     "trxpInstallation": "outdoor",
+     "trxpLatitude": 51.51161977,
+     "trxpLongitude": -0.030234443,
+     "trxpType": "Macro"
+},
+{
+     "cgi": "234-15-8700-22",
+     "trxpAzimuth": 270,
+     "trxpHbw": 0,
+     "trxpInstallation": "outdoor",
+     "trxpLatitude": 51.51161977,
+     "trxpLongitude": -0.030234443,
+     "trxpType": "Macro"
+},
+{
+     "cgi": "234-15-8700-32",
+     "trxpAzimuth": 0,
+     "trxpHbw": 0,
+     "trxpInstallation": "outdoor",
+     "trxpLatitude": 51.51161977,
+     "trxpLongitude": -0.030234443,
+     "trxpType": "Macro"
+}]
+}

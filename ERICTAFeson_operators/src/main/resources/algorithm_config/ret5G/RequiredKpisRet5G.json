@@ -1,0 +1,131 @@
+{
+  "source": "RET_5G",
+  "kpi_definitions": [
+    {
+      "name": "num_samples_rsrp",
+      "alias": "cell_guid",
+      "expression": "SUM(synthetic_counters_cell_5g.ctrNumSamplesRsrp) FROM pm_events://synthetic_counters_cell_5g",
+      "object_type": "INTEGER",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "synthetic_counters_cell_5g.guid",
+        "synthetic_counters_cell_5g.oss_id",
+        "synthetic_counters_cell_5g.fdn"
+      ],
+      "is_visible": "true"
+    },
+    {
+      "name": "num_samples_ta",
+      "alias": "cell_guid",
+      "expression": "INDEXED_ARRAY_INDEX_SUM(synthetic_counters_cell_5g.ctrNumSamplesTa) FROM pm_events://synthetic_counters_cell_5g",
+      "object_type": "INTEGER[][]",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "INDEXED_ARRAY_INDEX_SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "synthetic_counters_cell_5g.guid",
+        "synthetic_counters_cell_5g.oss_id",
+        "synthetic_counters_cell_5g.fdn"
+      ],
+      "is_visible": "true"
+    },
+    {
+      "name": "num_samples_bad_rsrp_ta",
+      "alias": "cell_guid",
+      "expression": "INDEXED_ARRAY_INDEX_SUM(synthetic_counters_cell_5g.ctrNumSamplesBadRsrpTa) FROM pm_events://synthetic_counters_cell_5g",
+      "object_type": "INTEGER[][]",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "INDEXED_ARRAY_INDEX_SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "synthetic_counters_cell_5g.guid",
+        "synthetic_counters_cell_5g.oss_id",
+        "synthetic_counters_cell_5g.fdn"
+      ],
+      "is_visible": "true"
+    },
+    {
+      "name": "num_samples_rsrp_ta",
+      "alias": "cell_guid",
+      "expression": "INDEXED_ARRAY_INDEX_SUM(synthetic_counters_cell_5g.ctrNumSamplesRsrpTa) FROM pm_events://synthetic_counters_cell_5g",
+      "object_type": "INTEGER[][]",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "INDEXED_ARRAY_INDEX_SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "synthetic_counters_cell_5g.guid",
+        "synthetic_counters_cell_5g.oss_id",
+        "synthetic_counters_cell_5g.fdn"
+      ],
+      "is_visible": "true"
+    },
+    {
+      "name": "adj_num_times_first_adj",
+      "alias": "relation_guid_source_guid_target_guid",
+      "expression": "SUM(synthetic_counters_relation_5g.ctrAdjNumTimesFirstAdj) FROM pm_events://synthetic_counters_relation_5g",
+      "object_type": "INTEGER",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "synthetic_counters_relation_5g.guid",
+        "synthetic_counters_relation_5g.source_guid",
+        "synthetic_counters_relation_5g.target_guid",
+        "synthetic_counters_relation_5g.oss_id",
+        "synthetic_counters_relation_5g.fdn"
+      ],
+      "is_visible": "false"
+    },
+    {
+      "name": "num_overlapping_samples_when_high_rsrp",
+      "alias": "relation_guid_source_guid_target_guid",
+      "expression": "SUM(synthetic_counters_relation_5g.ctrNumOverlappingSamplesWhenHighRsrp) FROM pm_events://synthetic_counters_relation_5g",
+      "object_type": "INTEGER",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "synthetic_counters_relation_5g.guid",
+        "synthetic_counters_relation_5g.source_guid",
+        "synthetic_counters_relation_5g.target_guid",
+        "synthetic_counters_relation_5g.oss_id",
+        "synthetic_counters_relation_5g.fdn"
+      ],
+      "is_visible": "false"
+    },
+    {
+      "name": "adj_num_times_interf",
+      "alias": "relation_guid_source_guid_target_guid",
+      "expression": "SUM(synthetic_counters_relation_5g.ctrAdjNumTimesInterf) FROM pm_events://synthetic_counters_relation_5g",
+      "object_type": "INTEGER",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "synthetic_counters_relation_5g.guid",
+        "synthetic_counters_relation_5g.source_guid",
+        "synthetic_counters_relation_5g.target_guid",
+        "synthetic_counters_relation_5g.oss_id",
+        "synthetic_counters_relation_5g.fdn"
+      ],
+      "is_visible": "false"
+    },
+    {
+      "name": "cgi",
+      "alias": "cell_guid",
+      "expression": "nr_cell.cgi FROM cm://nr_cell",
+      "object_type": "STRING",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "nr_cell.id as guid",
+        "nr_cell.oss_id",
+        "nr_cell.fdn"
+      ],
+      "is_visible": false
+    }
+  ]
+}

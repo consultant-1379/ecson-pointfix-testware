@@ -1,0 +1,592 @@
+{
+  "source": "RET",
+  "kpi_definitions": [
+    {
+      "name": "pm_stats_cell_reliability_daily",
+      "alias": "cell_guid",
+      "expression": "count(counters_cell.fdn) FROM pm_stats://counters_cell",
+      "object_type": "INTEGER",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "counters_cell.guid",
+        "counters_cell.fdn",
+        "counters_cell.oss_id"
+      ],
+      "is_visible": "false"
+    },
+    {
+      "name": "pm_events_cell_reliability_daily",
+      "alias": "cell_guid",
+      "expression": "count(synthetic_counters_cell.fdn) FROM pm_events://synthetic_counters_cell",
+      "object_type": "INTEGER",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "synthetic_counters_cell.guid",
+        "synthetic_counters_cell.oss_id",
+        "synthetic_counters_cell.fdn"
+      ],
+      "is_visible": "false"
+    },
+    {
+      "name": "pm_stats_relation_reliability_daily",
+      "alias": "relation_guid_source_guid_target_guid",
+      "expression": "count(counters_relation.fdn) FROM pm_stats://counters_relation",
+      "object_type": "INTEGER",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "counters_relation.guid",
+        "counters_relation.source_guid",
+        "counters_relation.target_guid",
+        "counters_relation.oss_id",
+        "counters_relation.fdn"
+      ],
+      "is_visible": "false"
+    },
+    {
+      "name": "pm_events_relation_reliability_daily",
+      "alias": "relation_guid_source_guid_target_guid",
+      "expression": "count(synthetic_counters_relation.fdn) FROM pm_events://synthetic_counters_relation",
+      "object_type": "INTEGER",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "synthetic_counters_relation.guid",
+        "synthetic_counters_relation.source_guid",
+        "synthetic_counters_relation.target_guid",
+        "synthetic_counters_relation.oss_id",
+        "synthetic_counters_relation.fdn"
+      ],
+      "is_visible": "false"
+    },
+    {
+      "name": "num_calls_daily",
+      "alias": "cell_guid",
+      "expression": "SUM(counters_cell.pmErabEstabSuccInit) FROM pm_stats://counters_cell",
+      "object_type": "INTEGER",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "counters_cell.guid",
+        "counters_cell.oss_id",
+        "counters_cell.fdn"
+      ],
+      "is_visible": "true"
+    },
+    {
+      "name": "source_cell_cgi_daily",
+      "alias": "relation_guid_source_guid_target_guid",
+      "expression": "relation.source_cell_cgi FROM cm://relation",
+      "object_type": "STRING",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "relation.id as guid",
+        "relation.source_cell_id as source_guid",
+        "relation.target_cell_id as target_guid",
+        "relation.oss_id",
+        "relation.fdn"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "cgi",
+      "alias": "cell_guid",
+      "expression": "cell.cgi FROM cm://cell",
+      "object_type": "STRING",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "cell.id as guid",
+        "cell.oss_id",
+        "cell.fdn"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "cell_succ_ho_daily",
+      "alias": "cell_guid",
+      "expression": "SUM(relation_guid_source_guid_target_guid.out_succ_ho_daily) FROM kpi://cell_guid LEFT JOIN kpi://relation_guid_source_guid_target_guid ON cell_guid.cgi = relation_guid_source_guid_target_guid.source_cell_cgi_daily AND cell_guid.local_timestamp = relation_guid_source_guid_target_guid.local_timestamp",
+      "object_type": "INTEGER",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "cell_guid.guid",
+        "cell_guid.oss_id",
+        "cell_guid.fdn"
+      ],
+      "is_visible": "true"
+    },
+    {
+      "name": "out_succ_ho_daily",
+      "alias": "relation_guid_source_guid_target_guid",
+      "expression": "SUM(counters_relation.pmHoExeSuccLteInterF) + SUM(counters_relation.pmHoExeSuccLteIntraF) FROM pm_stats://counters_relation",
+      "object_type": "INTEGER",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "counters_relation.guid",
+        "counters_relation.source_guid",
+        "counters_relation.target_guid",
+        "counters_relation.oss_id",
+        "counters_relation.fdn"
+      ],
+      "is_visible": "true"
+    },
+    {
+      "name": "num_samples_rsrp",
+      "alias": "cell_guid",
+      "expression": "SUM(synthetic_counters_cell.ctrNumSamplesRsrp) FROM pm_events://synthetic_counters_cell",
+      "object_type": "INTEGER",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "synthetic_counters_cell.guid",
+        "synthetic_counters_cell.oss_id",
+        "synthetic_counters_cell.fdn"
+      ],
+      "is_visible": "true"
+    },
+    {
+      "name": "num_samples_ta",
+      "alias": "cell_guid",
+      "expression": "ARRAY_INDEX_SUM(synthetic_counters_cell.ctrNumSamplesTa) FROM pm_events://synthetic_counters_cell",
+      "object_type": "INTEGER[129]",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "ARRAY_INDEX_SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "synthetic_counters_cell.guid",
+        "synthetic_counters_cell.oss_id",
+        "synthetic_counters_cell.fdn"
+      ],
+      "is_visible": "true"
+    },
+    {
+      "name": "num_samples_bad_rsrp_ta",
+      "alias": "cell_guid",
+      "expression": "ARRAY_INDEX_SUM(synthetic_counters_cell.ctrNumSamplesBadRsrpTa) FROM pm_events://synthetic_counters_cell",
+      "object_type": "INTEGER[129]",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "ARRAY_INDEX_SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "synthetic_counters_cell.guid",
+        "synthetic_counters_cell.oss_id",
+        "synthetic_counters_cell.fdn"
+      ],
+      "is_visible": "true"
+    },
+    {
+      "name": "num_samples_rsrp_ta",
+      "alias": "cell_guid",
+      "expression": "ARRAY_INDEX_SUM(synthetic_counters_cell.ctrNumSamplesRsrpTa) FROM pm_events://synthetic_counters_cell",
+      "object_type": "INTEGER[129]",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "ARRAY_INDEX_SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "synthetic_counters_cell.guid",
+        "synthetic_counters_cell.oss_id",
+        "synthetic_counters_cell.fdn"
+      ],
+      "is_visible": "true"
+    },
+    {
+      "name": "adj_num_times_first_adj",
+      "alias": "relation_guid_source_guid_target_guid",
+      "expression": "SUM(synthetic_counters_relation.ctrNeighborNumTimesFirstNeighbor) FROM pm_events://synthetic_counters_relation",
+      "object_type": "INTEGER",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "synthetic_counters_relation.guid",
+        "synthetic_counters_relation.source_guid",
+        "synthetic_counters_relation.target_guid",
+        "synthetic_counters_relation.oss_id",
+        "synthetic_counters_relation.fdn"
+      ],
+      "is_visible": "false"
+    },
+    {
+      "name": "num_overlapping_samples_when_high_rsrp",
+      "alias": "relation_guid_source_guid_target_guid",
+      "expression": "SUM(synthetic_counters_relation.ctrNumOverlappingSamplesWhenHighRsrp) FROM pm_events://synthetic_counters_relation",
+      "object_type": "INTEGER",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "synthetic_counters_relation.guid",
+        "synthetic_counters_relation.source_guid",
+        "synthetic_counters_relation.target_guid",
+        "synthetic_counters_relation.oss_id",
+        "synthetic_counters_relation.fdn"
+      ],
+      "is_visible": "false"
+    },
+    {
+      "name": "num_overlapping_samples",
+      "alias": "relation_guid_source_guid_target_guid",
+      "expression": "SUM(synthetic_counters_relation.ctrNumOverlappingSamples) FROM pm_events://synthetic_counters_relation",
+      "object_type": "INTEGER",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "synthetic_counters_relation.guid",
+        "synthetic_counters_relation.source_guid",
+        "synthetic_counters_relation.target_guid",
+        "synthetic_counters_relation.oss_id",
+        "synthetic_counters_relation.fdn"
+      ],
+      "is_visible": "false"
+    },
+    {
+      "name": "adj_num_times_interf",
+      "alias": "relation_guid_source_guid_target_guid",
+      "expression": "SUM(synthetic_counters_relation.ctrNeighborNumTimesInterf) FROM pm_events://synthetic_counters_relation",
+      "object_type": "INTEGER",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "synthetic_counters_relation.guid",
+        "synthetic_counters_relation.source_guid",
+        "synthetic_counters_relation.target_guid",
+        "synthetic_counters_relation.oss_id",
+        "synthetic_counters_relation.fdn"
+      ],
+      "is_visible": "false"
+    },
+    {
+      "name": "pm_stats_cell_reliability_hourly",
+      "alias": "cell_guid",
+      "expression": "count(counters_cell.fdn) FROM pm_stats://counters_cell",
+      "object_type": "INTEGER",
+      "calculation_frequency": "0 30 0/1 * * ? *",
+      "aggregation_type": "SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "counters_cell.guid",
+        "counters_cell.oss_id",
+        "counters_cell.fdn"
+      ],
+      "is_visible": "false"
+    },
+    {
+      "name": "pm_stats_relation_reliability_hourly",
+      "alias": "relation_guid_source_guid_target_guid",
+      "expression": "count(counters_relation.fdn) FROM pm_stats://counters_relation",
+      "object_type": "INTEGER",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "counters_relation.guid",
+        "counters_relation.source_guid",
+        "counters_relation.target_guid",
+        "counters_relation.oss_id",
+        "counters_relation.fdn"
+      ],
+      "is_visible": "false"
+    },
+    {
+      "name": "out_succ_ho_hourly",
+      "alias": "relation_guid_source_guid_target_guid",
+      "expression": "SUM(counters_relation.pmHoExeSuccLteInterF) + SUM(counters_relation.pmHoExeSuccLteIntraF) FROM pm_stats://counters_relation",
+      "object_type": "INTEGER",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "counters_relation.guid",
+        "counters_relation.source_guid",
+        "counters_relation.target_guid",
+        "counters_relation.oss_id",
+        "counters_relation.fdn"
+      ],
+      "is_visible": "true"
+    },
+    {
+      "name": "source_cell_cgi_hourly",
+      "alias": "relation_guid_source_guid_target_guid",
+      "expression": "relation.source_cell_cgi FROM cm://relation",
+      "object_type": "STRING",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "relation.id as guid",
+        "relation.source_cell_id as source_guid",
+        "relation.target_cell_id as target_guid",
+        "relation.oss_id",
+        "relation.fdn"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "cgi_hourly",
+      "alias": "cell_guid",
+      "expression": "cell.cgi FROM cm://cell",
+      "object_type": "STRING",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "cell.id as guid",
+        "cell.oss_id",
+        "cell.fdn"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "cell_succ_ho_hourly",
+      "alias": "cell_guid",
+      "expression": "SUM(relation_guid_source_guid_target_guid.out_succ_ho_hourly) FROM kpi://cell_guid LEFT JOIN kpi://relation_guid_source_guid_target_guid ON cell_guid.cgi_hourly = relation_guid_source_guid_target_guid.source_cell_cgi_hourly AND cell_guid.local_timestamp = relation_guid_source_guid_target_guid.local_timestamp",
+      "object_type": "INTEGER",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "cell_guid.guid",
+        "cell_guid.oss_id",
+        "cell_guid.fdn"
+      ],
+      "is_visible": "true"
+    },
+    {
+      "name": "cell_succ_ho_hourly_intra_f",
+      "alias": "cell_guid",
+      "expression": "SUM(relation_guid_source_guid_target_guid.out_succ_ho_hourly) FROM kpi://cell_guid LEFT JOIN kpi://relation_guid_source_guid_target_guid ON cell_guid.cgi_hourly = relation_guid_source_guid_target_guid.source_cell_cgi_hourly AND cell_guid.local_timestamp = relation_guid_source_guid_target_guid.local_timestamp WHERE relation_guid_source_guid_target_guid.frequency_relation_type = ''INTRA''",
+      "object_type": "INTEGER",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "cell_guid.guid",
+        "cell_guid.oss_id",
+        "cell_guid.fdn"
+      ],
+      "is_visible": "false"
+    },
+    {
+      "name": "num_calls_hourly",
+      "alias": "cell_guid",
+      "expression": "SUM(counters_cell.pmErabEstabSuccInit) FROM pm_stats://counters_cell",
+      "object_type": "INTEGER",
+      "calculation_frequency": "0 30 0/1 * * ? *",
+      "aggregation_type": "SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "counters_cell.guid",
+        "counters_cell.oss_id",
+        "counters_cell.fdn"
+      ],
+      "is_visible": "true"
+    },
+    {
+      "name": "rrc_congestion_rate_numerator",
+      "alias": "cell_guid",
+      "expression": "100 * (SUM(counters_cell.pmRrcConnEstabFailMpOverload) + SUM(counters_cell.pmRrcConnEstabFailDuIntens) + SUM(counters_cell.pmRrcConnEstabFailCellIntensDLC) + SUM(counters_cell.pmRrcConnEstabFailCellIntensStat) + SUM(counters_cell.pmRrcConnEstabFailCellLatency)) FROM pm_stats://counters_cell",
+      "object_type": "INTEGER",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "counters_cell.guid",
+        "counters_cell.oss_id",
+        "counters_cell.fdn"
+      ],
+      "is_visible": "false"
+    },
+    {
+      "name": "rrc_congestion_rate_denominator",
+      "alias": "cell_guid",
+      "expression": "SUM(counters_cell.pmRrcConnEstabAtt) FROM pm_stats://counters_cell",
+      "object_type": "INTEGER",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "counters_cell.guid",
+        "counters_cell.oss_id",
+        "counters_cell.fdn"
+      ],
+      "is_visible": "true"
+    },
+    {
+      "name": "rrc_congestion_rate",
+      "alias": "cell_guid",
+      "expression": "SUM( cell_guid.rrc_congestion_rate_numerator ) / SUM( cell_guid.rrc_congestion_rate_denominator ) FROM kpi_post_agg://cell_guid",
+      "object_type": "FLOAT",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "cell_guid.guid",
+        "cell_guid.oss_id",
+        "cell_guid.fdn"
+      ],
+      "is_visible": "true"
+    },
+    {
+      "name": "source_fdn_hourly",
+      "alias": "relation_guid_source_guid_target_guid",
+      "expression": "cell.fdn FROM cm://relation LEFT JOIN cm://cell ON relation.source_cell_cgi = cell.cgi",
+      "object_type": "TEXT",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "relation.id as guid",
+        "relation.source_cell_id as source_guid",
+        "relation.target_cell_id as target_guid",
+        "relation.oss_id",
+        "relation.fdn"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "frequency_relation_type",
+      "alias": "relation_guid_source_guid_target_guid",
+      "expression": "relation.relationType FROM cm://relation",
+      "object_type": "STRING",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "relation.id as guid",
+        "relation.source_cell_id as source_guid",
+        "relation.target_cell_id as target_guid",
+        "relation.oss_id",
+        "relation.fdn"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "rrc_congestion_rate_neigh",
+      "alias": "cell_guid",
+      "expression": "FIRST(cell_guid.rrc_congestion_rate_neigh_formula_1) FROM kpi_post_agg://cell_guid",
+      "object_type": "FLOAT",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "cell_guid.guid",
+        "cell_guid.oss_id",
+        "cell_guid.fdn"
+      ],
+      "is_visible": "true"
+    },
+    {
+      "name": "target_cell_cgi_hourly",
+      "alias": "relation_guid_source_guid_target_guid",
+      "expression": "relation.target_cell_cgi FROM cm://relation",
+      "object_type": "STRING",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "relation.id as guid",
+        "relation.source_cell_id as source_guid",
+        "relation.target_cell_id as target_guid",
+        "relation.oss_id",
+        "relation.fdn"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "target_cell_rrc_congestion_rate",
+      "alias": "relation_guid_source_guid_target_guid",
+      "expression": "coalesce(FIRST(cell_guid.rrc_congestion_rate), 0.0) FROM kpi_post_agg://relation_guid_source_guid_target_guid LEFT JOIN kpi_post_agg://cell_guid ON relation_guid_source_guid_target_guid.target_cell_cgi_hourly = cell_guid.cgi_hourly",
+      "object_type": "FLOAT",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "relation_guid_source_guid_target_guid.guid",
+        "relation_guid_source_guid_target_guid.oss_id",
+        "relation_guid_source_guid_target_guid.fdn",
+        "relation_guid_source_guid_target_guid.source_guid",
+        "relation_guid_source_guid_target_guid.target_guid"
+      ],
+      "is_visible": "false"
+    },
+    {
+      "name": "rrc_congestion_rate_neigh_formula_1_multiplication",
+      "alias": "relation_guid_source_guid_target_guid",
+      "expression": "SUM(relation_guid_source_guid_target_guid.target_cell_rrc_congestion_rate * relation_guid_source_guid_target_guid.out_succ_ho_hourly) FROM kpi_post_agg://relation_guid_source_guid_target_guid WHERE relation_guid_source_guid_target_guid.frequency_relation_type = ''INTRA''",
+      "object_type": "FLOAT",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "relation_guid_source_guid_target_guid.guid",
+        "relation_guid_source_guid_target_guid.oss_id",
+        "relation_guid_source_guid_target_guid.fdn",
+        "relation_guid_source_guid_target_guid.source_guid",
+        "relation_guid_source_guid_target_guid.target_guid"
+      ],
+      "is_visible": "false"
+    },
+    {
+      "name": "rrc_congestion_rate_neigh_formula_1_numerator",
+      "alias": "cell_guid",
+      "expression": "SUM(relation_guid_source_guid_target_guid.rrc_congestion_rate_neigh_formula_1_multiplication) FROM kpi_post_agg://relation_guid_source_guid_target_guid",
+      "object_type": "FLOAT",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "relation_guid_source_guid_target_guid.source_guid as guid",
+        "relation_guid_source_guid_target_guid.oss_id",
+        "relation_guid_source_guid_target_guid.source_fdn_hourly as fdn"
+      ],
+      "is_visible": "false"
+    },
+    {
+      "name": "rrc_congestion_rate_neigh_formula_1",
+      "alias": "cell_guid",
+      "expression": "FIRST( cell_guid.rrc_congestion_rate_neigh_formula_1_numerator ) / FIRST( cell_guid.cell_succ_ho_hourly_intra_f ) FROM kpi_post_agg://cell_guid",
+      "object_type": "FLOAT",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "cell_guid.guid",
+        "cell_guid.oss_id",
+        "cell_guid.fdn"
+      ],
+      "is_visible": "false"
+    },
+    {
+      "name": "number_of_neighbors_intra_f",
+      "alias": "cell_guid",
+      "expression": "COUNT(relation_guid_source_guid_target_guid.source_cell_cgi_hourly) FROM kpi://relation_guid_source_guid_target_guid WHERE relation_guid_source_guid_target_guid.frequency_relation_type = ''INTRA''",
+      "object_type": "INTEGER",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "relation_guid_source_guid_target_guid.source_guid as guid",
+        "relation_guid_source_guid_target_guid.oss_id",
+        "relation_guid_source_guid_target_guid.source_fdn_hourly as fdn"
+      ],
+      "is_visible": false
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+testCaseId,cm_collection_definition_file,cm_collection_name
+SONP-37761_VerifyCommon,CmCollectionOne.json,ecson-trxpoint-filter-group
+SONP-37761_VerifyCommon,CmCollectionSonMediation.json,son-mediation
+SONP-37761_VerifyCommon,CmCollectionTwo.json,ecson-cell-filter-group

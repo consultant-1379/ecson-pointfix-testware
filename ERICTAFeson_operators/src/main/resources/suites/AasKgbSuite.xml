@@ -1,0 +1,28 @@
+<suite name="eSON AAS KGB Tests" verbose="2">
+    Reset Environment
+    <test name="Truncate relevant tables">
+        <classes>
+            <class name="com.ericsson.oss.services.eson.test.cases.aas.test.ResetEnvironmentAasTest"/>
+        </classes>
+    </test>
+
+    TAF users verification
+    <test name="Verify TAF users.">
+        <classes>
+            <class name="com.ericsson.oss.services.eson.test.teststeps.VerifyTAFUsersTestSteps"/>
+        </classes>
+    </test>
+
+    Verify client
+    <test name="Verify client.">
+        <classes>
+            <class name="com.ericsson.oss.services.eson.test.cases.authorization.InitClient"/>
+        </classes>
+    </test>
+
+    <test name="Verify AAS Algorithm.">
+        <classes>
+            <class name="com.ericsson.oss.services.eson.test.cases.aas.test.VerifyAas"/>
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,81 @@
+{
+  "source": "TEST",
+  "elements": [
+    {
+      "name": "cell",
+      "attributes": [
+        "administrativeState",
+        "areaCode",
+        "carrier",
+        "cellBarred",
+        "cellType",
+        "cgi",
+        "eci",
+        "name",
+        "pci",
+        "technologyId",
+        "timezone",
+        "vendorId",
+        "idleModePrioAtReleaseRef"
+      ]
+    },
+    {
+      "name": "node",
+      "attributes": [
+        "identity",
+        "name",
+        "nodeId",
+        "plmn",
+        "timezone"
+      ]
+    },
+    {
+      "name": "relation",
+      "attributes": [
+        "relationType",
+        "source_cell_id",
+        "source_cell_cgi",
+        "target_cell_id",
+        "target_cell_cgi"
+      ]
+    },
+    {
+      "name": "ret",
+      "attributes": [
+        "electricalAntennaTilt",
+        "maxElectricalTilt",
+        "maxTotalTilt",
+        "mechanicalAntennaTilt",
+        "minElectricalTilt",
+        "minTotalTilt",
+        "name"
+      ]
+    },
+    {
+      "name": "trxpoint",
+      "attributes": [
+        "altitude",
+        "azimuth",
+        "mechanicalTilt",
+        "latitude",
+        "longitude"
+      ]
+    },
+    {
+      "name": "idlemodeprioatrelease",
+      "attributes": [
+        "reservedBy",
+        "highLoadDistributionInfo",
+        "highLoadThreshold",
+        "lowLoadDistributionInfo",
+        "lowLoadThreshold",
+        "lowMediumLoadDistributionInfo",
+        "lowMediumLoadThreshold",
+        "mediumHighLoadDistributionInfo",
+        "mediumHighLoadThreshold",
+        "mediumLoadDistributionInfo",
+        "mediumLoadThreshold"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+<suite name="eSON KGB Tests" verbose="2">
+
+    <!-- Reset Environment -->
+    <test name="Truncate relevant tables">
+        <classes>
+            <class name="com.ericsson.oss.services.eson.test.cases.flm.ResetEnvironmentFlm"/>
+        </classes>
+    </test>
+    
+    <!-- TAF users verification -->
+    <test name="Verify TAF users.">
+        <classes>
+            <class name="com.ericsson.oss.services.eson.test.teststeps.VerifyTAFUsersTestSteps"/>
+        </classes>
+    </test>
+
+    <!-- Verify client -->
+    <test name="Verify client.">
+        <classes>
+            <class name="com.ericsson.oss.services.eson.test.cases.authorization.InitClient"/>
+        </classes>
+    </test>
+
+    <test name="Verify REST End Points Are Available.">
+        <classes>
+            <class name="com.ericsson.oss.services.eson.test.cases.common.VerifyCommonRestEndPointsAvailable"/>
+        </classes>
+    </test>
+
+    <!-- Authorization Verification -->
+    <test name="Verify authorization.">
+        <classes>
+            <class name="com.ericsson.oss.services.eson.test.cases.authorization.VerifyUserRoles"/>
+        </classes>
+    </test>
+
+    <!-- Reset Environment -->
+    <test name="Truncate relevant FLM tables">
+        <classes>
+            <class name="com.ericsson.oss.services.eson.test.cases.flm.ResetEnvironmentFlm"/>
+        </classes>
+    </test>
+
+    <!-- Installation Verification -->
+    <test name="Verify deployment of FLM SON OM Software.">
+        <classes>
+            <class name="com.ericsson.oss.services.eson.test.cases.flm.VerifyFlmSuccessfulInstallation"/>
+        </classes>
+    </test>
+
+    <test name="Verify FLM Algorithm.">
+        <classes>
+            <class name="com.ericsson.oss.services.eson.test.cases.flm.ScheduleFlmAndVerifyExecution"/>
+        </classes>
+    </test>
+
+</suite>

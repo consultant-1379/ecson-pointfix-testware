@@ -1,0 +1,2 @@
+db_connection_details,db_tables,db_table_count_values,polling_timeout,external_view_service_name
+kpi_service_db;kpi_exporter;5432;eric-pm-kpi-calculator-exporter-secret,cell_guid_1440_kpis;cell_guid_60_kpis,3832;5305,20,eric-tcp-traffic-forward-kpi

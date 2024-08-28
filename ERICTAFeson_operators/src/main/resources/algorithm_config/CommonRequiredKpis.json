@@ -1,0 +1,381 @@
+{
+  "source": "TEST",
+  "kpi_definitions": [
+    {
+      "name": "pm_stats_cell_reliability_daily",
+      "alias": "cell_guid",
+      "expression": "count(counters_cell.guid) FROM pm_stats://counters_cell",
+      "object_type": "INTEGER",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "counters_cell.guid"
+      ],
+      "is_visible": "false"
+    },
+    {
+      "name": "pm_events_cell_reliability_daily",
+      "alias": "cell_guid",
+      "expression": "count(synthetic_counters_cell.guid) FROM pm_events://synthetic_counters_cell",
+      "object_type": "INTEGER",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "synthetic_counters_cell.guid"
+      ],
+      "is_visible": "false"
+    },
+    {
+      "name": "pm_stats_relation_reliability_daily",
+      "alias": "relation_guid_source_guid_target_guid",
+      "expression": "count(counters_relation.guid) FROM pm_stats://counters_relation",
+      "object_type": "INTEGER",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "counters_relation.guid",
+        "counters_relation.source_guid",
+        "counters_relation.target_guid"
+      ],
+      "is_visible": "false"
+    },
+    {
+      "name": "pm_events_relation_reliability_daily",
+      "alias": "relation_guid_source_guid_target_guid",
+      "expression": "count(synthetic_counters_relation.guid) FROM pm_events://synthetic_counters_relation",
+      "object_type": "INTEGER",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "synthetic_counters_relation.guid",
+        "synthetic_counters_relation.source_guid",
+        "synthetic_counters_relation.target_guid"
+      ],
+      "is_visible": "false"
+    },
+    {
+      "name": "num_calls_daily",
+      "alias": "cell_guid",
+      "expression": "counters_cell.pmErabEstabSuccInit FROM pm_stats://counters_cell",
+      "object_type": "INTEGER",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "counters_cell.guid"
+      ],
+      "is_visible": "true"
+    },
+    {
+      "name": "cell_succ_ho_daily",
+      "alias": "cell_guid",
+      "expression": "relation_guid_source_guid_target_guid.out_succ_ho_daily FROM kpi://cell_guid LEFT JOIN kpi://relation_guid_source_guid_target_guid ON cell_guid.guid = relation_guid_source_guid_target_guid.source_guid AND cell_guid.local_timestamp = relation_guid_source_guid_target_guid.local_timestamp",
+      "object_type": "INTEGER",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "cell_guid.guid"
+      ],
+      "is_visible": "true"
+    },
+    {
+      "name": "out_succ_ho_daily",
+      "alias": "relation_guid_source_guid_target_guid",
+      "expression": "counters_relation.pmHoExeSuccLteInterF + counters_relation.pmHoExeSuccLteIntraF FROM pm_stats://counters_relation",
+      "object_type": "INTEGER",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "counters_relation.guid",
+        "counters_relation.source_guid",
+        "counters_relation.target_guid"
+      ],
+      "is_visible": "true"
+    },
+    {
+      "name": "num_samples_rsrp",
+      "alias": "cell_guid",
+      "expression": "synthetic_counters_cell.ctrNumSamplesRsrp FROM pm_events://synthetic_counters_cell",
+      "object_type": "INTEGER",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "synthetic_counters_cell.guid"
+      ],
+      "is_visible": "true"
+    },
+    {
+      "name": "num_samples_rsrp_ta",
+      "alias": "cell_guid",
+      "expression": "synthetic_counters_cell.ctrNumSamplesRsrpTa FROM pm_events://synthetic_counters_cell",
+      "object_type": "INTEGER[129]",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "ARRAY_INDEX_SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "synthetic_counters_cell.guid"
+      ],
+      "is_visible": "true"
+    },
+    {
+      "name": "adj_num_times_first_adj",
+      "alias": "relation_guid_source_guid_target_guid",
+      "expression": "synthetic_counters_relation.ctrNeighborNumTimesFirstNeighbor FROM pm_events://synthetic_counters_relation",
+      "object_type": "INTEGER",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "synthetic_counters_relation.guid",
+        "synthetic_counters_relation.source_guid",
+        "synthetic_counters_relation.target_guid"
+      ],
+      "is_visible": "true"
+    },
+    {
+      "name": "pm_stats_cell_reliability_hourly",
+      "alias": "cell_guid",
+      "expression": "count(counters_cell.guid) FROM pm_stats://counters_cell",
+      "object_type": "INTEGER",
+      "calculation_frequency": "0 0 0/1 * * ? *",
+      "aggregation_type": "SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "counters_cell.guid"
+      ],
+      "is_visible": "false"
+    },
+    {
+      "name": "pm_stats_relation_reliability_hourly",
+      "alias": "relation_guid_source_guid_target_guid",
+      "expression": "count(counters_relation.guid) FROM pm_stats://counters_relation",
+      "object_type": "INTEGER",
+      "calculation_frequency": "0 0 0/1 * * ? *",
+      "aggregation_type": "SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "counters_relation.guid",
+        "counters_relation.source_guid",
+        "counters_relation.target_guid"
+      ],
+      "is_visible": "false"
+    },
+    {
+      "name": "out_succ_ho_hourly",
+      "alias": "relation_guid_source_guid_target_guid",
+      "expression": "counters_relation.pmHoExeSuccLteInterF + counters_relation.pmHoExeSuccLteIntraF FROM pm_stats://counters_relation",
+      "object_type": "INTEGER",
+      "calculation_frequency": "0 0 0/1 * * ? *",
+      "aggregation_type": "SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "counters_relation.guid",
+        "counters_relation.source_guid",
+        "counters_relation.target_guid"
+      ],
+      "is_visible": "true"
+    },
+    {
+      "name": "cell_succ_ho_hourly",
+      "alias": "cell_guid",
+      "expression": "relation_guid_source_guid_target_guid.out_succ_ho_hourly FROM kpi://cell_guid LEFT JOIN kpi://relation_guid_source_guid_target_guid ON cell_guid.guid = relation_guid_source_guid_target_guid.source_guid AND cell_guid.local_timestamp = relation_guid_source_guid_target_guid.local_timestamp",
+      "object_type": "INTEGER",
+      "calculation_frequency": "0 0 0/1 * * ? *",
+      "aggregation_type": "SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "cell_guid.guid"
+      ],
+      "is_visible": "true"
+    },
+    {
+      "name": "num_calls_hourly",
+      "alias": "cell_guid",
+      "expression": "counters_cell.pmErabEstabSuccInit FROM pm_stats://counters_cell",
+      "object_type": "INTEGER",
+      "calculation_frequency": "0 0 0/1 * * ? *",
+      "aggregation_type": "SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "counters_cell.guid"
+      ],
+      "is_visible": "true"
+    },
+    {
+      "name": "rrc_congestion_rate_numerator",
+      "alias": "cell_guid",
+      "expression": "100 * (counters_cell.pmRrcConnEstabFailMpOverload + counters_cell.pmRrcConnEstabFailDuIntens + counters_cell.pmRrcConnEstabFailCellIntensDLC + counters_cell.pmRrcConnEstabFailCellIntensStat + counters_cell.pmRrcConnEstabFailCellLatency) FROM pm_stats://counters_cell",
+      "object_type": "INTEGER",
+      "calculation_frequency": "0 0 0/1 * * ? *",
+      "aggregation_type": "SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "counters_cell.guid"
+      ],
+      "is_visible": "true"
+    },
+    {
+      "name": "rrc_congestion_rate_denominator",
+      "alias": "cell_guid",
+      "expression": "counters_cell.pmRrcConnEstabAtt FROM pm_stats://counters_cell",
+      "object_type": "INTEGER",
+      "calculation_frequency": "0 0 0/1 * * ? *",
+      "aggregation_type": "SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "counters_cell.guid"
+      ],
+      "is_visible": "true"
+    },
+    {
+      "name": "rrc_congestion_rate",
+      "alias": "cell_guid",
+      "expression": "cell_guid.rrc_congestion_rate_numerator / cell_guid.rrc_congestion_rate_denominator FROM kpi://cell_guid",
+      "object_type": "FLOAT",
+      "calculation_frequency": "0 0 0/1 * * ? *",
+      "aggregation_type": "SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "cell_guid.guid"
+      ],
+      "is_visible": "true"
+    },
+    {
+      "name": "rrc_congestion_rate_neigh",
+      "alias": "cell_guid",
+      "expression": "(cell_guid.rrc_congestion_rate * relation_guid_source_guid_target_guid.out_succ_ho_hourly) / cell_guid.cell_succ_ho_hourly FROM kpi://cell_guid LEFT JOIN kpi://relation_guid_source_guid_target_guid ON cell_guid.guid = relation_guid_source_guid_target_guid.source_guid AND cell_guid.local_timestamp = relation_guid_source_guid_target_guid.local_timestamp",
+      "object_type": "FLOAT",
+      "calculation_frequency": "0 0 0/1 * * ? *",
+      "aggregation_type": "SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "cell_guid.guid"
+      ],
+      "is_visible": "true"
+    },
+    {
+      "name": "intra_site",
+      "alias": "relation_guid_source_guid_target_guid",
+      "expression": "relation.intraSite FROM cm://relation",
+      "object_type": "BOOLEAN",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "relation.id as guid",
+        "relation.source_cell_id as source_guid",
+        "relation.target_cell_id as target_guid"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "out_succ_ho_intraf",
+      "alias": "relation_guid_source_guid_target_guid",
+      "expression": "counters_relation.pmHoExeSuccLteIntraF FROM pm_stats://counters_relation",
+      "object_type": "INTEGER",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "counters_relation.guid",
+        "counters_relation.source_guid",
+        "counters_relation.target_guid"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "out_succ_ho_interf",
+      "alias": "relation_guid_source_guid_target_guid",
+      "expression": "counters_relation.pmHoExeSuccLteInterF FROM pm_stats://counters_relation",
+      "object_type": "INTEGER",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "counters_relation.guid",
+        "counters_relation.source_guid",
+        "counters_relation.target_guid"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "pm_cell_downtime_auto_daily",
+      "alias": "cell_guid",
+      "expression": "counters_cell.pmCellDowntimeAuto FROM pm_stats://counters_cell",
+      "object_type": "INTEGER",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "counters_cell.guid"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "pm_cell_downtime_man_daily",
+      "alias": "cell_guid",
+      "expression": "counters_cell.pmCellDowntimeMan FROM pm_stats://counters_cell",
+      "object_type": "INTEGER",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "counters_cell.guid"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "contiguity",
+      "alias": "cell_guid",
+      "expression": "100 * (kpi_relation_guid_source_guid_target_guid_1440.out_succ_ho_intraf) / (kpi_relation_guid_source_guid_target_guid_1440.out_succ_ho_intraf + kpi_relation_guid_source_guid_target_guid_1440.out_succ_ho_interf) FROM kpi_db://kpi_relation_guid_source_guid_target_guid_1440",
+      "object_type": "FLOAT",
+      "calculation_frequency": "0 0 1 * * ? *",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "filter": [
+        "kpi_db://kpi_relation_guid_source_guid_target_guid_1440.local_timestamp = TO_TIMESTAMP(1593993600)",
+        "kpi_db://kpi_relation_guid_source_guid_target_guid_1440.intra_site = false OR intra_site IS NULL"
+      ],
+      "aggregation_elements": [
+        "kpi_relation_guid_source_guid_target_guid_1440.source_guid as guid"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "num_samples_ta",
+      "alias": "cell_guid",
+      "expression": "synthetic_counters_cell.ctrNumSamplesTa FROM pm_events://synthetic_counters_cell",
+      "object_type": "INTEGER[129]",
+      "calculation_frequency": "0 0/15 * * * ? *",
+      "aggregation_type": "ARRAY_INDEX_SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "synthetic_counters_cell.guid"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "cell_availability",
+      "alias": "cell_guid",
+      "expression": "100 * (96 * 900 - kpi_cell_guid_1440.pm_cell_downtime_auto_daily - kpi_cell_guid_1440.pm_cell_downtime_man_daily) / (96 * 900) FROM kpi_db://kpi_cell_guid_1440",
+      "object_type": "FLOAT",
+      "calculation_frequency": "0 0 1 * * ? *",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "kpi_cell_guid_1440.guid"
+      ],
+      "filter": [
+        "kpi_db://kpi_cell_guid_1440.local_timestamp = TO_TIMESTAMP(DATE_SUB(CURRENT_DATE(),1))"
+      ],
+      "is_visible": false
+    }
+  ]
+}

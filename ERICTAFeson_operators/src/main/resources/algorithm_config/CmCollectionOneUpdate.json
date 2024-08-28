@@ -1,0 +1,9 @@
+{
+  "id": 1,
+  "collectionName": "ecson-trxpoint-filter-group",
+  "topologyType": "trxpoint",
+  "criteria": [
+    "azimuth=gt=70",
+    "latitude==73.4258990858764"
+  ]
+}

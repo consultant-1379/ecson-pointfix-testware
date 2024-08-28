@@ -1,0 +1,1045 @@
+[{
+    "proposedChanges": [
+      {
+        "ossId": 1,
+        "objectType": "ret",
+        "nodeType": "radionode",
+        "guid": 949,
+        "fdn": "SubNetwork=ONRM_ROOT_MO,SubNetwork=MKT_054,MeContext=054598_WINTER_GARDENS,ManagedElement=054598_WINTER_GARDENS,Equipment=1,AntennaUnitGroup=24,AntennaNearUnit=1,RetSubUnit=1",
+        "operationType": "MODIFY",
+        "parameterChanges": [
+          {
+            "parameterName": "electricalAntennaTilt",
+            "parameterValue": "10.0"
+          }
+        ]
+      },
+      {
+        "ossId": 1,
+        "objectType": "ret",
+        "nodeType": "radionode",
+        "guid": 946,
+        "fdn": "SubNetwork=ONRM_ROOT_MO,SubNetwork=MKT_054,MeContext=054598_WINTER_GARDENS,ManagedElement=054598_WINTER_GARDENS,Equipment=1,AntennaUnitGroup=22,AntennaNearUnit=1,RetSubUnit=1",
+        "operationType": "MODIFY",
+        "parameterChanges": [
+          {
+            "parameterName": "electricalAntennaTilt",
+            "parameterValue": "10.0"
+          }
+        ]
+      }
+    ],
+    "id": 26,
+    "executionId": "RET_1585148340088",
+    "sourceOfChange": "alg_RET_1",
+    "status": "PENDING_APPROVAL",
+    "modifiedBy": "alg_RET_1",
+    "lastModified": 1585149026395
+  },
+  {
+    "proposedChanges": [
+      {
+        "ossId": 1,
+        "objectType": "ret",
+        "nodeType": "radionode",
+        "guid": 1956,
+        "fdn": "SubNetwork=ONRM_ROOT_MO,SubNetwork=MKT_054,MeContext=054158_VIVIENDA,ManagedElement=054158_VIVIENDA,Equipment=1,AntennaUnitGroup=22,AntennaNearUnit=6,RetSubUnit=2",
+        "operationType": "MODIFY",
+        "parameterChanges": [
+          {
+            "parameterName": "electricalAntennaTilt",
+            "parameterValue": "1.0"
+          }
+        ]
+      }
+    ],
+    "id": 27,
+    "executionId": "RET_1585148340088",
+    "sourceOfChange": "alg_RET_1",
+    "status": "PENDING_APPROVAL",
+    "modifiedBy": "alg_RET_1",
+    "lastModified": 1585149026691
+  },
+  {
+    "proposedChanges": [
+      {
+        "ossId": 1,
+        "objectType": "ret",
+        "nodeType": "erbs",
+        "guid": 544,
+        "fdn": "SubNetwork=ONRM_ROOT_MO,SubNetwork=MKT_054,MeContext=054862_76_FRAZEE,ManagedElement=1,Equipment=1,AntennaUnitGroup=14,AntennaNearUnit=1,RetSubUnit=1",
+        "operationType": "MODIFY",
+        "parameterChanges": [
+          {
+            "parameterName": "electricalAntennaTilt",
+            "parameterValue": "1.0"
+          }
+        ]
+      }
+    ],
+    "id": 1,
+    "executionId": "RET_1585148340088",
+    "sourceOfChange": "alg_RET_1",
+    "status": "PENDING_APPROVAL",
+    "modifiedBy": "CAS",
+    "lastModified": 1585149036727
+  },
+  {
+    "proposedChanges": [
+      {
+        "ossId": 1,
+        "objectType": "ret",
+        "nodeType": "erbs",
+        "guid": 3633,
+        "fdn": "SubNetwork=ONRM_ROOT_MO,SubNetwork=MKT_054,MeContext=054996_CARLSBAD_VILLAGE,ManagedElement=1,Equipment=1,AntennaUnitGroup=34,AntennaNearUnit=1,RetSubUnit=1",
+        "operationType": "MODIFY",
+        "parameterChanges": [
+          {
+            "parameterName": "electricalAntennaTilt",
+            "parameterValue": "1.0"
+          }
+        ]
+      },
+      {
+        "ossId": 1,
+        "objectType": "ret",
+        "nodeType": "erbs",
+        "guid": 3635,
+        "fdn": "SubNetwork=ONRM_ROOT_MO,SubNetwork=MKT_054,MeContext=054996_CARLSBAD_VILLAGE,ManagedElement=1,Equipment=1,AntennaUnitGroup=31,AntennaNearUnit=1,RetSubUnit=1",
+        "operationType": "MODIFY",
+        "parameterChanges": [
+          {
+            "parameterName": "electricalAntennaTilt",
+            "parameterValue": "1.0"
+          }
+        ]
+      }
+    ],
+    "id": 28,
+    "executionId": "RET_1585148340088",
+    "sourceOfChange": "alg_RET_1",
+    "status": "PENDING_APPROVAL",
+    "modifiedBy": "alg_RET_1",
+    "lastModified": 1585149028279
+  },
+  {
+    "proposedChanges": [
+      {
+        "ossId": 1,
+        "objectType": "ret",
+        "nodeType": "erbs",
+        "guid": 3703,
+        "fdn": "SubNetwork=ONRM_ROOT_MO,SubNetwork=MKT_054,MeContext=054175_TWIN_OAKS,ManagedElement=1,Equipment=1,AntennaUnitGroup=5,AntennaNearUnit=2,RetSubUnit=1",
+        "operationType": "MODIFY",
+        "parameterChanges": [
+          {
+            "parameterName": "electricalAntennaTilt",
+            "parameterValue": "1.0"
+          }
+        ]
+      }
+    ],
+    "id": 29,
+    "executionId": "RET_1585148340088",
+    "sourceOfChange": "alg_RET_1",
+    "status": "PENDING_APPROVAL",
+    "modifiedBy": "alg_RET_1",
+    "lastModified": 1585149028375
+  },
+  {
+    "proposedChanges": [
+      {
+        "ossId": 1,
+        "objectType": "ret",
+        "nodeType": "radionode",
+        "guid": 4243,
+        "fdn": "SubNetwork=ONRM_ROOT_MO,SubNetwork=MKT_054,MeContext=054487_COAST_RR,ManagedElement=054487_COAST_RR,Equipment=1,AntennaUnitGroup=31,AntennaNearUnit=4,RetSubUnit=1",
+        "operationType": "MODIFY",
+        "parameterChanges": [
+          {
+            "parameterName": "electricalAntennaTilt",
+            "parameterValue": "1.0"
+          }
+        ]
+      },
+      {
+        "ossId": 1,
+        "objectType": "ret",
+        "nodeType": "radionode",
+        "guid": 4245,
+        "fdn": "SubNetwork=ONRM_ROOT_MO,SubNetwork=MKT_054,MeContext=054487_COAST_RR,ManagedElement=054487_COAST_RR,Equipment=1,AntennaUnitGroup=31,AntennaNearUnit=5,RetSubUnit=1",
+        "operationType": "MODIFY",
+        "parameterChanges": [
+          {
+            "parameterName": "electricalAntennaTilt",
+            "parameterValue": "1.0"
+          }
+        ]
+      }
+    ],
+    "id": 30,
+    "executionId": "RET_1585148340088",
+    "sourceOfChange": "alg_RET_1",
+    "status": "PENDING_APPROVAL",
+    "modifiedBy": "alg_RET_1",
+    "lastModified": 1585149028670
+  },
+  {
+    "proposedChanges": [
+      {
+        "ossId": 1,
+        "objectType": "ret",
+        "nodeType": "erbs",
+        "guid": 4913,
+        "fdn": "SubNetwork=ONRM_ROOT_MO,SubNetwork=MKT_054,MeContext=054602_BALLENA_WHALES,ManagedElement=1,Equipment=1,AntennaUnitGroup=22,AntennaNearUnit=1,RetSubUnit=2",
+        "operationType": "MODIFY",
+        "parameterChanges": [
+          {
+            "parameterName": "electricalAntennaTilt",
+            "parameterValue": "1.0"
+          }
+        ]
+      }
+    ],
+    "id": 31,
+    "executionId": "RET_1585148340088",
+    "sourceOfChange": "alg_RET_1",
+    "status": "PENDING_APPROVAL",
+    "modifiedBy": "alg_RET_1",
+    "lastModified": 1585149028874
+  },
+  {
+    "proposedChanges": [
+      {
+        "ossId": 1,
+        "objectType": "ret",
+        "nodeType": "erbs",
+        "guid": 1163,
+        "fdn": "SubNetwork=ONRM_ROOT_MO,SubNetwork=MKT_054,MeContext=054864_SUNSET_BUENA_VISTA,ManagedElement=1,Equipment=1,AntennaUnitGroup=5,AntennaNearUnit=4,RetSubUnit=1",
+        "operationType": "MODIFY",
+        "parameterChanges": [
+          {
+            "parameterName": "electricalAntennaTilt",
+            "parameterValue": "1.0"
+          }
+        ]
+      }
+    ],
+    "id": 32,
+    "executionId": "RET_1585148340088",
+    "sourceOfChange": "alg_RET_1",
+    "status": "PENDING_APPROVAL",
+    "modifiedBy": "alg_RET_1",
+    "lastModified": 1585149029462
+  },
+  {
+    "proposedChanges": [
+      {
+        "ossId": 1,
+        "objectType": "ret",
+        "nodeType": "radionode",
+        "guid": 4250,
+        "fdn": "SubNetwork=ONRM_ROOT_MO,SubNetwork=MKT_054,MeContext=054487_COAST_RR,ManagedElement=054487_COAST_RR,Equipment=1,AntennaUnitGroup=31,AntennaNearUnit=2,RetSubUnit=1",
+        "operationType": "MODIFY",
+        "parameterChanges": [
+          {
+            "parameterName": "electricalAntennaTilt",
+            "parameterValue": "1.0"
+          }
+        ]
+      },
+      {
+        "ossId": 1,
+        "objectType": "ret",
+        "nodeType": "radionode",
+        "guid": 4252,
+        "fdn": "SubNetwork=ONRM_ROOT_MO,SubNetwork=MKT_054,MeContext=054487_COAST_RR,ManagedElement=054487_COAST_RR,Equipment=1,AntennaUnitGroup=31,AntennaNearUnit=6,RetSubUnit=1",
+        "operationType": "MODIFY",
+        "parameterChanges": [
+          {
+            "parameterName": "electricalAntennaTilt",
+            "parameterValue": "1.0"
+          }
+        ]
+      }
+    ],
+    "id": 33,
+    "executionId": "RET_1585148340088",
+    "sourceOfChange": "alg_RET_1",
+    "status": "PENDING_APPROVAL",
+    "modifiedBy": "alg_RET_1",
+    "lastModified": 1585149030492
+  },
+  {
+    "proposedChanges": [
+      {
+        "ossId": 1,
+        "objectType": "ret",
+        "nodeType": "erbs",
+        "guid": 2235,
+        "fdn": "SubNetwork=ONRM_ROOT_MO,SubNetwork=MKT_054,MeContext=054499_KUMEYAAY,ManagedElement=1,Equipment=1,AntennaUnitGroup=31,AntennaNearUnit=4,RetSubUnit=1",
+        "operationType": "MODIFY",
+        "parameterChanges": [
+          {
+            "parameterName": "electricalAntennaTilt",
+            "parameterValue": "1.0"
+          }
+        ]
+      },
+      {
+        "ossId": 1,
+        "objectType": "ret",
+        "nodeType": "erbs",
+        "guid": 2261,
+        "fdn": "SubNetwork=ONRM_ROOT_MO,SubNetwork=MKT_054,MeContext=054499_KUMEYAAY,ManagedElement=1,Equipment=1,AntennaUnitGroup=31,AntennaNearUnit=1,RetSubUnit=1",
+        "operationType": "MODIFY",
+        "parameterChanges": [
+          {
+            "parameterName": "electricalAntennaTilt",
+            "parameterValue": "1.0"
+          }
+        ]
+      },
+      {
+        "ossId": 1,
+        "objectType": "ret",
+        "nodeType": "erbs",
+        "guid": 2252,
+        "fdn": "SubNetwork=ONRM_ROOT_MO,SubNetwork=MKT_054,MeContext=054499_KUMEYAAY,ManagedElement=1,Equipment=1,AntennaUnitGroup=21,AntennaNearUnit=4,RetSubUnit=1",
+        "operationType": "MODIFY",
+        "parameterChanges": [
+          {
+            "parameterName": "electricalAntennaTilt",
+            "parameterValue": "1.0"
+          }
+        ]
+      }
+    ],
+    "id": 2,
+    "executionId": "RET_1585148340088",
+    "sourceOfChange": "alg_RET_1",
+    "status": "PENDING_APPROVAL",
+    "modifiedBy": "CAS",
+    "lastModified": 1585149036727
+  },
+  {
+    "proposedChanges": [
+      {
+        "ossId": 1,
+        "objectType": "ret",
+        "nodeType": "erbs",
+        "guid": 1502,
+        "fdn": "SubNetwork=ONRM_ROOT_MO,SubNetwork=MKT_054,MeContext=054190_NORTH_RAMONA,ManagedElement=1,Equipment=1,AntennaUnitGroup=12,AntennaNearUnit=1,RetSubUnit=2",
+        "operationType": "MODIFY",
+        "parameterChanges": [
+          {
+            "parameterName": "electricalAntennaTilt",
+            "parameterValue": "1.0"
+          }
+        ]
+      }
+    ],
+    "id": 3,
+    "executionId": "RET_1585148340088",
+    "sourceOfChange": "alg_RET_1",
+    "status": "PENDING_APPROVAL",
+    "modifiedBy": "CAS",
+    "lastModified": 1585149036727
+  },
+  {
+    "proposedChanges": [
+      {
+        "ossId": 1,
+        "objectType": "ret",
+        "nodeType": "radionode",
+        "guid": 1972,
+        "fdn": "SubNetwork=ONRM_ROOT_MO,SubNetwork=MKT_054,MeContext=054158_VIVIENDA,ManagedElement=054158_VIVIENDA,Equipment=1,AntennaUnitGroup=34,AntennaNearUnit=1,RetSubUnit=2",
+        "operationType": "MODIFY",
+        "parameterChanges": [
+          {
+            "parameterName": "electricalAntennaTilt",
+            "parameterValue": "1.0"
+          }
+        ]
+      }
+    ],
+    "id": 4,
+    "executionId": "RET_1585148340088",
+    "sourceOfChange": "alg_RET_1",
+    "status": "PENDING_APPROVAL",
+    "modifiedBy": "CAS",
+    "lastModified": 1585149036727
+  },
+  {
+    "proposedChanges": [
+      {
+        "ossId": 1,
+        "objectType": "ret",
+        "nodeType": "erbs",
+        "guid": 1430,
+        "fdn": "SubNetwork=ONRM_ROOT_MO,SubNetwork=MKT_054,MeContext=054180_CLOUDCREST,ManagedElement=1,Equipment=1,AntennaUnitGroup=2,AntennaNearUnit=1,RetSubUnit=1",
+        "operationType": "MODIFY",
+        "parameterChanges": [
+          {
+            "parameterName": "electricalAntennaTilt",
+            "parameterValue": "1.0"
+          }
+        ]
+      },
+      {
+        "ossId": 1,
+        "objectType": "ret",
+        "nodeType": "erbs",
+        "guid": 1444,
+        "fdn": "SubNetwork=ONRM_ROOT_MO,SubNetwork=MKT_054,MeContext=054180_CLOUDCREST,ManagedElement=1,Equipment=1,AntennaUnitGroup=2,AntennaNearUnit=2,RetSubUnit=1",
+        "operationType": "MODIFY",
+        "parameterChanges": [
+          {
+            "parameterName": "electricalAntennaTilt",
+            "parameterValue": "1.0"
+          }
+        ]
+      }
+    ],
+    "id": 5,
+    "executionId": "RET_1585148340088",
+    "sourceOfChange": "alg_RET_1",
+    "status": "PENDING_APPROVAL",
+    "modifiedBy": "CAS",
+    "lastModified": 1585149036727
+  },
+  {
+    "proposedChanges": [
+      {
+        "ossId": 1,
+        "objectType": "ret",
+        "nodeType": "erbs",
+        "guid": 1600,
+        "fdn": "SubNetwork=ONRM_ROOT_MO,SubNetwork=MKT_054,MeContext=054200_BIRMINGHAM,ManagedElement=1,Equipment=1,AntennaUnitGroup=3,AntennaNearUnit=4,RetSubUnit=1",
+        "operationType": "MODIFY",
+        "parameterChanges": [
+          {
+            "parameterName": "electricalAntennaTilt",
+            "parameterValue": "1.0"
+          }
+        ]
+      }
+    ],
+    "id": 6,
+    "executionId": "RET_1585148340088",
+    "sourceOfChange": "alg_RET_1",
+    "status": "PENDING_APPROVAL",
+    "modifiedBy": "CAS",
+    "lastModified": 1585149036727
+  },
+  {
+    "proposedChanges": [
+      {
+        "ossId": 1,
+        "objectType": "ret",
+        "nodeType": "radionode",
+        "guid": 903,
+        "fdn": "SubNetwork=ONRM_ROOT_MO,SubNetwork=MKT_054,MeContext=054131_BASSMORE,ManagedElement=054131_BASSMORE,Equipment=1,AntennaUnitGroup=14,AntennaNearUnit=2,RetSubUnit=2",
+        "operationType": "MODIFY",
+        "parameterChanges": [
+          {
+            "parameterName": "electricalAntennaTilt",
+            "parameterValue": "1.0"
+          }
+        ]
+      }
+    ],
+    "id": 7,
+    "executionId": "RET_1585148340088",
+    "sourceOfChange": "alg_RET_1",
+    "status": "PENDING_APPROVAL",
+    "modifiedBy": "CAS",
+    "lastModified": 1585149036727
+  },
+  {
+    "proposedChanges": [
+      {
+        "ossId": 1,
+        "objectType": "ret",
+        "nodeType": "erbs",
+        "guid": 101,
+        "fdn": "SubNetwork=ONRM_ROOT_MO,SubNetwork=MKT_054,MeContext=054156_EL_CAMINO_AND_LA_COSTA,ManagedElement=1,Equipment=1,AntennaUnitGroup=22,AntennaNearUnit=2,RetSubUnit=1",
+        "operationType": "MODIFY",
+        "parameterChanges": [
+          {
+            "parameterName": "electricalAntennaTilt",
+            "parameterValue": "1.0"
+          }
+        ]
+      },
+      {
+        "ossId": 1,
+        "objectType": "ret",
+        "nodeType": "erbs",
+        "guid": 143,
+        "fdn": "SubNetwork=ONRM_ROOT_MO,SubNetwork=MKT_054,MeContext=054156_EL_CAMINO_AND_LA_COSTA,ManagedElement=1,Equipment=1,AntennaUnitGroup=22,AntennaNearUnit=3,RetSubUnit=1",
+        "operationType": "MODIFY",
+        "parameterChanges": [
+          {
+            "parameterName": "electricalAntennaTilt",
+            "parameterValue": "1.0"
+          }
+        ]
+      }
+    ],
+    "id": 8,
+    "executionId": "RET_1585148340088",
+    "sourceOfChange": "alg_RET_1",
+    "status": "PENDING_APPROVAL",
+    "modifiedBy": "CAS",
+    "lastModified": 1585149036727
+  },
+  {
+    "proposedChanges": [
+      {
+        "ossId": 1,
+        "objectType": "ret",
+        "nodeType": "erbs",
+        "guid": 4777,
+        "fdn": "SubNetwork=ONRM_ROOT_MO,SubNetwork=MKT_054,MeContext=054649_MUSSEY_GRADE,ManagedElement=1,Equipment=1,AntennaUnitGroup=22,AntennaNearUnit=2,RetSubUnit=2",
+        "operationType": "MODIFY",
+        "parameterChanges": [
+          {
+            "parameterName": "electricalAntennaTilt",
+            "parameterValue": "1.0"
+          }
+        ]
+      }
+    ],
+    "id": 9,
+    "executionId": "RET_1585148340088",
+    "sourceOfChange": "alg_RET_1",
+    "status": "PENDING_APPROVAL",
+    "modifiedBy": "CAS",
+    "lastModified": 1585149036727
+  },
+  {
+    "proposedChanges": [
+      {
+        "ossId": 1,
+        "objectType": "ret",
+        "nodeType": "erbs",
+        "guid": 4585,
+        "fdn": "SubNetwork=ONRM_ROOT_MO,SubNetwork=MKT_054,MeContext=054688_CAMP_PEN_LAS_FLORES,ManagedElement=1,Equipment=1,AntennaUnitGroup=22,AntennaNearUnit=3,RetSubUnit=1",
+        "operationType": "MODIFY",
+        "parameterChanges": [
+          {
+            "parameterName": "electricalAntennaTilt",
+            "parameterValue": "1.0"
+          }
+        ]
+      }
+    ],
+    "id": 10,
+    "executionId": "RET_1585148340088",
+    "sourceOfChange": "alg_RET_1",
+    "status": "PENDING_APPROVAL",
+    "modifiedBy": "CAS",
+    "lastModified": 1585149036727
+  },
+  {
+    "proposedChanges": [
+      {
+        "ossId": 1,
+        "objectType": "ret",
+        "nodeType": "erbs",
+        "guid": 4586,
+        "fdn": "SubNetwork=ONRM_ROOT_MO,SubNetwork=MKT_054,MeContext=054688_CAMP_PEN_LAS_FLORES,ManagedElement=1,Equipment=1,AntennaUnitGroup=32,AntennaNearUnit=1,RetSubUnit=1",
+        "operationType": "MODIFY",
+        "parameterChanges": [
+          {
+            "parameterName": "electricalAntennaTilt",
+            "parameterValue": "1.0"
+          }
+        ]
+      }
+    ],
+    "id": 25,
+    "executionId": "RET_1585148340088",
+    "sourceOfChange": "alg_RET_1",
+    "status": "PENDING_APPROVAL",
+    "modifiedBy": "CAS",
+    "lastModified": 1585149036727
+  },
+  {
+    "proposedChanges": [
+      {
+        "ossId": 1,
+        "objectType": "ret",
+        "nodeType": "erbs",
+        "guid": 3977,
+        "fdn": "SubNetwork=ONRM_ROOT_MO,SubNetwork=MKT_054,MeContext=054111_ALPINE_HEIGHTS,ManagedElement=1,Equipment=1,AntennaUnitGroup=3,AntennaNearUnit=3,RetSubUnit=1",
+        "operationType": "MODIFY",
+        "parameterChanges": [
+          {
+            "parameterName": "electricalAntennaTilt",
+            "parameterValue": "1.0"
+          }
+        ]
+      },
+      {
+        "ossId": 1,
+        "objectType": "ret",
+        "nodeType": "erbs",
+        "guid": 4014,
+        "fdn": "SubNetwork=ONRM_ROOT_MO,SubNetwork=MKT_054,MeContext=054111_ALPINE_HEIGHTS,ManagedElement=1,Equipment=1,AntennaUnitGroup=3,AntennaNearUnit=1,RetSubUnit=1",
+        "operationType": "MODIFY",
+        "parameterChanges": [
+          {
+            "parameterName": "electricalAntennaTilt",
+            "parameterValue": "1.0"
+          }
+        ]
+      }
+    ],
+    "id": 11,
+    "executionId": "RET_1585148340088",
+    "sourceOfChange": "alg_RET_1",
+    "status": "PENDING_APPROVAL",
+    "modifiedBy": "CAS",
+    "lastModified": 1585149036727
+  },
+  {
+    "proposedChanges": [
+      {
+        "ossId": 1,
+        "objectType": "ret",
+        "nodeType": "radionode",
+        "guid": 3190,
+        "fdn": "SubNetwork=ONRM_ROOT_MO,SubNetwork=MKT_054,MeContext=054690_78_CEASAR,ManagedElement=054690_78_CEASAR,Equipment=1,AntennaUnitGroup=34,AntennaNearUnit=2,RetSubUnit=1",
+        "operationType": "MODIFY",
+        "parameterChanges": [
+          {
+            "parameterName": "electricalAntennaTilt",
+            "parameterValue": "1.0"
+          }
+        ]
+      },
+      {
+        "ossId": 1,
+        "objectType": "ret",
+        "nodeType": "radionode",
+        "guid": 3194,
+        "fdn": "SubNetwork=ONRM_ROOT_MO,SubNetwork=MKT_054,MeContext=054690_78_CEASAR,ManagedElement=054690_78_CEASAR,Equipment=1,AntennaUnitGroup=32,AntennaNearUnit=1,RetSubUnit=1",
+        "operationType": "MODIFY",
+        "parameterChanges": [
+          {
+            "parameterName": "electricalAntennaTilt",
+            "parameterValue": "1.0"
+          }
+        ]
+      }
+    ],
+    "id": 12,
+    "executionId": "RET_1585148340088",
+    "sourceOfChange": "alg_RET_1",
+    "status": "PENDING_APPROVAL",
+    "modifiedBy": "CAS",
+    "lastModified": 1585149036727
+  },
+  {
+    "proposedChanges": [
+      {
+        "ossId": 1,
+        "objectType": "ret",
+        "nodeType": "erbs",
+        "guid": 3139,
+        "fdn": "SubNetwork=ONRM_ROOT_MO,SubNetwork=MKT_054,MeContext=054228_FALLBROOK_CENTER,ManagedElement=1,Equipment=1,AntennaUnitGroup=21,AntennaNearUnit=1,RetSubUnit=1",
+        "operationType": "MODIFY",
+        "parameterChanges": [
+          {
+            "parameterName": "electricalAntennaTilt",
+            "parameterValue": "1.0"
+          }
+        ]
+      }
+    ],
+    "id": 24,
+    "executionId": "RET_1585148340088",
+    "sourceOfChange": "alg_RET_1",
+    "status": "PENDING_APPROVAL",
+    "modifiedBy": "CAS",
+    "lastModified": 1585149036727
+  },
+  {
+    "proposedChanges": [
+      {
+        "ossId": 1,
+        "objectType": "ret",
+        "nodeType": "radionode",
+        "guid": 4870,
+        "fdn": "SubNetwork=ONRM_ROOT_MO,SubNetwork=MKT_054,MeContext=054271_TORREY_MERGE,ManagedElement=054271_TORREY_MERGE,Equipment=1,AntennaUnitGroup=32,AntennaNearUnit=5,RetSubUnit=1",
+        "operationType": "MODIFY",
+        "parameterChanges": [
+          {
+            "parameterName": "electricalAntennaTilt",
+            "parameterValue": "1.0"
+          }
+        ]
+      },
+      {
+        "ossId": 1,
+        "objectType": "ret",
+        "nodeType": "radionode",
+        "guid": 4886,
+        "fdn": "SubNetwork=ONRM_ROOT_MO,SubNetwork=MKT_054,MeContext=054271_TORREY_MERGE,ManagedElement=054271_TORREY_MERGE,Equipment=1,AntennaUnitGroup=32,AntennaNearUnit=3,RetSubUnit=1",
+        "operationType": "MODIFY",
+        "parameterChanges": [
+          {
+            "parameterName": "electricalAntennaTilt",
+            "parameterValue": "1.0"
+          }
+        ]
+      }
+    ],
+    "id": 13,
+    "executionId": "RET_1585148340088",
+    "sourceOfChange": "alg_RET_1",
+    "status": "PENDING_APPROVAL",
+    "modifiedBy": "CAS",
+    "lastModified": 1585149036727
+  },
+  {
+    "proposedChanges": [
+      {
+        "ossId": 1,
+        "objectType": "ret",
+        "nodeType": "radionode",
+        "guid": 4875,
+        "fdn": "SubNetwork=ONRM_ROOT_MO,SubNetwork=MKT_054,MeContext=054271_TORREY_MERGE,ManagedElement=054271_TORREY_MERGE,Equipment=1,AntennaUnitGroup=11,AntennaNearUnit=4,RetSubUnit=1",
+        "operationType": "MODIFY",
+        "parameterChanges": [
+          {
+            "parameterName": "electricalAntennaTilt",
+            "parameterValue": "1.0"
+          }
+        ]
+      },
+      {
+        "ossId": 1,
+        "objectType": "ret",
+        "nodeType": "radionode",
+        "guid": 4893,
+        "fdn": "SubNetwork=ONRM_ROOT_MO,SubNetwork=MKT_054,MeContext=054271_TORREY_MERGE,ManagedElement=054271_TORREY_MERGE,Equipment=1,AntennaUnitGroup=11,AntennaNearUnit=2,RetSubUnit=1",
+        "operationType": "MODIFY",
+        "parameterChanges": [
+          {
+            "parameterName": "electricalAntennaTilt",
+            "parameterValue": "1.0"
+          }
+        ]
+      }
+    ],
+    "id": 14,
+    "executionId": "RET_1585148340088",
+    "sourceOfChange": "alg_RET_1",
+    "status": "PENDING_APPROVAL",
+    "modifiedBy": "CAS",
+    "lastModified": 1585149036727
+  },
+  {
+    "proposedChanges": [
+      {
+        "ossId": 1,
+        "objectType": "ret",
+        "nodeType": "erbs",
+        "guid": 3354,
+        "fdn": "SubNetwork=ONRM_ROOT_MO,SubNetwork=MKT_054,MeContext=054561_CARR_ROAD,ManagedElement=1,Equipment=1,AntennaUnitGroup=22,AntennaNearUnit=4,RetSubUnit=1",
+        "operationType": "MODIFY",
+        "parameterChanges": [
+          {
+            "parameterName": "electricalAntennaTilt",
+            "parameterValue": "1.0"
+          }
+        ]
+      },
+      {
+        "ossId": 1,
+        "objectType": "ret",
+        "nodeType": "erbs",
+        "guid": 3330,
+        "fdn": "SubNetwork=ONRM_ROOT_MO,SubNetwork=MKT_054,MeContext=054561_CARR_ROAD,ManagedElement=1,Equipment=1,AntennaUnitGroup=22,AntennaNearUnit=2,RetSubUnit=1",
+        "operationType": "MODIFY",
+        "parameterChanges": [
+          {
+            "parameterName": "electricalAntennaTilt",
+            "parameterValue": "1.0"
+          }
+        ]
+      }
+    ],
+    "id": 15,
+    "executionId": "RET_1585148340088",
+    "sourceOfChange": "alg_RET_1",
+    "status": "PENDING_APPROVAL",
+    "modifiedBy": "CAS",
+    "lastModified": 1585149036727
+  },
+  {
+    "proposedChanges": [
+      {
+        "ossId": 1,
+        "objectType": "ret",
+        "nodeType": "radionode",
+        "guid": 268,
+        "fdn": "SubNetwork=ONRM_ROOT_MO,SubNetwork=MKT_054,MeContext=054516_CSUSM,ManagedElement=054516_CSUSM,Equipment=1,AntennaUnitGroup=2,AntennaNearUnit=1,RetSubUnit=2",
+        "operationType": "MODIFY",
+        "parameterChanges": [
+          {
+            "parameterName": "electricalAntennaTilt",
+            "parameterValue": "1.0"
+          }
+        ]
+      }
+    ],
+    "id": 16,
+    "executionId": "RET_1585148340088",
+    "sourceOfChange": "alg_RET_1",
+    "status": "PENDING_APPROVAL",
+    "modifiedBy": "CAS",
+    "lastModified": 1585149036727
+  },
+  {
+    "proposedChanges": [
+      {
+        "ossId": 1,
+        "objectType": "ret",
+        "nodeType": "radionode",
+        "guid": 4872,
+        "fdn": "SubNetwork=ONRM_ROOT_MO,SubNetwork=MKT_054,MeContext=054271_TORREY_MERGE,ManagedElement=054271_TORREY_MERGE,Equipment=1,AntennaUnitGroup=22,AntennaNearUnit=2,RetSubUnit=1",
+        "operationType": "MODIFY",
+        "parameterChanges": [
+          {
+            "parameterName": "electricalAntennaTilt",
+            "parameterValue": "1.0"
+          }
+        ]
+      },
+      {
+        "ossId": 1,
+        "objectType": "ret",
+        "nodeType": "radionode",
+        "guid": 4899,
+        "fdn": "SubNetwork=ONRM_ROOT_MO,SubNetwork=MKT_054,MeContext=054271_TORREY_MERGE,ManagedElement=054271_TORREY_MERGE,Equipment=1,AntennaUnitGroup=22,AntennaNearUnit=5,RetSubUnit=1",
+        "operationType": "MODIFY",
+        "parameterChanges": [
+          {
+            "parameterName": "electricalAntennaTilt",
+            "parameterValue": "1.0"
+          }
+        ]
+      }
+    ],
+    "id": 17,
+    "executionId": "RET_1585148340088",
+    "sourceOfChange": "alg_RET_1",
+    "status": "PENDING_APPROVAL",
+    "modifiedBy": "CAS",
+    "lastModified": 1585149036727
+  },
+  {
+    "proposedChanges": [
+      {
+        "ossId": 1,
+        "objectType": "ret",
+        "nodeType": "radionode",
+        "guid": 1882,
+        "fdn": "SubNetwork=ONRM_ROOT_MO,SubNetwork=MKT_054,MeContext=054622_LA_MOREE,ManagedElement=054622_LA_MOREE,Equipment=1,AntennaUnitGroup=24,AntennaNearUnit=1,RetSubUnit=2",
+        "operationType": "MODIFY",
+        "parameterChanges": [
+          {
+            "parameterName": "electricalAntennaTilt",
+            "parameterValue": "1.0"
+          }
+        ]
+      }
+    ],
+    "id": 18,
+    "executionId": "RET_1585148340088",
+    "sourceOfChange": "alg_RET_1",
+    "status": "PENDING_APPROVAL",
+    "modifiedBy": "CAS",
+    "lastModified": 1585149036727
+  },
+  {
+    "proposedChanges": [
+      {
+        "ossId": 1,
+        "objectType": "ret",
+        "nodeType": "radionode",
+        "guid": 3775,
+        "fdn": "SubNetwork=ONRM_ROOT_MO,SubNetwork=MKT_054,MeContext=054223_TEEPEE,ManagedElement=054223_TEEPEE,Equipment=1,AntennaUnitGroup=21,AntennaNearUnit=3,RetSubUnit=1",
+        "operationType": "MODIFY",
+        "parameterChanges": [
+          {
+            "parameterName": "electricalAntennaTilt",
+            "parameterValue": "1.0"
+          }
+        ]
+      },
+      {
+        "ossId": 1,
+        "objectType": "ret",
+        "nodeType": "radionode",
+        "guid": 3772,
+        "fdn": "SubNetwork=ONRM_ROOT_MO,SubNetwork=MKT_054,MeContext=054223_TEEPEE,ManagedElement=054223_TEEPEE,Equipment=1,AntennaUnitGroup=21,AntennaNearUnit=4,RetSubUnit=1",
+        "operationType": "MODIFY",
+        "parameterChanges": [
+          {
+            "parameterName": "electricalAntennaTilt",
+            "parameterValue": "1.0"
+          }
+        ]
+      }
+    ],
+    "id": 19,
+    "executionId": "RET_1585148340088",
+    "sourceOfChange": "alg_RET_1",
+    "status": "PENDING_APPROVAL",
+    "modifiedBy": "CAS",
+    "lastModified": 1585149036727
+  },
+  {
+    "proposedChanges": [
+      {
+        "ossId": 1,
+        "objectType": "ret",
+        "nodeType": "erbs",
+        "guid": 2041,
+        "fdn": "SubNetwork=ONRM_ROOT_MO,SubNetwork=MKT_054,MeContext=354552_HACKMORE_DR,ManagedElement=1,Equipment=1,AntennaUnitGroup=3,AntennaNearUnit=1,RetSubUnit=1",
+        "operationType": "MODIFY",
+        "parameterChanges": [
+          {
+            "parameterName": "electricalAntennaTilt",
+            "parameterValue": "1.0"
+          }
+        ]
+      },
+      {
+        "ossId": 1,
+        "objectType": "ret",
+        "nodeType": "erbs",
+        "guid": 2045,
+        "fdn": "SubNetwork=ONRM_ROOT_MO,SubNetwork=MKT_054,MeContext=354552_HACKMORE_DR,ManagedElement=1,Equipment=1,AntennaUnitGroup=3,AntennaNearUnit=2,RetSubUnit=1",
+        "operationType": "MODIFY",
+        "parameterChanges": [
+          {
+            "parameterName": "electricalAntennaTilt",
+            "parameterValue": "1.0"
+          }
+        ]
+      }
+    ],
+    "id": 20,
+    "executionId": "RET_1585148340088",
+    "sourceOfChange": "alg_RET_1",
+    "status": "PENDING_APPROVAL",
+    "modifiedBy": "CAS",
+    "lastModified": 1585149036727
+  },
+  {
+    "proposedChanges": [
+      {
+        "ossId": 1,
+        "objectType": "ret",
+        "nodeType": "radionode",
+        "guid": 4897,
+        "fdn": "SubNetwork=ONRM_ROOT_MO,SubNetwork=MKT_054,MeContext=054271_TORREY_MERGE,ManagedElement=054271_TORREY_MERGE,Equipment=1,AntennaUnitGroup=12,AntennaNearUnit=6,RetSubUnit=1",
+        "operationType": "MODIFY",
+        "parameterChanges": [
+          {
+            "parameterName": "electricalAntennaTilt",
+            "parameterValue": "1.0"
+          }
+        ]
+      },
+      {
+        "ossId": 1,
+        "objectType": "ret",
+        "nodeType": "radionode",
+        "guid": 4898,
+        "fdn": "SubNetwork=ONRM_ROOT_MO,SubNetwork=MKT_054,MeContext=054271_TORREY_MERGE,ManagedElement=054271_TORREY_MERGE,Equipment=1,AntennaUnitGroup=11,AntennaNearUnit=1,RetSubUnit=1",
+        "operationType": "MODIFY",
+        "parameterChanges": [
+          {
+            "parameterName": "electricalAntennaTilt",
+            "parameterValue": "1.0"
+          }
+        ]
+      }
+    ],
+    "id": 21,
+    "executionId": "RET_1585148340088",
+    "sourceOfChange": "alg_RET_1",
+    "status": "PENDING_APPROVAL",
+    "modifiedBy": "CAS",
+    "lastModified": 1585149036727
+  },
+  {
+    "proposedChanges": [
+      {
+        "ossId": 1,
+        "objectType": "ret",
+        "nodeType": "erbs",
+        "guid": 3811,
+        "fdn": "SubNetwork=ONRM_ROOT_MO,SubNetwork=MKT_054,MeContext=054241_ICE_ARENA,ManagedElement=1,Equipment=1,AntennaUnitGroup=34,AntennaNearUnit=3,RetSubUnit=1",
+        "operationType": "MODIFY",
+        "parameterChanges": [
+          {
+            "parameterName": "electricalAntennaTilt",
+            "parameterValue": "10.0"
+          }
+        ]
+      },
+      {
+        "ossId": 1,
+        "objectType": "ret",
+        "nodeType": "erbs",
+        "guid": 3827,
+        "fdn": "SubNetwork=ONRM_ROOT_MO,SubNetwork=MKT_054,MeContext=054241_ICE_ARENA,ManagedElement=1,Equipment=1,AntennaUnitGroup=34,AntennaNearUnit=1,RetSubUnit=1",
+        "operationType": "MODIFY",
+        "parameterChanges": [
+          {
+            "parameterName": "electricalAntennaTilt",
+            "parameterValue": "10.0"
+          }
+        ]
+      }
+    ],
+    "id": 22,
+    "executionId": "RET_1585148340088",
+    "sourceOfChange": "alg_RET_1",
+    "status": "PENDING_APPROVAL",
+    "modifiedBy": "CAS",
+    "lastModified": 1585149036727
+  },
+  {
+    "proposedChanges": [
+      {
+        "ossId": 1,
+        "objectType": "ret",
+        "nodeType": "radionode",
+        "guid": 1959,
+        "fdn": "SubNetwork=ONRM_ROOT_MO,SubNetwork=MKT_054,MeContext=054158_VIVIENDA,ManagedElement=054158_VIVIENDA,Equipment=1,AntennaUnitGroup=24,AntennaNearUnit=1,RetSubUnit=2",
+        "operationType": "MODIFY",
+        "parameterChanges": [
+          {
+            "parameterName": "electricalAntennaTilt",
+            "parameterValue": "1.0"
+          }
+        ]
+      }
+    ],
+    "id": 23,
+    "executionId": "RET_1585148340088",
+    "sourceOfChange": "alg_RET_1",
+    "status": "PENDING_APPROVAL",
+    "modifiedBy": "CAS",
+    "lastModified": 1585149036727
+  }
+  ]

@@ -1,0 +1,101 @@
+{
+  "source": "RET_5G",
+  "counterAttributes": [
+    {
+      "name": "ctrNumSamplesBadRsrpTa",
+      "counter_source": "SON",
+      "node_type": [
+        "ERBS",
+        "RadioNode"
+      ],
+      "data_type": "PM_CELLTRACE_CUCP,PM_CELLTRACE_DU",
+      "element": "cell",
+      "is_normalized": "false",
+      "is_array": "true"
+    },
+    {
+      "name": "ctrNumSamplesRsrpTa",
+      "counter_source": "SON",
+      "node_type": [
+        "ERBS",
+        "RadioNode"
+      ],
+      "data_type": "PM_CELLTRACE_CUCP,PM_CELLTRACE_DU",
+      "element": "cell",
+      "is_normalized": "false",
+      "is_array": "true"
+    },
+    {
+      "name": "ctrNumSamplesTa",
+      "counter_source": "SON",
+      "node_type": [
+        "ERBS",
+        "RadioNode"
+      ],
+      "data_type": "PM_CELLTRACE_CUCP,PM_CELLTRACE_DU",
+      "element": "cell",
+      "is_normalized": "false",
+      "is_array": "true"
+    },
+    {
+      "name": "ctrNumSamplesRsrp",
+      "counter_source": "SON",
+      "node_type": [
+        "ERBS",
+        "RadioNode"
+      ],
+      "data_type": "PM_CELLTRACE_CUCP,PM_CELLTRACE_DU",
+      "element": "cell",
+      "is_normalized": "false",
+      "is_array": "false"
+    },
+    {
+      "name": "ctrNumOverlappingSamplesWhenHighRsrp",
+      "counter_source": "SON",
+      "node_type": [
+        "ERBS",
+        "RadioNode"
+      ],
+      "data_type": "PM_CELLTRACE_CUCP,PM_CELLTRACE_DU",
+      "element": "relation",
+      "is_normalized": "false",
+      "is_array": "false"
+    },
+    {
+      "name": "ctrAdjNumTimesFirstAdj",
+      "counter_source": "SON",
+      "node_type": [
+        "ERBS",
+        "RadioNode"
+      ],
+      "data_type": "PM_CELLTRACE_CUCP,PM_CELLTRACE_DU",
+      "element": "relation",
+      "is_normalized": "false",
+      "is_array": "false"
+    },
+    {
+      "name": "ctrAdjNumTimesInterf",
+      "counter_source": "SON",
+      "node_type": [
+        "ERBS",
+        "RadioNode"
+      ],
+      "data_type": "PM_CELLTRACE_CUCP,PM_CELLTRACE_DU",
+      "element": "relation",
+      "is_normalized": "false",
+      "is_array": "false"
+    },
+    {
+      "name": "ctrNumOverlappingSamples",
+      "counter_source": "SON",
+      "node_type": [
+        "ERBS",
+        "RadioNode"
+      ],
+      "data_type": "PM_CELLTRACE_CUCP,PM_CELLTRACE_DU",
+      "element": "relation",
+      "is_normalized": "false",
+      "is_array": "false"
+    }
+  ]
+}

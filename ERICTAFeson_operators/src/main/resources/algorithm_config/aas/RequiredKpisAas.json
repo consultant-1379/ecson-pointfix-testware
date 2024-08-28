@@ -1,0 +1,3645 @@
+{
+  "source": "AAS",
+  "kpi_definitions": [
+    {
+      "name": "pm_prb_util_dl",
+      "alias": "cell_guid_4g",
+      "expression": "ARRAY_INDEX_SUM(counters_cell.pmPrbUtilDl) FROM pm_stats://counters_cell",
+      "object_type": "INTEGER[10]",
+      "aggregation_type": "ARRAY_INDEX_SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "counters_cell.guid",
+        "counters_cell.oss_id",
+        "counters_cell.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "pm_rrc_conn_estab_succ",
+      "alias": "cell_guid_4g",
+      "expression": "SUM(counters_cell.pmRrcConnEstabSucc) FROM pm_stats://counters_cell",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "counters_cell.guid",
+        "counters_cell.oss_id",
+        "counters_cell.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "pm_rrc_conn_estab_att",
+      "alias": "cell_guid_4g",
+      "expression": "SUM(counters_cell.pmRrcConnEstabAtt) FROM pm_stats://counters_cell",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "counters_cell.guid",
+        "counters_cell.oss_id",
+        "counters_cell.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "pm_rrc_conn_estab_att_reatt",
+      "alias": "cell_guid_4g",
+      "expression": "SUM(counters_cell.pmRrcConnEstabAttReatt) FROM pm_stats://counters_cell",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "counters_cell.guid",
+        "counters_cell.oss_id",
+        "counters_cell.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "pm_rrc_conn_estab_fail_mme_ovl_mos",
+      "alias": "cell_guid_4g",
+      "expression": "CASE WHEN SUM(counters_cell.pmRrcConnEstabFailMmeOvlMos) IS NULL THEN 0 ELSE SUM(counters_cell.pmRrcConnEstabFailMmeOvlMos) END FROM pm_stats://counters_cell",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "counters_cell.guid",
+        "counters_cell.oss_id",
+        "counters_cell.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "pm_rrc_conn_estab_fail_mme_ovl_mod",
+      "alias": "cell_guid_4g",
+      "expression": "CASE WHEN SUM(counters_cell.pmRrcConnEstabFailMmeOvlMod) IS NULL THEN 0 ELSE SUM(counters_cell.pmRrcConnEstabFailMmeOvlMod) END FROM pm_stats://counters_cell",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "counters_cell.guid",
+        "counters_cell.oss_id",
+        "counters_cell.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "pm_s1_sig_conn_estab_succ",
+      "alias": "cell_guid_4g",
+      "expression": "SUM(counters_cell.pmS1SigConnEstabSucc) FROM pm_stats://counters_cell",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "counters_cell.guid",
+        "counters_cell.oss_id",
+        "counters_cell.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "pm_s1_sig_conn_estab_att",
+      "alias": "cell_guid_4g",
+      "expression": "SUM(counters_cell.pmS1SigConnEstabAtt) FROM pm_stats://counters_cell",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "counters_cell.guid",
+        "counters_cell.oss_id",
+        "counters_cell.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "pm_s1_sig_conn_estab_fail_mme_ovl_mos",
+      "alias": "cell_guid_4g",
+      "expression": "CASE WHEN SUM(counters_cell.pmS1SigConnEstabFailMmeOvlMos) IS NULL THEN 0 ELSE SUM(counters_cell.pmS1SigConnEstabFailMmeOvlMos) END FROM pm_stats://counters_cell",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "counters_cell.guid",
+        "counters_cell.oss_id",
+        "counters_cell.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "num_calls_daily",
+      "alias": "cell_guid_4g",
+      "expression": "SUM(counters_cell.pmErabEstabSuccInit) FROM pm_stats://counters_cell",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "counters_cell.guid",
+        "counters_cell.oss_id",
+        "counters_cell.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "pm_erab_estab_succ_added",
+      "alias": "cell_guid_4g",
+      "expression": "SUM(counters_cell.pmErabEstabSuccAdded) FROM pm_stats://counters_cell",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "counters_cell.guid",
+        "counters_cell.oss_id",
+        "counters_cell.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "pm_erab_estab_att_init",
+      "alias": "cell_guid_4g",
+      "expression": "SUM(counters_cell.pmErabEstabAttInit) FROM pm_stats://counters_cell",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "counters_cell.guid",
+        "counters_cell.oss_id",
+        "counters_cell.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "pm_erab_estab_att_added",
+      "alias": "cell_guid_4g",
+      "expression": "SUM(counters_cell.pmErabEstabAttAdded) FROM pm_stats://counters_cell",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "counters_cell.guid",
+        "counters_cell.oss_id",
+        "counters_cell.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "pm_erab_estab_fail_added_ongoing_proc",
+      "alias": "cell_guid_4g",
+      "expression": "SUM(counters_cell.pmErabEstabFailAddedOngoingProc) FROM pm_stats://counters_cell",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "counters_cell.guid",
+        "counters_cell.oss_id",
+        "counters_cell.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "pm_erab_estab_fail_added_ongoing_proc_null_as_zero",
+      "alias": "cell_guid_4g",
+      "expression": "FIRST(CASE WHEN cell_guid_4g.pm_erab_estab_fail_added_ongoing_proc IS NULL THEN 0 ELSE pm_erab_estab_fail_added_ongoing_proc END) FROM kpi://cell_guid_4g",
+      "object_type": "FLOAT",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "cell_guid_4g.guid",
+        "cell_guid_4g.oss_id",
+        "cell_guid_4g.fdn"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "rrc_mme_ovl",
+      "alias": "cell_guid_4g",
+      "expression": "FIRST(cell_guid_4g.pm_rrc_conn_estab_fail_mme_ovl_mos) + FIRST(cell_guid_4g.pm_rrc_conn_estab_fail_mme_ovl_mod) FROM kpi://cell_guid_4g",
+      "object_type": "FLOAT",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "cell_guid_4g.guid",
+        "cell_guid_4g.oss_id",
+        "cell_guid_4g.fdn"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "rrc_estab_r_denom",
+      "alias": "cell_guid_4g",
+      "expression": "FIRST(cell_guid_4g.pm_rrc_conn_estab_att) - FIRST(cell_guid_4g.pm_rrc_conn_estab_att_reatt) - FIRST(cell_guid_4g.rrc_mme_ovl) FROM kpi://cell_guid_4g",
+      "object_type": "FLOAT",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "cell_guid_4g.guid",
+        "cell_guid_4g.oss_id",
+        "cell_guid_4g.fdn"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "rrc_estab_r",
+      "alias": "cell_guid_4g",
+      "expression": "FIRST(kpi_cell_guid_4g_1440.pm_rrc_conn_estab_succ) / FIRST(kpi_cell_guid_4g_1440.rrc_estab_r_denom) FROM kpi_db://kpi_cell_guid_4g_1440",
+      "object_type": "FLOAT",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "kpi_cell_guid_4g_1440.guid",
+        "kpi_cell_guid_4g_1440.oss_id",
+        "kpi_cell_guid_4g_1440.fdn"
+      ],
+      "filter": [
+        "kpi_db://kpi_cell_guid_4g_1440.local_timestamp = ''${param.kpi_date} 00:00:00''"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "s1_sig_conn_estab_r_denom",
+      "alias": "cell_guid_4g",
+      "expression": "FIRST(cell_guid_4g.pm_s1_sig_conn_estab_att) - FIRST(cell_guid_4g.pm_s1_sig_conn_estab_fail_mme_ovl_mos) FROM kpi://cell_guid_4g",
+      "object_type": "FLOAT",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "cell_guid_4g.guid",
+        "cell_guid_4g.oss_id",
+        "cell_guid_4g.fdn"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "s1_sig_conn_estab_r",
+      "alias": "cell_guid_4g",
+      "expression": "FIRST(kpi_cell_guid_4g_1440.pm_s1_sig_conn_estab_succ) / FIRST(kpi_cell_guid_4g_1440.s1_sig_conn_estab_r_denom) FROM kpi_db://kpi_cell_guid_4g_1440",
+      "object_type": "FLOAT",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "kpi_cell_guid_4g_1440.guid",
+        "kpi_cell_guid_4g_1440.oss_id",
+        "kpi_cell_guid_4g_1440.fdn"
+      ],
+      "filter": [
+        "kpi_db://kpi_cell_guid_4g_1440.local_timestamp = ''${param.kpi_date} 00:00:00''"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "erab_estab_int_r_numerator",
+      "alias": "cell_guid_4g",
+      "expression": "FIRST(cell_guid_4g.num_calls_daily) + FIRST(cell_guid_4g.pm_erab_estab_succ_added) FROM kpi://cell_guid_4g",
+      "object_type": "FLOAT",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "cell_guid_4g.guid",
+        "cell_guid_4g.oss_id",
+        "cell_guid_4g.fdn"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "erab_estab_int_r_denom",
+      "alias": "cell_guid_4g",
+      "expression": "FIRST(cell_guid_4g.pm_erab_estab_att_init) + FIRST(cell_guid_4g.pm_erab_estab_att_added) - FIRST(cell_guid_4g.pm_erab_estab_fail_added_ongoing_proc_null_as_zero) FROM kpi://cell_guid_4g",
+      "object_type": "FLOAT",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "cell_guid_4g.guid",
+        "cell_guid_4g.oss_id",
+        "cell_guid_4g.fdn"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "erab_estab_int_r",
+      "alias": "cell_guid_4g",
+      "expression": "FIRST(kpi_cell_guid_4g_1440.erab_estab_int_r_numerator) / FIRST(kpi_cell_guid_4g_1440.erab_estab_int_r_denom) FROM kpi_db://kpi_cell_guid_4g_1440",
+      "object_type": "FLOAT",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "kpi_cell_guid_4g_1440.guid",
+        "kpi_cell_guid_4g_1440.oss_id",
+        "kpi_cell_guid_4g_1440.fdn"
+      ],
+      "filter": [
+        "kpi_db://kpi_cell_guid_4g_1440.local_timestamp = ''${param.kpi_date} 00:00:00''"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "lte_accessibility",
+      "alias": "cell_guid_4g",
+      "expression": "100 * FIRST(cell_guid_4g.rrc_estab_r) * FIRST(cell_guid_4g.s1_sig_conn_estab_r) * FIRST(cell_guid_4g.erab_estab_int_r) FROM kpi://cell_guid_4g",
+      "object_type": "FLOAT",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "cell_guid_4g.guid",
+        "cell_guid_4g.oss_id",
+        "cell_guid_4g.fdn"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "cgi",
+      "alias": "cell_guid_4g",
+      "expression": "FIRST(cell.cgi) FROM pm_stats://counters_cell INNER JOIN cm://cell ON counters_cell.guid = cell.id",
+      "object_type": "STRING",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "counters_cell.guid",
+        "counters_cell.oss_id",
+        "counters_cell.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "name",
+      "alias": "cell_guid_4g",
+      "expression": "FIRST(cell.name) FROM pm_stats://counters_cell INNER JOIN cm://cell ON counters_cell.guid = cell.id",
+      "object_type": "STRING",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "counters_cell.guid",
+        "counters_cell.oss_id",
+        "counters_cell.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "pm_mac_rb_sym_used_pdsch_type_a",
+      "alias": "cell_guid_5g",
+      "expression": "SUM(counters_cell_5g.pmMacRBSymUsedPdschTypeA) FROM pm_stats://counters_cell_5g",
+      "object_type": "LONG",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "counters_cell_5g.guid",
+        "counters_cell_5g.oss_id",
+        "counters_cell_5g.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "pm_mac_rb_sym_used_pdcch_type_a",
+      "alias": "cell_guid_5g",
+      "expression": "SUM(counters_cell_5g.pmMacRBSymUsedPdcchTypeA) FROM pm_stats://counters_cell_5g",
+      "object_type": "LONG",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "counters_cell_5g.guid",
+        "counters_cell_5g.oss_id",
+        "counters_cell_5g.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "pm_mac_rb_sym_used_pdcch_type_b",
+      "alias": "cell_guid_5g",
+      "expression": "SUM(counters_cell_5g.pmMacRBSymUsedPdcchTypeB) FROM pm_stats://counters_cell_5g",
+      "object_type": "LONG",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "counters_cell_5g.guid",
+        "counters_cell_5g.oss_id",
+        "counters_cell_5g.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "pm_mac_rb_sym_used_pdsch_type_a_broadcasting",
+      "alias": "cell_guid_5g",
+      "expression": "SUM(counters_cell_5g.pmMacRBSymUsedPdschTypeABroadcasting) FROM pm_stats://counters_cell_5g",
+      "object_type": "LONG",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "counters_cell_5g.guid",
+        "counters_cell_5g.oss_id",
+        "counters_cell_5g.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "pm_mac_rb_sym_csi_rs",
+      "alias": "cell_guid_5g",
+      "expression": "SUM(counters_cell_5g.pmMacRBSymCsiRs) FROM pm_stats://counters_cell_5g",
+      "object_type": "LONG",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "counters_cell_5g.guid",
+        "counters_cell_5g.oss_id",
+        "counters_cell_5g.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "pm_mac_rb_sym_avail_dl",
+      "alias": "cell_guid_5g",
+      "expression": "SUM(counters_cell_5g.pmMacRBSymAvailDl) FROM pm_stats://counters_cell_5g",
+      "object_type": "LONG",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "counters_cell_5g.guid",
+        "counters_cell_5g.oss_id",
+        "counters_cell_5g.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "pm_pdsch_sched_activity",
+      "alias": "cell_guid_5g",
+      "expression": "SUM(counters_cell_5g.pmPdschSchedActivity) FROM pm_stats://counters_cell_5g",
+      "object_type": "LONG",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "counters_cell_5g.guid",
+        "counters_cell_5g.oss_id",
+        "counters_cell_5g.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "pm_pdsch_avail_time",
+      "alias": "cell_guid_5g",
+      "expression": "SUM(counters_cell_5g.pmPdschAvailTime) FROM pm_stats://counters_cell_5g",
+      "object_type": "LONG",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "counters_cell_5g.guid",
+        "counters_cell_5g.oss_id",
+        "counters_cell_5g.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "pm_flex_erab_estab_succ_init_endc_1to99",
+      "alias": "cell_guid_4g",
+      "expression": "SUM(counters_cell.pmFlexErabEstabSuccInit_Endc1To99) FROM pm_stats://counters_cell",
+      "object_type": "LONG",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "counters_cell.guid",
+        "counters_cell.oss_id",
+        "counters_cell.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "pm_flex_erab_estab_succ_added_endc_1to99",
+      "alias": "cell_guid_4g",
+      "expression": "SUM(counters_cell.pmFlexErabEstabSuccAdded_Endc1To99) FROM pm_stats://counters_cell",
+      "object_type": "LONG",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "counters_cell.guid",
+        "counters_cell.oss_id",
+        "counters_cell.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "pm_flex_erab_estab_att_init_endc_1to99",
+      "alias": "cell_guid_4g",
+      "expression": "SUM(counters_cell.pmFlexErabEstabAttInit_Endc1To99) FROM pm_stats://counters_cell",
+      "object_type": "LONG",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "counters_cell.guid",
+        "counters_cell.oss_id",
+        "counters_cell.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "pm_flex_erab_estab_att_added_endc_1to99",
+      "alias": "cell_guid_4g",
+      "expression": "SUM(counters_cell.pmFlexErabEstabAttAdded_Endc1To99) FROM pm_stats://counters_cell",
+      "object_type": "LONG",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "counters_cell.guid",
+        "counters_cell.oss_id",
+        "counters_cell.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "pm_flex_erab_estab_fail_added_ongoing_proc_endc_1to99",
+      "alias": "cell_guid_4g",
+      "expression": "SUM(counters_cell.pmFlexErabEstabFailAddedOngoingProc_Endc1To99) FROM pm_stats://counters_cell",
+      "object_type": "LONG",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "counters_cell.guid",
+        "counters_cell.oss_id",
+        "counters_cell.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "pm_endc_setup_ue_succ",
+      "alias": "cell_guid_5g",
+      "expression": "SUM(counters_cell_5g.pmEndcSetupUeSucc) FROM pm_stats://counters_cell_5g",
+      "object_type": "LONG",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "counters_cell_5g.guid",
+        "counters_cell_5g.oss_id",
+        "counters_cell_5g.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "pm_endc_setup_ue_att",
+      "alias": "cell_guid_5g",
+      "expression": "SUM(counters_cell_5g.pmEndcSetupUeAtt) FROM pm_stats://counters_cell_5g",
+      "object_type": "LONG",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "counters_cell_5g.guid",
+        "counters_cell_5g.oss_id",
+        "counters_cell_5g.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "erab_estab_int_r_nsa_numerator",
+      "alias": "cell_guid_4g",
+      "expression": "FIRST(cell_guid_4g.pm_flex_erab_estab_succ_init_endc_1to99) + FIRST(cell_guid_4g.pm_flex_erab_estab_succ_added_endc_1to99) FROM kpi://cell_guid_4g",
+      "object_type": "LONG",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "cell_guid_4g.guid",
+        "cell_guid_4g.oss_id",
+        "cell_guid_4g.fdn"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "erab_estab_int_r_nsa_denum",
+      "alias": "cell_guid_4g",
+      "expression": "FIRST(cell_guid_4g.pm_flex_erab_estab_att_init_endc_1to99) + FIRST(cell_guid_4g.pm_flex_erab_estab_att_added_endc_1to99) - FIRST (cell_guid_4g.pm_flex_erab_estab_fail_added_ongoing_proc_endc_1to99) FROM kpi://cell_guid_4g",
+      "object_type": "LONG",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "cell_guid_4g.guid",
+        "cell_guid_4g.oss_id",
+        "cell_guid_4g.fdn"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "erab_estab_int_r_nsa",
+      "alias": "cell_guid_4g",
+      "expression": "FIRST(kpi_cell_guid_4g_1440.erab_estab_int_r_nsa_numerator) / FIRST(kpi_cell_guid_4g_1440.erab_estab_int_r_nsa_denum) FROM kpi_db://kpi_cell_guid_4g_1440",
+      "object_type": "FLOAT",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "kpi_cell_guid_4g_1440.guid",
+        "kpi_cell_guid_4g_1440.oss_id",
+        "kpi_cell_guid_4g_1440.fdn"
+      ],
+      "filter": [
+        "kpi_db://kpi_cell_guid_4g_1440.local_timestamp = ''${param.kpi_date} 00:00:00''"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "nr_accessibility",
+      "alias": "cell_guid_4g",
+      "expression": "100 * FIRST(cell_guid_4g.rrc_estab_r) * FIRST(cell_guid_4g.s1_sig_conn_estab_r) * FIRST(cell_guid_4g.erab_estab_int_r_nsa) FROM kpi://cell_guid_4g",
+      "object_type": "FLOAT",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "cell_guid_4g.guid",
+        "cell_guid_4g.oss_id",
+        "cell_guid_4g.fdn"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "dl_total_used_rb_sym",
+      "alias": "cell_guid_5g",
+      "expression": "FIRST(cell_guid_5g.pm_mac_rb_sym_used_pdsch_type_a) + FIRST(cell_guid_5g.pm_mac_rb_sym_used_pdcch_type_a) + FIRST(cell_guid_5g.pm_mac_rb_sym_used_pdcch_type_b) + FIRST(cell_guid_5g.pm_mac_rb_sym_used_pdsch_type_a_broadcasting) + FIRST(cell_guid_5g.pm_mac_rb_sym_csi_rs) FROM kpi://cell_guid_5g",
+      "object_type": "LONG",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "cell_guid_5g.guid",
+        "cell_guid_5g.oss_id",
+        "cell_guid_5g.fdn"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "dl_prb_utilization",
+      "alias": "cell_guid_5g",
+      "expression": "100 * FIRST(kpi_cell_guid_5g_1440.dl_total_used_rb_sym) / FIRST(kpi_cell_guid_5g_1440.pm_mac_rb_sym_avail_dl) FROM kpi_db://kpi_cell_guid_5g_1440",
+      "object_type": "FLOAT",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "kpi_cell_guid_5g_1440.guid",
+        "kpi_cell_guid_5g_1440.oss_id",
+        "kpi_cell_guid_5g_1440.fdn"
+      ],
+      "filter": [
+        "kpi_db://kpi_cell_guid_5g_1440.local_timestamp = ''${param.kpi_date} 00:00:00''"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "pdsch_slot_utilization",
+      "alias": "cell_guid_5g",
+      "expression": "100 * FIRST(kpi_cell_guid_5g_1440.pm_pdsch_sched_activity) / FIRST(kpi_cell_guid_5g_1440.pm_pdsch_avail_time) FROM kpi_db://kpi_cell_guid_5g_1440",
+      "object_type": "FLOAT",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "kpi_cell_guid_5g_1440.guid",
+        "kpi_cell_guid_5g_1440.oss_id",
+        "kpi_cell_guid_5g_1440.fdn"
+      ],
+      "filter": [
+        "kpi_db://kpi_cell_guid_5g_1440.local_timestamp = ''${param.kpi_date} 00:00:00''"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "en_dc_setup_sr_gnode_b",
+      "alias": "cell_guid_5g",
+      "expression": "100 * FIRST(kpi_cell_guid_5g_1440.pm_endc_setup_ue_succ) / FIRST(kpi_cell_guid_5g_1440.pm_endc_setup_ue_att) FROM kpi_db://kpi_cell_guid_5g_1440",
+      "object_type": "FLOAT",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "kpi_cell_guid_5g_1440.guid",
+        "kpi_cell_guid_5g_1440.oss_id",
+        "kpi_cell_guid_5g_1440.fdn"
+      ],
+      "filter": [
+        "kpi_db://kpi_cell_guid_5g_1440.local_timestamp = ''${param.kpi_date} 00:00:00''"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "nci",
+      "alias": "cell_guid_5g",
+      "expression": "FIRST(nr_cell.nci) FROM kpi_db://kpi_cell_guid_5g_1440 INNER JOIN cm://nr_cell ON kpi_cell_guid_5g_1440.guid = nr_cell.id",
+      "object_type": "STRING",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "kpi_cell_guid_5g_1440.guid",
+        "kpi_cell_guid_5g_1440.oss_id",
+        "kpi_cell_guid_5g_1440.fdn"
+      ],
+      "filter": [
+        "kpi_db://kpi_cell_guid_5g_1440.local_timestamp = ''${param.kpi_date} 00:00:00''"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "nr_name",
+      "alias": "cell_guid_5g",
+      "expression": "FIRST(nr_cell.name) FROM kpi_db://kpi_cell_guid_5g_1440 INNER JOIN cm://nr_cell ON kpi_cell_guid_5g_1440.guid = nr_cell.id",
+      "object_type": "STRING",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "kpi_cell_guid_5g_1440.guid",
+        "kpi_cell_guid_5g_1440.oss_id",
+        "kpi_cell_guid_5g_1440.fdn"
+      ],
+      "filter": [
+        "kpi_db://kpi_cell_guid_5g_1440.local_timestamp = ''${param.kpi_date} 00:00:00''"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "num_samples_ta",
+      "alias": "cell_guid_5g",
+      "expression": "INDEXED_ARRAY_INDEX_SUM(synthetic_counters_cell_5g.ctrNumSamplesTa) FROM pm_events://synthetic_counters_cell_5g",
+      "object_type": "INTEGER[][]",
+      "aggregation_type": "INDEXED_ARRAY_INDEX_SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "synthetic_counters_cell_5g.guid",
+        "synthetic_counters_cell_5g.oss_id",
+        "synthetic_counters_cell_5g.fdn"
+      ],
+      "filter": [
+        "pm_events://synthetic_counters_cell_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "low_serving_distance",
+      "alias": "cell_guid_5g",
+      "expression": "PERCENTILE_TA_DISTANCE(FIRST(cell_guid_5g.num_samples_ta), 5) FROM kpi://cell_guid_5g",
+      "object_type": "FLOAT",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "cell_guid_5g.guid",
+        "cell_guid_5g.oss_id",
+        "cell_guid_5g.fdn"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "mid_serving_distance",
+      "alias": "cell_guid_5g",
+      "expression": "PERCENTILE_TA_DISTANCE(FIRST(cell_guid_5g.num_samples_ta), 50) FROM kpi://cell_guid_5g",
+      "object_type": "FLOAT",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "cell_guid_5g.guid",
+        "cell_guid_5g.oss_id",
+        "cell_guid_5g.fdn"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "high_serving_distance",
+      "alias": "cell_guid_5g",
+      "expression": "PERCENTILE_TA_DISTANCE(FIRST(cell_guid_5g.num_samples_ta), 95) FROM kpi://cell_guid_5g",
+      "object_type": "FLOAT",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "cell_guid_5g.guid",
+        "cell_guid_5g.oss_id",
+        "cell_guid_5g.fdn"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "num_samples_ta_pmi",
+      "alias": "cell_guid_5g",
+      "expression": "INDEXED_ARRAY_INDEX_SUM(synthetic_counters_cell_5g.ctrNumSamplesTaPmi) FROM pm_events://synthetic_counters_cell_5g",
+      "object_type": "INTEGER[][]",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "synthetic_counters_cell_5g.guid",
+        "synthetic_counters_cell_5g.oss_id",
+        "synthetic_counters_cell_5g.fdn"
+      ],
+      "filter": [
+        "pm_events://synthetic_counters_cell_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "nr_ue_spatial_grid",
+      "alias": "cell_guid_5g",
+      "expression": "CALCULATE_PERCENTAGE_SPATIAL_GRID_32(FIRST(kpi_cell_guid_5g_1440.num_samples_ta_pmi), FIRST(kpi_cell_guid_5g_1440.high_serving_distance)) FROM kpi_db://kpi_cell_guid_5g_1440",
+      "object_type": "FLOAT[]",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "kpi_cell_guid_5g_1440.guid",
+        "kpi_cell_guid_5g_1440.oss_id",
+        "kpi_cell_guid_5g_1440.fdn"
+      ],
+      "filter": [
+        "kpi_db://kpi_cell_guid_5g_1440.local_timestamp = ''${param.kpi_date} 00:00:00''"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "num_samples_pmi",
+      "alias": "cell_guid_5g",
+      "expression": "ARRAY_INDEX_SUM(synthetic_counters_cell_5g.ctrNumSamplesPmi) FROM pm_events://synthetic_counters_cell_5g",
+      "object_type": "INTEGER[32]",
+      "aggregation_type": "ARRAY_INDEX_SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "synthetic_counters_cell_5g.guid",
+        "synthetic_counters_cell_5g.oss_id",
+        "synthetic_counters_cell_5g.fdn"
+      ],
+      "filter": [
+        "pm_events://synthetic_counters_cell_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "low_serving_azimuth",
+      "alias": "cell_guid_5g",
+      "expression": "CALCULATE_AZIMUTH_PERCENTILE(FIRST(cell_guid_5g.num_samples_pmi), 5) FROM kpi://cell_guid_5g",
+      "object_type": "INTEGER",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "cell_guid_5g.guid",
+        "cell_guid_5g.oss_id",
+        "cell_guid_5g.fdn"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "mid_serving_azimuth",
+      "alias": "cell_guid_5g",
+      "expression": "CALCULATE_AZIMUTH_PERCENTILE(FIRST(cell_guid_5g.num_samples_pmi), 50) FROM kpi://cell_guid_5g",
+      "object_type": "INTEGER",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "cell_guid_5g.guid",
+        "cell_guid_5g.oss_id",
+        "cell_guid_5g.fdn"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "high_serving_azimuth",
+      "alias": "cell_guid_5g",
+      "expression": "CALCULATE_AZIMUTH_PERCENTILE(FIRST(cell_guid_5g.num_samples_pmi), 95) FROM kpi://cell_guid_5g",
+      "object_type": "INTEGER",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "cell_guid_5g.guid",
+        "cell_guid_5g.oss_id",
+        "cell_guid_5g.fdn"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "num_samples_rsrp_at_or_above_neg_105",
+      "alias": "cell_guid_5g",
+      "expression": "SUM(synthetic_counters_cell_5g.ctrNumSamplesRsrpAtOrAboveNeg105) FROM pm_events://synthetic_counters_cell_5g",
+      "object_type": "INTEGER",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "synthetic_counters_cell_5g.guid",
+        "synthetic_counters_cell_5g.oss_id",
+        "synthetic_counters_cell_5g.fdn"
+      ],
+      "filter": [
+        "pm_events://synthetic_counters_cell_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "num_samples_sinr_at_or_above_0_hr",
+      "alias": "cell_guid_5g",
+      "expression": "SUM(synthetic_counters_cell_5g.ctrNumSamplesSinrAtOrAbove0) FROM pm_events://synthetic_counters_cell_5g",
+      "object_type": "INTEGER",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "synthetic_counters_cell_5g.guid",
+        "synthetic_counters_cell_5g.oss_id",
+        "synthetic_counters_cell_5g.fdn"
+      ],
+      "filter": [
+        "pm_events://synthetic_counters_cell_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "num_samples_sinr_at_or_above_0",
+      "alias": "cell_guid_5g",
+      "expression": "SUM(synthetic_counters_cell_5g.ctrNumSamplesSinrAtOrAbove0) FROM pm_events://synthetic_counters_cell_5g",
+      "object_type": "INTEGER",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "synthetic_counters_cell_5g.guid",
+        "synthetic_counters_cell_5g.oss_id",
+        "synthetic_counters_cell_5g.fdn"
+      ],
+      "filter": [
+        "pm_events://synthetic_counters_cell_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "source_nci",
+      "alias": "relation_source_target_guid_5g",
+      "expression": "FIRST(nr_cell.nci) FROM kpi_db://kpi_relation_source_target_guid_5g_1440 INNER JOIN cm://nr_cell ON kpi_relation_source_target_guid_5g_1440.source_guid = nr_cell.id",
+      "object_type": "STRING",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "kpi_relation_source_target_guid_5g_1440.guid",
+        "kpi_relation_source_target_guid_5g_1440.source_guid",
+        "kpi_relation_source_target_guid_5g_1440.target_guid",
+        "kpi_relation_source_target_guid_5g_1440.oss_id",
+        "kpi_relation_source_target_guid_5g_1440.fdn"
+      ],
+      "filter": [
+        "kpi_db://kpi_relation_source_target_guid_5g_1440.local_timestamp = ''${param.kpi_date} 00:00:00''"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "source_nr_name",
+      "alias": "relation_source_target_guid_5g",
+      "expression": "FIRST(nr_cell.name) FROM kpi_db://kpi_relation_source_target_guid_5g_1440 INNER JOIN cm://nr_cell ON kpi_relation_source_target_guid_5g_1440.source_guid = nr_cell.id",
+      "object_type": "STRING",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "kpi_relation_source_target_guid_5g_1440.guid",
+        "kpi_relation_source_target_guid_5g_1440.source_guid",
+        "kpi_relation_source_target_guid_5g_1440.target_guid",
+        "kpi_relation_source_target_guid_5g_1440.oss_id",
+        "kpi_relation_source_target_guid_5g_1440.fdn"
+      ],
+      "filter": [
+        "kpi_db://kpi_relation_source_target_guid_5g_1440.local_timestamp = ''${param.kpi_date} 00:00:00''"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "target_nci",
+      "alias": "relation_source_target_guid_5g",
+      "expression": "FIRST(nr_cell.nci) FROM kpi_db://kpi_relation_source_target_guid_5g_1440 INNER JOIN cm://nr_cell ON kpi_relation_source_target_guid_5g_1440.target_guid = nr_cell.id",
+      "object_type": "STRING",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "kpi_relation_source_target_guid_5g_1440.guid",
+        "kpi_relation_source_target_guid_5g_1440.source_guid",
+        "kpi_relation_source_target_guid_5g_1440.target_guid",
+        "kpi_relation_source_target_guid_5g_1440.oss_id",
+        "kpi_relation_source_target_guid_5g_1440.fdn"
+      ],
+      "filter": [
+        "kpi_db://kpi_relation_source_target_guid_5g_1440.local_timestamp = ''${param.kpi_date} 00:00:00''"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "target_nr_name",
+      "alias": "relation_source_target_guid_5g",
+      "expression": "FIRST(nr_cell.name) FROM kpi_db://kpi_relation_source_target_guid_5g_1440 INNER JOIN cm://nr_cell ON kpi_relation_source_target_guid_5g_1440.target_guid = nr_cell.id",
+      "object_type": "STRING",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "kpi_relation_source_target_guid_5g_1440.guid",
+        "kpi_relation_source_target_guid_5g_1440.source_guid",
+        "kpi_relation_source_target_guid_5g_1440.target_guid",
+        "kpi_relation_source_target_guid_5g_1440.oss_id",
+        "kpi_relation_source_target_guid_5g_1440.fdn"
+      ],
+      "filter": [
+        "kpi_db://kpi_relation_source_target_guid_5g_1440.local_timestamp = ''${param.kpi_date} 00:00:00''"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "num_samples_rsrp",
+      "alias": "relation_source_target_guid_5g",
+      "expression": "SUM(synthetic_counters_relation_5g.ctrNumRsrpSamples) FROM pm_events://synthetic_counters_relation_5g",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "synthetic_counters_relation_5g.guid",
+        "synthetic_counters_relation_5g.source_guid",
+        "synthetic_counters_relation_5g.target_guid",
+        "synthetic_counters_relation_5g.oss_id",
+        "synthetic_counters_relation_5g.fdn"
+      ],
+      "filter": [
+        "pm_events://synthetic_counters_relation_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "sum_serv_rsrp",
+      "alias": "relation_source_target_guid_5g",
+      "expression": "SUM(synthetic_counters_relation_5g.ctrSumServRsrp) FROM pm_events://synthetic_counters_relation_5g",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "synthetic_counters_relation_5g.guid",
+        "synthetic_counters_relation_5g.source_guid",
+        "synthetic_counters_relation_5g.target_guid",
+        "synthetic_counters_relation_5g.oss_id",
+        "synthetic_counters_relation_5g.fdn"
+      ],
+      "filter": [
+        "pm_events://synthetic_counters_relation_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "sum_serv_sinr",
+      "alias": "relation_source_target_guid_5g",
+      "expression": "SUM(synthetic_counters_relation_5g.ctrSumServSinr) FROM pm_events://synthetic_counters_relation_5g",
+      "object_type": "FLOAT",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "synthetic_counters_relation_5g.guid",
+        "synthetic_counters_relation_5g.source_guid",
+        "synthetic_counters_relation_5g.target_guid",
+        "synthetic_counters_relation_5g.oss_id",
+        "synthetic_counters_relation_5g.fdn"
+      ],
+      "filter": [
+        "pm_events://synthetic_counters_relation_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "sum_targ_rsrp",
+      "alias": "relation_source_target_guid_5g",
+      "expression": "SUM(synthetic_counters_relation_5g.ctrSumTargRsrp) FROM pm_events://synthetic_counters_relation_5g",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "synthetic_counters_relation_5g.guid",
+        "synthetic_counters_relation_5g.source_guid",
+        "synthetic_counters_relation_5g.target_guid",
+        "synthetic_counters_relation_5g.oss_id",
+        "synthetic_counters_relation_5g.fdn"
+      ],
+      "filter": [
+        "pm_events://synthetic_counters_relation_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "num_samples_rsrp_periodic_ta_pmi",
+      "alias": "cell_guid_5g",
+      "expression": "INDEXED_ARRAY_INDEX_SUM(synthetic_counters_cell_5g.ctrNumSamplesRsrpPeriodicTaPmi) FROM pm_events://synthetic_counters_cell_5g",
+      "object_type": "INTEGER[][]",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "synthetic_counters_cell_5g.guid",
+        "synthetic_counters_cell_5g.oss_id",
+        "synthetic_counters_cell_5g.fdn"
+      ],
+      "filter": [
+        "pm_events://synthetic_counters_cell_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "sum_serv_rsrp_ta_pmi",
+      "alias": "cell_guid_5g",
+      "expression": "INDEXED_ARRAY_INDEX_SUM(synthetic_counters_cell_5g.ctrSumServRsrpTaPmi) FROM pm_events://synthetic_counters_cell_5g",
+      "object_type": "INTEGER[][]",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "synthetic_counters_cell_5g.guid",
+        "synthetic_counters_cell_5g.oss_id",
+        "synthetic_counters_cell_5g.fdn"
+      ],
+      "filter": [
+        "pm_events://synthetic_counters_cell_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "sum_serv_sinr_ta_pmi",
+      "alias": "cell_guid_5g",
+      "expression": "INDEXED_ARRAY_INDEX_SUM(synthetic_counters_cell_5g.ctrSumServSinrTaPmi) FROM pm_events://synthetic_counters_cell_5g",
+      "object_type": "INTEGER[][]",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "synthetic_counters_cell_5g.guid",
+        "synthetic_counters_cell_5g.oss_id",
+        "synthetic_counters_cell_5g.fdn"
+      ],
+      "filter": [
+        "pm_events://synthetic_counters_cell_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "num_samples_rsrp_intermediate_spatial_grid",
+      "alias": "cell_guid_5g",
+      "expression": "CALCULATE_SUM_SPATIAL_GRID_32(FIRST(kpi_cell_guid_5g_1440.num_samples_rsrp_periodic_ta_pmi), FIRST(kpi_cell_guid_5g_1440.high_serving_distance), false) FROM kpi_db://kpi_cell_guid_5g_1440",
+      "object_type": "FLOAT[]",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "kpi_cell_guid_5g_1440.guid",
+        "kpi_cell_guid_5g_1440.oss_id",
+        "kpi_cell_guid_5g_1440.fdn"
+      ],
+      "filter": [
+        "kpi_db://kpi_cell_guid_5g_1440.local_timestamp = ''${param.kpi_date} 00:00:00''"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "sum_serv_rsrp_intermediate_spatial_grid",
+      "alias": "cell_guid_5g",
+      "expression": "CALCULATE_SUM_SPATIAL_GRID_32(FIRST(kpi_cell_guid_5g_1440.sum_serv_rsrp_ta_pmi), FIRST(kpi_cell_guid_5g_1440.high_serving_distance), false) FROM kpi_db://kpi_cell_guid_5g_1440",
+      "object_type": "FLOAT[]",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "kpi_cell_guid_5g_1440.guid",
+        "kpi_cell_guid_5g_1440.oss_id",
+        "kpi_cell_guid_5g_1440.fdn"
+      ],
+      "filter": [
+        "kpi_db://kpi_cell_guid_5g_1440.local_timestamp = ''${param.kpi_date} 00:00:00''"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "sum_serv_sinr_intermediate_spatial_grid",
+      "alias": "cell_guid_5g",
+      "expression": "CALCULATE_SUM_SPATIAL_GRID_32(FIRST(kpi_cell_guid_5g_1440.sum_serv_sinr_ta_pmi), FIRST(kpi_cell_guid_5g_1440.high_serving_distance), true) FROM kpi_db://kpi_cell_guid_5g_1440",
+      "object_type": "FLOAT[]",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "kpi_cell_guid_5g_1440.guid",
+        "kpi_cell_guid_5g_1440.oss_id",
+        "kpi_cell_guid_5g_1440.fdn"
+      ],
+      "filter": [
+        "kpi_db://kpi_cell_guid_5g_1440.local_timestamp = ''${param.kpi_date} 00:00:00''"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "nr_rsrp_spatial_grid",
+      "alias": "cell_guid_5g",
+      "expression": "ARRAY_DIVISION(FIRST(kpi_cell_guid_5g_1440.sum_serv_rsrp_intermediate_spatial_grid), FIRST(kpi_cell_guid_5g_1440.num_samples_rsrp_intermediate_spatial_grid)) FROM kpi_db://kpi_cell_guid_5g_1440",
+      "object_type": "FLOAT[]",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "kpi_cell_guid_5g_1440.guid",
+        "kpi_cell_guid_5g_1440.oss_id",
+        "kpi_cell_guid_5g_1440.fdn"
+      ],
+      "filter": [
+        "kpi_db://kpi_cell_guid_5g_1440.local_timestamp = ''${param.kpi_date} 00:00:00''"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "nr_sinr_spatial_grid",
+      "alias": "cell_guid_5g",
+      "expression": "ARRAY_DIVISION(FIRST(kpi_cell_guid_5g_1440.sum_serv_sinr_intermediate_spatial_grid), FIRST(kpi_cell_guid_5g_1440.num_samples_rsrp_intermediate_spatial_grid)) FROM kpi_db://kpi_cell_guid_5g_1440",
+      "object_type": "FLOAT[]",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "kpi_cell_guid_5g_1440.guid",
+        "kpi_cell_guid_5g_1440.oss_id",
+        "kpi_cell_guid_5g_1440.fdn"
+      ],
+      "filter": [
+        "kpi_db://kpi_cell_guid_5g_1440.local_timestamp = ''${param.kpi_date} 00:00:00''"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "num_samples_ctr_rsrp",
+      "alias": "cell_guid_5g",
+      "expression": "SUM(synthetic_counters_cell_5g.ctrNumSamplesRsrp) FROM pm_events://synthetic_counters_cell_5g",
+      "object_type": "INTEGER",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "synthetic_counters_cell_5g.guid",
+        "synthetic_counters_cell_5g.oss_id",
+        "synthetic_counters_cell_5g.fdn"
+      ],
+      "filter": [
+        "pm_events://synthetic_counters_cell_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "lte_prb_utilization_numerator",
+      "alias": "cell_guid_4g",
+      "expression": "SUM(5 * cell_guid_4g.pm_prb_util_dl[0]) + SUM(15 * cell_guid_4g.pm_prb_util_dl[1]) + SUM(25 * cell_guid_4g.pm_prb_util_dl[2]) + SUM(35 * cell_guid_4g.pm_prb_util_dl[3]) + SUM(45 * cell_guid_4g.pm_prb_util_dl[4]) + SUM(55 * cell_guid_4g.pm_prb_util_dl[5]) + SUM(65 * cell_guid_4g.pm_prb_util_dl[6]) + SUM(75 * cell_guid_4g.pm_prb_util_dl[7]) + SUM(85 * cell_guid_4g.pm_prb_util_dl[8]) + SUM(95 * cell_guid_4g.pm_prb_util_dl[9]) FROM kpi://cell_guid_4g",
+      "object_type": "LONG",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "cell_guid_4g.guid",
+        "cell_guid_4g.oss_id",
+        "cell_guid_4g.fdn"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "lte_prb_utilization_denominator",
+      "alias": "cell_guid_4g",
+      "expression": "FIRST(cell_guid_4g.pm_prb_util_dl[0]) + FIRST(cell_guid_4g.pm_prb_util_dl[1]) + FIRST(cell_guid_4g.pm_prb_util_dl[2]) + FIRST(cell_guid_4g.pm_prb_util_dl[3]) + FIRST(cell_guid_4g.pm_prb_util_dl[4]) + FIRST(cell_guid_4g.pm_prb_util_dl[5]) + FIRST(cell_guid_4g.pm_prb_util_dl[6]) + FIRST(cell_guid_4g.pm_prb_util_dl[7]) + FIRST(cell_guid_4g.pm_prb_util_dl[8]) + FIRST(cell_guid_4g.pm_prb_util_dl[9]) FROM kpi://cell_guid_4g",
+      "object_type": "LONG",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "cell_guid_4g.guid",
+        "cell_guid_4g.oss_id",
+        "cell_guid_4g.fdn"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "lte_prb_utilization",
+      "alias": "cell_guid_4g",
+      "expression": "FIRST(kpi_cell_guid_4g_1440.lte_prb_utilization_numerator) / FIRST(kpi_cell_guid_4g_1440.lte_prb_utilization_denominator) FROM kpi_db://kpi_cell_guid_4g_1440",
+      "object_type": "FLOAT",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "kpi_cell_guid_4g_1440.guid",
+        "kpi_cell_guid_4g_1440.oss_id",
+        "kpi_cell_guid_4g_1440.fdn"
+      ],
+      "filter": [
+        "kpi_db://kpi_cell_guid_4g_1440.local_timestamp = ''${param.kpi_date} 00:00:00''"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "num_samples_rsrp_bin",
+      "alias": "cell_guid_5g",
+      "expression": "ARRAY_INDEX_SUM(synthetic_counters_cell_5g.ctrNumSamplesRsrpBin) FROM pm_events://synthetic_counters_cell_5g",
+      "object_type": "INTEGER[127]",
+      "aggregation_type": "ARRAY_INDEX_SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "synthetic_counters_cell_5g.guid",
+        "synthetic_counters_cell_5g.oss_id",
+        "synthetic_counters_cell_5g.fdn"
+      ],
+      "filter": [
+        "pm_events://synthetic_counters_cell_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "num_samples_sinr_bin",
+      "alias": "cell_guid_5g",
+      "expression": "ARRAY_INDEX_SUM(synthetic_counters_cell_5g.ctrNumSamplesSinrBin) FROM pm_events://synthetic_counters_cell_5g",
+      "object_type": "INTEGER[128]",
+      "aggregation_type": "ARRAY_INDEX_SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "synthetic_counters_cell_5g.guid",
+        "synthetic_counters_cell_5g.oss_id",
+        "synthetic_counters_cell_5g.fdn"
+      ],
+      "filter": [
+        "pm_events://synthetic_counters_cell_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "low_serving_rsrp",
+      "alias": "cell_guid_5g",
+      "expression": "CALCULATE_AZIMUTH_PERCENTILE(FIRST(cell_guid_5g.num_samples_rsrp_bin), 5) - 156 FROM kpi://cell_guid_5g",
+      "object_type": "INTEGER",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "cell_guid_5g.guid",
+        "cell_guid_5g.oss_id",
+        "cell_guid_5g.fdn"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "mid_serving_rsrp",
+      "alias": "cell_guid_5g",
+      "expression": "CALCULATE_AZIMUTH_PERCENTILE(FIRST(cell_guid_5g.num_samples_rsrp_bin), 50) - 156 FROM kpi://cell_guid_5g",
+      "object_type": "INTEGER",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "cell_guid_5g.guid",
+        "cell_guid_5g.oss_id",
+        "cell_guid_5g.fdn"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "high_serving_rsrp",
+      "alias": "cell_guid_5g",
+      "expression": "CALCULATE_AZIMUTH_PERCENTILE(FIRST(cell_guid_5g.num_samples_rsrp_bin), 95) - 156 FROM kpi://cell_guid_5g",
+      "object_type": "INTEGER",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "cell_guid_5g.guid",
+        "cell_guid_5g.oss_id",
+        "cell_guid_5g.fdn"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "low_serving_sinr",
+      "alias": "cell_guid_5g",
+      "expression": "(CALCULATE_AZIMUTH_PERCENTILE(FIRST(cell_guid_5g.num_samples_sinr_bin), 5) - 46) / 2 FROM kpi://cell_guid_5g",
+      "object_type": "FLOAT",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "cell_guid_5g.guid",
+        "cell_guid_5g.oss_id",
+        "cell_guid_5g.fdn"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "mid_serving_sinr",
+      "alias": "cell_guid_5g",
+      "expression": "(CALCULATE_AZIMUTH_PERCENTILE(FIRST(cell_guid_5g.num_samples_sinr_bin), 50) - 46) / 2 FROM kpi://cell_guid_5g",
+      "object_type": "FLOAT",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "cell_guid_5g.guid",
+        "cell_guid_5g.oss_id",
+        "cell_guid_5g.fdn"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "high_serving_sinr",
+      "alias": "cell_guid_5g",
+      "expression": "(CALCULATE_AZIMUTH_PERCENTILE(FIRST(cell_guid_5g.num_samples_sinr_bin), 95) - 46) / 2 FROM kpi://cell_guid_5g",
+      "object_type": "FLOAT",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "cell_guid_5g.guid",
+        "cell_guid_5g.oss_id",
+        "cell_guid_5g.fdn"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "num_samples_ue_thp",
+      "alias": "cell_guid_5g",
+      "expression": "ARRAY_INDEX_SUM(synthetic_counters_cell_5g.ctrNumSamplesUeThp) FROM pm_events://synthetic_counters_cell_5g",
+      "object_type": "INTEGER[501]",
+      "aggregation_type": "ARRAY_INDEX_SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "synthetic_counters_cell_5g.guid",
+        "synthetic_counters_cell_5g.oss_id",
+        "synthetic_counters_cell_5g.fdn"
+      ],
+      "filter": [
+        "pm_events://synthetic_counters_cell_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "sum_array_ue_thp",
+      "alias": "cell_guid_5g",
+      "expression": "FIRST(aggregate(cell_guid_5g.num_samples_ue_thp, 0, (acc, x) -> acc + x)) FROM kpi://cell_guid_5g",
+      "object_type": "INTEGER",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "cell_guid_5g.guid",
+        "cell_guid_5g.oss_id",
+        "cell_guid_5g.fdn"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "low_serving_ue_thp_conditional",
+      "alias": "cell_guid_5g",
+      "expression": "CALCULATE_AZIMUTH_PERCENTILE(FIRST(cell_guid_5g.num_samples_ue_thp), 5) + 1 FROM kpi://cell_guid_5g",
+      "object_type": "INTEGER",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "cell_guid_5g.guid",
+        "cell_guid_5g.oss_id",
+        "cell_guid_5g.fdn"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "low_serving_ue_thp",
+      "alias": "cell_guid_5g",
+      "expression": "FIRST(CASE WHEN cell_guid_5g.sum_array_ue_thp = 0 THEN null ELSE cell_guid_5g.low_serving_ue_thp_conditional END) FROM kpi://cell_guid_5g",
+      "object_type": "INTEGER",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "cell_guid_5g.guid",
+        "cell_guid_5g.oss_id",
+        "cell_guid_5g.fdn"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "low10_serving_ue_thp_conditional",
+      "alias": "cell_guid_5g",
+      "expression": "CALCULATE_AZIMUTH_PERCENTILE(FIRST(cell_guid_5g.num_samples_ue_thp), 10) + 1 FROM kpi://cell_guid_5g",
+      "object_type": "INTEGER",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "cell_guid_5g.guid",
+        "cell_guid_5g.oss_id",
+        "cell_guid_5g.fdn"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "low10_serving_ue_thp",
+      "alias": "cell_guid_5g",
+      "expression": "FIRST(CASE WHEN cell_guid_5g.sum_array_ue_thp = 0 THEN null ELSE cell_guid_5g.low10_serving_ue_thp_conditional END) FROM kpi://cell_guid_5g",
+      "object_type": "INTEGER",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "cell_guid_5g.guid",
+        "cell_guid_5g.oss_id",
+        "cell_guid_5g.fdn"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "mid_serving_ue_thp_conditional",
+      "alias": "cell_guid_5g",
+      "expression": "CALCULATE_AZIMUTH_PERCENTILE(FIRST(cell_guid_5g.num_samples_ue_thp), 50) + 1 FROM kpi://cell_guid_5g",
+      "object_type": "INTEGER",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "cell_guid_5g.guid",
+        "cell_guid_5g.oss_id",
+        "cell_guid_5g.fdn"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "mid_serving_ue_thp",
+      "alias": "cell_guid_5g",
+      "expression": "FIRST(CASE WHEN cell_guid_5g.sum_array_ue_thp = 0 THEN null ELSE cell_guid_5g.mid_serving_ue_thp_conditional END) FROM kpi://cell_guid_5g",
+      "object_type": "INTEGER",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "cell_guid_5g.guid",
+        "cell_guid_5g.oss_id",
+        "cell_guid_5g.fdn"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "high_serving_ue_thp_conditional",
+      "alias": "cell_guid_5g",
+      "expression": "CALCULATE_AZIMUTH_PERCENTILE(FIRST(cell_guid_5g.num_samples_ue_thp), 95) + 1 FROM kpi://cell_guid_5g",
+      "object_type": "INTEGER",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "cell_guid_5g.guid",
+        "cell_guid_5g.oss_id",
+        "cell_guid_5g.fdn"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "high_serving_ue_thp",
+      "alias": "cell_guid_5g",
+      "expression": "FIRST(CASE WHEN cell_guid_5g.sum_array_ue_thp = 0 THEN null ELSE cell_guid_5g.high_serving_ue_thp_conditional END) FROM kpi://cell_guid_5g",
+      "object_type": "INTEGER",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "cell_guid_5g.guid",
+        "cell_guid_5g.oss_id",
+        "cell_guid_5g.fdn"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "sum_cell_serv_rsrp",
+      "alias": "cell_guid_5g",
+      "expression": "SUM(synthetic_counters_cell_5g.ctrSumCellServRsrp) FROM pm_events://synthetic_counters_cell_5g",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "synthetic_counters_cell_5g.guid",
+        "synthetic_counters_cell_5g.oss_id",
+        "synthetic_counters_cell_5g.fdn"
+      ],
+      "filter": [
+        "pm_events://synthetic_counters_cell_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "num_samples_sinr_at_or_below_neg_6",
+      "alias": "cell_guid_5g",
+      "expression": "SUM(synthetic_counters_cell_5g.ctrNumSamplesSinrAtOrBelowNeg6) FROM pm_events://synthetic_counters_cell_5g",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "synthetic_counters_cell_5g.guid",
+        "synthetic_counters_cell_5g.oss_id",
+        "synthetic_counters_cell_5g.fdn"
+      ],
+      "filter": [
+        "pm_events://synthetic_counters_cell_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "relational_bad_coverage_count",
+      "alias": "relation_source_target_guid_5g",
+      "expression": "SUM(synthetic_counters_relation_5g.ctrRelationalBadCoverageCount) FROM pm_events://synthetic_counters_relation_5g",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "synthetic_counters_relation_5g.guid",
+        "synthetic_counters_relation_5g.source_guid",
+        "synthetic_counters_relation_5g.target_guid",
+        "synthetic_counters_relation_5g.oss_id",
+        "synthetic_counters_relation_5g.fdn"
+      ],
+      "filter": [
+        "pm_events://synthetic_counters_relation_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "pm_endc_rel_ue_abnormal_menb_act",
+      "alias": "cell_guid_5g",
+      "expression": "SUM(counters_cell_5g.pmEndcRelUeAbnormalMenbAct) FROM pm_stats://counters_cell_5g",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "counters_cell_5g.guid",
+        "counters_cell_5g.oss_id",
+        "counters_cell_5g.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "pm_endc_rel_ue_abnormal_sgnb_act",
+      "alias": "cell_guid_5g",
+      "expression": "SUM(counters_cell_5g.pmEndcRelUeAbnormalSgnbAct) FROM pm_stats://counters_cell_5g",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "counters_cell_5g.guid",
+        "counters_cell_5g.oss_id",
+        "counters_cell_5g.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "pm_endc_rel_ue_normal",
+      "alias": "cell_guid_5g",
+      "expression": "SUM(counters_cell_5g.pmEndcRelUeNormal) FROM pm_stats://counters_cell_5g",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "counters_cell_5g.guid",
+        "counters_cell_5g.oss_id",
+        "counters_cell_5g.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "pm_endc_rel_ue_abnormal_menb",
+      "alias": "cell_guid_5g",
+      "expression": "SUM(counters_cell_5g.pmEndcRelUeAbnormalMenb) FROM pm_stats://counters_cell_5g",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "counters_cell_5g.guid",
+        "counters_cell_5g.oss_id",
+        "counters_cell_5g.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "pm_endc_rel_ue_abnormal_sgnb",
+      "alias": "cell_guid_5g",
+      "expression": "SUM(counters_cell_5g.pmEndcRelUeAbnormalSgnb) FROM pm_stats://counters_cell_5g",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "counters_cell_5g.guid",
+        "counters_cell_5g.oss_id",
+        "counters_cell_5g.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "endc_ue_rel_abnormal_act",
+      "alias": "cell_guid_5g",
+      "expression": "FIRST(kpi_cell_guid_5g_1440.pm_endc_rel_ue_abnormal_menb_act) + FIRST(kpi_cell_guid_5g_1440.pm_endc_rel_ue_abnormal_sgnb_act) FROM kpi_db://kpi_cell_guid_5g_1440",
+      "object_type": "FLOAT",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "kpi_cell_guid_5g_1440.guid",
+        "kpi_cell_guid_5g_1440.oss_id",
+        "kpi_cell_guid_5g_1440.fdn"
+      ],
+      "filter": [
+        "kpi_db://kpi_cell_guid_5g_1440.local_timestamp = ''${param.kpi_date} 00:00:00''"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "endc_ue_rel_total",
+      "alias": "cell_guid_5g",
+      "expression": "FIRST(kpi_cell_guid_5g_1440.pm_endc_rel_ue_normal) + FIRST(kpi_cell_guid_5g_1440.pm_endc_rel_ue_abnormal_menb) + FIRST(kpi_cell_guid_5g_1440.pm_endc_rel_ue_abnormal_sgnb) FROM kpi_db://kpi_cell_guid_5g_1440",
+      "object_type": "FLOAT",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "kpi_cell_guid_5g_1440.guid",
+        "kpi_cell_guid_5g_1440.oss_id",
+        "kpi_cell_guid_5g_1440.fdn"
+      ],
+      "filter": [
+        "kpi_db://kpi_cell_guid_5g_1440.local_timestamp = ''${param.kpi_date} 00:00:00''"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "nr_droprate",
+      "alias": "cell_guid_5g",
+      "expression": "100 * FIRST(kpi_cell_guid_5g_1440.endc_ue_rel_abnormal_act) / FIRST(kpi_cell_guid_5g_1440.endc_ue_rel_total) FROM kpi_db://kpi_cell_guid_5g_1440",
+      "object_type": "FLOAT",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "kpi_cell_guid_5g_1440.guid",
+        "kpi_cell_guid_5g_1440.oss_id",
+        "kpi_cell_guid_5g_1440.fdn"
+      ],
+      "filter": [
+        "kpi_db://kpi_cell_guid_5g_1440.local_timestamp = ''${param.kpi_date} 00:00:00''"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "pm_prb_util_dl_hr",
+      "alias": "cell_guid_4g",
+      "expression": "ARRAY_INDEX_SUM(counters_cell.pmPrbUtilDl) FROM pm_stats://counters_cell",
+      "object_type": "INTEGER[10]",
+      "aggregation_type": "ARRAY_INDEX_SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "counters_cell.guid",
+        "counters_cell.oss_id",
+        "counters_cell.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "pm_rrc_conn_estab_succ_hr",
+      "alias": "cell_guid_4g",
+      "expression": "SUM(counters_cell.pmRrcConnEstabSucc) FROM pm_stats://counters_cell",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "counters_cell.guid",
+        "counters_cell.oss_id",
+        "counters_cell.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "pm_rrc_conn_estab_att_hr",
+      "alias": "cell_guid_4g",
+      "expression": "SUM(counters_cell.pmRrcConnEstabAtt) FROM pm_stats://counters_cell",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "counters_cell.guid",
+        "counters_cell.oss_id",
+        "counters_cell.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "pm_rrc_conn_estab_att_reatt_hr",
+      "alias": "cell_guid_4g",
+      "expression": "SUM(counters_cell.pmRrcConnEstabAttReatt) FROM pm_stats://counters_cell",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "counters_cell.guid",
+        "counters_cell.oss_id",
+        "counters_cell.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "pm_rrc_conn_estab_fail_mme_ovl_mos_hr",
+      "alias": "cell_guid_4g",
+      "expression": "CASE WHEN SUM(counters_cell.pmRrcConnEstabFailMmeOvlMos) IS NULL THEN 0 ELSE SUM(counters_cell.pmRrcConnEstabFailMmeOvlMos) END FROM pm_stats://counters_cell",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "counters_cell.guid",
+        "counters_cell.oss_id",
+        "counters_cell.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "pm_rrc_conn_estab_fail_mme_ovl_mod_hr",
+      "alias": "cell_guid_4g",
+      "expression": "CASE WHEN SUM(counters_cell.pmRrcConnEstabFailMmeOvlMod) IS NULL THEN 0 ELSE SUM(counters_cell.pmRrcConnEstabFailMmeOvlMod) END FROM pm_stats://counters_cell",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "counters_cell.guid",
+        "counters_cell.oss_id",
+        "counters_cell.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "pm_s1_sig_conn_estab_succ_hr",
+      "alias": "cell_guid_4g",
+      "expression": "SUM(counters_cell.pmS1SigConnEstabSucc) FROM pm_stats://counters_cell",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "counters_cell.guid",
+        "counters_cell.oss_id",
+        "counters_cell.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "pm_s1_sig_conn_estab_att_hr",
+      "alias": "cell_guid_4g",
+      "expression": "SUM(counters_cell.pmS1SigConnEstabAtt) FROM pm_stats://counters_cell",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "counters_cell.guid",
+        "counters_cell.oss_id",
+        "counters_cell.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "pm_s1_sig_conn_estab_fail_mme_ovl_mos_hr",
+      "alias": "cell_guid_4g",
+      "expression": "CASE WHEN SUM(counters_cell.pmS1SigConnEstabFailMmeOvlMos) IS NULL THEN 0 ELSE SUM(counters_cell.pmS1SigConnEstabFailMmeOvlMos) END FROM pm_stats://counters_cell",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "counters_cell.guid",
+        "counters_cell.oss_id",
+        "counters_cell.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "num_calls_daily_hr",
+      "alias": "cell_guid_4g",
+      "expression": "SUM(counters_cell.pmErabEstabSuccInit) FROM pm_stats://counters_cell",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "counters_cell.guid",
+        "counters_cell.oss_id",
+        "counters_cell.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "pm_erab_estab_succ_added_hr",
+      "alias": "cell_guid_4g",
+      "expression": "SUM(counters_cell.pmErabEstabSuccAdded) FROM pm_stats://counters_cell",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "counters_cell.guid",
+        "counters_cell.oss_id",
+        "counters_cell.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "pm_erab_estab_att_init_hr",
+      "alias": "cell_guid_4g",
+      "expression": "SUM(counters_cell.pmErabEstabAttInit) FROM pm_stats://counters_cell",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "counters_cell.guid",
+        "counters_cell.oss_id",
+        "counters_cell.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "pm_erab_estab_att_added_hr",
+      "alias": "cell_guid_4g",
+      "expression": "SUM(counters_cell.pmErabEstabAttAdded) FROM pm_stats://counters_cell",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "counters_cell.guid",
+        "counters_cell.oss_id",
+        "counters_cell.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "pm_erab_estab_fail_added_ongoing_proc_hr",
+      "alias": "cell_guid_4g",
+      "expression": "SUM(counters_cell.pmErabEstabFailAddedOngoingProc) FROM pm_stats://counters_cell",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "counters_cell.guid",
+        "counters_cell.oss_id",
+        "counters_cell.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "pm_erab_estab_fail_added_ongoing_proc_null_as_zero_hr",
+      "alias": "cell_guid_4g",
+      "expression": "FIRST(CASE WHEN cell_guid_4g.pm_erab_estab_fail_added_ongoing_proc_hr IS NULL THEN 0 ELSE pm_erab_estab_fail_added_ongoing_proc_hr END) FROM kpi://cell_guid_4g",
+      "object_type": "FLOAT",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "cell_guid_4g.guid",
+        "cell_guid_4g.oss_id",
+        "cell_guid_4g.fdn"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "rrc_mme_ovl_hr",
+      "alias": "cell_guid_4g",
+      "expression": "FIRST(cell_guid_4g.pm_rrc_conn_estab_fail_mme_ovl_mos_hr) + FIRST(cell_guid_4g.pm_rrc_conn_estab_fail_mme_ovl_mod_hr) FROM kpi://cell_guid_4g",
+      "object_type": "FLOAT",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "cell_guid_4g.guid",
+        "cell_guid_4g.oss_id",
+        "cell_guid_4g.fdn"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "rrc_estab_r_denom_hr",
+      "alias": "cell_guid_4g",
+      "expression": "FIRST(cell_guid_4g.pm_rrc_conn_estab_att_hr) - FIRST(cell_guid_4g.pm_rrc_conn_estab_att_reatt_hr) - FIRST(cell_guid_4g.rrc_mme_ovl_hr) FROM kpi://cell_guid_4g",
+      "object_type": "FLOAT",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "cell_guid_4g.guid",
+        "cell_guid_4g.oss_id",
+        "cell_guid_4g.fdn"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "rrc_estab_r_hr",
+      "alias": "cell_guid_4g",
+      "expression": "FIRST(kpi_cell_guid_4g_60.pm_rrc_conn_estab_succ_hr) / FIRST(kpi_cell_guid_4g_60.rrc_estab_r_denom_hr) FROM kpi_db://kpi_cell_guid_4g_60",
+      "object_type": "FLOAT",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "kpi_cell_guid_4g_60.guid",
+        "kpi_cell_guid_4g_60.oss_id",
+        "kpi_cell_guid_4g_60.fdn"
+      ],
+      "filter": [
+        "kpi_db://kpi_cell_guid_4g_60.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "s1_sig_conn_estab_r_denom_hr",
+      "alias": "cell_guid_4g",
+      "expression": "FIRST(cell_guid_4g.pm_s1_sig_conn_estab_att_hr) - FIRST(cell_guid_4g.pm_s1_sig_conn_estab_fail_mme_ovl_mos_hr) FROM kpi://cell_guid_4g",
+      "object_type": "FLOAT",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "cell_guid_4g.guid",
+        "cell_guid_4g.oss_id",
+        "cell_guid_4g.fdn"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "s1_sig_conn_estab_r_hr",
+      "alias": "cell_guid_4g",
+      "expression": "FIRST(kpi_cell_guid_4g_60.pm_s1_sig_conn_estab_succ_hr) / FIRST(kpi_cell_guid_4g_60.s1_sig_conn_estab_r_denom_hr) FROM kpi_db://kpi_cell_guid_4g_60",
+      "object_type": "FLOAT",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "kpi_cell_guid_4g_60.guid",
+        "kpi_cell_guid_4g_60.oss_id",
+        "kpi_cell_guid_4g_60.fdn"
+      ],
+      "filter": [
+        "kpi_db://kpi_cell_guid_4g_60.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "erab_estab_int_r_numerator_hr",
+      "alias": "cell_guid_4g",
+      "expression": "FIRST(cell_guid_4g.num_calls_daily_hr) + FIRST(cell_guid_4g.pm_erab_estab_succ_added_hr) FROM kpi://cell_guid_4g",
+      "object_type": "FLOAT",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "cell_guid_4g.guid",
+        "cell_guid_4g.oss_id",
+        "cell_guid_4g.fdn"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "erab_estab_int_r_denom_hr",
+      "alias": "cell_guid_4g",
+      "expression": "FIRST(cell_guid_4g.pm_erab_estab_att_init_hr) + FIRST(cell_guid_4g.pm_erab_estab_att_added_hr) - FIRST(cell_guid_4g.pm_erab_estab_fail_added_ongoing_proc_null_as_zero_hr) FROM kpi://cell_guid_4g",
+      "object_type": "FLOAT",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "cell_guid_4g.guid",
+        "cell_guid_4g.oss_id",
+        "cell_guid_4g.fdn"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "erab_estab_int_r_hr",
+      "alias": "cell_guid_4g",
+      "expression": "FIRST(kpi_cell_guid_4g_60.erab_estab_int_r_numerator_hr) / FIRST(kpi_cell_guid_4g_60.erab_estab_int_r_denom_hr) FROM kpi_db://kpi_cell_guid_4g_60",
+      "object_type": "FLOAT",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "kpi_cell_guid_4g_60.guid",
+        "kpi_cell_guid_4g_60.oss_id",
+        "kpi_cell_guid_4g_60.fdn"
+      ],
+      "filter": [
+        "kpi_db://kpi_cell_guid_4g_60.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "lte_accessibility_hr",
+      "alias": "cell_guid_4g",
+      "expression": "100 * FIRST(cell_guid_4g.rrc_estab_r_hr) * FIRST(cell_guid_4g.s1_sig_conn_estab_r_hr) * FIRST(cell_guid_4g.erab_estab_int_r_hr) FROM kpi://cell_guid_4g",
+      "object_type": "FLOAT",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "cell_guid_4g.guid",
+        "cell_guid_4g.oss_id",
+        "cell_guid_4g.fdn"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "cgi_hr",
+      "alias": "cell_guid_4g",
+      "expression": "FIRST(cell.cgi) FROM pm_stats://counters_cell INNER JOIN cm://cell ON counters_cell.guid = cell.id",
+      "object_type": "STRING",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "counters_cell.guid",
+        "counters_cell.oss_id",
+        "counters_cell.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "name_hr",
+      "alias": "cell_guid_4g",
+      "expression": "FIRST(cell.name) FROM pm_stats://counters_cell INNER JOIN cm://cell ON counters_cell.guid = cell.id",
+      "object_type": "STRING",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "counters_cell.guid",
+        "counters_cell.oss_id",
+        "counters_cell.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "pm_mac_rb_sym_used_pdsch_type_a_hr",
+      "alias": "cell_guid_5g",
+      "expression": "SUM(counters_cell_5g.pmMacRBSymUsedPdschTypeA) FROM pm_stats://counters_cell_5g",
+      "object_type": "LONG",
+      "aggregation_type": "SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "counters_cell_5g.guid",
+        "counters_cell_5g.oss_id",
+        "counters_cell_5g.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "pm_mac_rb_sym_used_pdcch_type_a_hr",
+      "alias": "cell_guid_5g",
+      "expression": "SUM(counters_cell_5g.pmMacRBSymUsedPdcchTypeA) FROM pm_stats://counters_cell_5g",
+      "object_type": "LONG",
+      "aggregation_type": "SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "counters_cell_5g.guid",
+        "counters_cell_5g.oss_id",
+        "counters_cell_5g.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "pm_mac_rb_sym_used_pdcch_type_b_hr",
+      "alias": "cell_guid_5g",
+      "expression": "SUM(counters_cell_5g.pmMacRBSymUsedPdcchTypeB) FROM pm_stats://counters_cell_5g",
+      "object_type": "LONG",
+      "aggregation_type": "SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "counters_cell_5g.guid",
+        "counters_cell_5g.oss_id",
+        "counters_cell_5g.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "pm_mac_rb_sym_used_pdsch_type_a_broadcasting_hr",
+      "alias": "cell_guid_5g",
+      "expression": "SUM(counters_cell_5g.pmMacRBSymUsedPdschTypeABroadcasting) FROM pm_stats://counters_cell_5g",
+      "object_type": "LONG",
+      "aggregation_type": "SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "counters_cell_5g.guid",
+        "counters_cell_5g.oss_id",
+        "counters_cell_5g.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "pm_mac_rb_sym_csi_rs_hr",
+      "alias": "cell_guid_5g",
+      "expression": "SUM(counters_cell_5g.pmMacRBSymCsiRs) FROM pm_stats://counters_cell_5g",
+      "object_type": "LONG",
+      "aggregation_type": "SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "counters_cell_5g.guid",
+        "counters_cell_5g.oss_id",
+        "counters_cell_5g.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "pm_mac_rb_sym_avail_dl_hr",
+      "alias": "cell_guid_5g",
+      "expression": "SUM(counters_cell_5g.pmMacRBSymAvailDl) FROM pm_stats://counters_cell_5g",
+      "object_type": "LONG",
+      "aggregation_type": "SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "counters_cell_5g.guid",
+        "counters_cell_5g.oss_id",
+        "counters_cell_5g.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "pm_pdsch_sched_activity_hr",
+      "alias": "cell_guid_5g",
+      "expression": "SUM(counters_cell_5g.pmPdschSchedActivity) FROM pm_stats://counters_cell_5g",
+      "object_type": "LONG",
+      "aggregation_type": "SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "counters_cell_5g.guid",
+        "counters_cell_5g.oss_id",
+        "counters_cell_5g.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "pm_pdsch_avail_time_hr",
+      "alias": "cell_guid_5g",
+      "expression": "SUM(counters_cell_5g.pmPdschAvailTime) FROM pm_stats://counters_cell_5g",
+      "object_type": "LONG",
+      "aggregation_type": "SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "counters_cell_5g.guid",
+        "counters_cell_5g.oss_id",
+        "counters_cell_5g.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "pm_flex_erab_estab_succ_init_endc_1to99_hr",
+      "alias": "cell_guid_4g",
+      "expression": "SUM(counters_cell.pmFlexErabEstabSuccInit_Endc1To99) FROM pm_stats://counters_cell",
+      "object_type": "LONG",
+      "aggregation_type": "SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "counters_cell.guid",
+        "counters_cell.oss_id",
+        "counters_cell.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "pm_flex_erab_estab_succ_added_endc_1to99_hr",
+      "alias": "cell_guid_4g",
+      "expression": "SUM(counters_cell.pmFlexErabEstabSuccAdded_Endc1To99) FROM pm_stats://counters_cell",
+      "object_type": "LONG",
+      "aggregation_type": "SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "counters_cell.guid",
+        "counters_cell.oss_id",
+        "counters_cell.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "pm_flex_erab_estab_att_init_endc_1to99_hr",
+      "alias": "cell_guid_4g",
+      "expression": "SUM(counters_cell.pmFlexErabEstabAttInit_Endc1To99) FROM pm_stats://counters_cell",
+      "object_type": "LONG",
+      "aggregation_type": "SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "counters_cell.guid",
+        "counters_cell.oss_id",
+        "counters_cell.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "pm_flex_erab_estab_att_added_endc_1to99_hr",
+      "alias": "cell_guid_4g",
+      "expression": "SUM(counters_cell.pmFlexErabEstabAttAdded_Endc1To99) FROM pm_stats://counters_cell",
+      "object_type": "LONG",
+      "aggregation_type": "SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "counters_cell.guid",
+        "counters_cell.oss_id",
+        "counters_cell.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "pm_flex_erab_estab_fail_added_ongoing_proc_endc_1to99_hr",
+      "alias": "cell_guid_4g",
+      "expression": "SUM(counters_cell.pmFlexErabEstabFailAddedOngoingProc_Endc1To99) FROM pm_stats://counters_cell",
+      "object_type": "LONG",
+      "aggregation_type": "SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "counters_cell.guid",
+        "counters_cell.oss_id",
+        "counters_cell.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "pm_endc_setup_ue_succ_hr",
+      "alias": "cell_guid_5g",
+      "expression": "SUM(counters_cell_5g.pmEndcSetupUeSucc) FROM pm_stats://counters_cell_5g",
+      "object_type": "LONG",
+      "aggregation_type": "SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "counters_cell_5g.guid",
+        "counters_cell_5g.oss_id",
+        "counters_cell_5g.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "pm_endc_setup_ue_att_hr",
+      "alias": "cell_guid_5g",
+      "expression": "SUM(counters_cell_5g.pmEndcSetupUeAtt) FROM pm_stats://counters_cell_5g",
+      "object_type": "LONG",
+      "aggregation_type": "SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "counters_cell_5g.guid",
+        "counters_cell_5g.oss_id",
+        "counters_cell_5g.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "erab_estab_int_r_nsa_numerator_hr",
+      "alias": "cell_guid_4g",
+      "expression": "FIRST(cell_guid_4g.pm_flex_erab_estab_succ_init_endc_1to99_hr) + FIRST(cell_guid_4g.pm_flex_erab_estab_succ_added_endc_1to99_hr) FROM kpi://cell_guid_4g",
+      "object_type": "LONG",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "cell_guid_4g.guid",
+        "cell_guid_4g.oss_id",
+        "cell_guid_4g.fdn"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "erab_estab_int_r_nsa_denum_hr",
+      "alias": "cell_guid_4g",
+      "expression": "FIRST(cell_guid_4g.pm_flex_erab_estab_att_init_endc_1to99_hr) + FIRST(cell_guid_4g.pm_flex_erab_estab_att_added_endc_1to99_hr) - FIRST (cell_guid_4g.pm_flex_erab_estab_fail_added_ongoing_proc_endc_1to99_hr) FROM kpi://cell_guid_4g",
+      "object_type": "LONG",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "cell_guid_4g.guid",
+        "cell_guid_4g.oss_id",
+        "cell_guid_4g.fdn"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "erab_estab_int_r_nsa_hr",
+      "alias": "cell_guid_4g",
+      "expression": "FIRST(kpi_cell_guid_4g_60.erab_estab_int_r_nsa_numerator_hr) / FIRST(kpi_cell_guid_4g_60.erab_estab_int_r_nsa_denum_hr) FROM kpi_db://kpi_cell_guid_4g_60",
+      "object_type": "FLOAT",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "kpi_cell_guid_4g_60.guid",
+        "kpi_cell_guid_4g_60.oss_id",
+        "kpi_cell_guid_4g_60.fdn"
+      ],
+      "filter": [
+        "kpi_db://kpi_cell_guid_4g_60.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "nr_accessibility_hr",
+      "alias": "cell_guid_4g",
+      "expression": "100 * FIRST(cell_guid_4g.rrc_estab_r_hr) * FIRST(cell_guid_4g.s1_sig_conn_estab_r_hr) * FIRST(cell_guid_4g.erab_estab_int_r_nsa_hr) FROM kpi://cell_guid_4g",
+      "object_type": "FLOAT",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "cell_guid_4g.guid",
+        "cell_guid_4g.oss_id",
+        "cell_guid_4g.fdn"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "dl_total_used_rb_sym_hr",
+      "alias": "cell_guid_5g",
+      "expression": "FIRST(cell_guid_5g.pm_mac_rb_sym_used_pdsch_type_a_hr) + FIRST(cell_guid_5g.pm_mac_rb_sym_used_pdcch_type_a_hr) + FIRST(cell_guid_5g.pm_mac_rb_sym_used_pdcch_type_b_hr) + FIRST(cell_guid_5g.pm_mac_rb_sym_used_pdsch_type_a_broadcasting_hr) + FIRST(cell_guid_5g.pm_mac_rb_sym_csi_rs_hr) FROM kpi://cell_guid_5g",
+      "object_type": "LONG",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "cell_guid_5g.guid",
+        "cell_guid_5g.oss_id",
+        "cell_guid_5g.fdn"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "dl_prb_utilization_hr",
+      "alias": "cell_guid_5g",
+      "expression": "100 * FIRST(kpi_cell_guid_5g_60.dl_total_used_rb_sym_hr) / FIRST(kpi_cell_guid_5g_60.pm_mac_rb_sym_avail_dl_hr) FROM kpi_db://kpi_cell_guid_5g_60",
+      "object_type": "FLOAT",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "kpi_cell_guid_5g_60.guid",
+        "kpi_cell_guid_5g_60.oss_id",
+        "kpi_cell_guid_5g_60.fdn"
+      ],
+      "filter": [
+        "kpi_db://kpi_cell_guid_5g_60.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "pdsch_slot_utilization_hr",
+      "alias": "cell_guid_5g",
+      "expression": "100 * FIRST(kpi_cell_guid_5g_60.pm_pdsch_sched_activity_hr) / FIRST(kpi_cell_guid_5g_60.pm_pdsch_avail_time_hr) FROM kpi_db://kpi_cell_guid_5g_60",
+      "object_type": "FLOAT",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "kpi_cell_guid_5g_60.guid",
+        "kpi_cell_guid_5g_60.oss_id",
+        "kpi_cell_guid_5g_60.fdn"
+      ],
+      "filter": [
+        "kpi_db://kpi_cell_guid_5g_60.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "en_dc_setup_sr_gnode_b_hr",
+      "alias": "cell_guid_5g",
+      "expression": "100 * FIRST(kpi_cell_guid_5g_60.pm_endc_setup_ue_succ_hr) / FIRST(kpi_cell_guid_5g_60.pm_endc_setup_ue_att_hr) FROM kpi_db://kpi_cell_guid_5g_60",
+      "object_type": "FLOAT",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "kpi_cell_guid_5g_60.guid",
+        "kpi_cell_guid_5g_60.oss_id",
+        "kpi_cell_guid_5g_60.fdn"
+      ],
+      "filter": [
+        "kpi_db://kpi_cell_guid_5g_60.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "nci_hr",
+      "alias": "cell_guid_5g",
+      "expression": "FIRST(nr_cell.nci) FROM kpi_db://kpi_cell_guid_5g_60 INNER JOIN cm://nr_cell ON kpi_cell_guid_5g_60.guid = nr_cell.id",
+      "object_type": "STRING",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "kpi_cell_guid_5g_60.guid",
+        "kpi_cell_guid_5g_60.oss_id",
+        "kpi_cell_guid_5g_60.fdn"
+      ],
+      "filter": [
+        "kpi_db://kpi_cell_guid_5g_60.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "nr_name_hr",
+      "alias": "cell_guid_5g",
+      "expression": "FIRST(nr_cell.name) FROM kpi_db://kpi_cell_guid_5g_60 INNER JOIN cm://nr_cell ON kpi_cell_guid_5g_60.guid = nr_cell.id",
+      "object_type": "STRING",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "kpi_cell_guid_5g_60.guid",
+        "kpi_cell_guid_5g_60.oss_id",
+        "kpi_cell_guid_5g_60.fdn"
+      ],
+      "filter": [
+        "kpi_db://kpi_cell_guid_5g_60.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "source_nci_hr",
+      "alias": "relation_source_target_guid_5g",
+      "expression": "FIRST(nr_cell.nci) FROM kpi_db://kpi_relation_source_target_guid_5g_60 INNER JOIN cm://nr_cell ON kpi_relation_source_target_guid_5g_60.source_guid = nr_cell.id",
+      "object_type": "STRING",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "kpi_relation_source_target_guid_5g_60.guid",
+        "kpi_relation_source_target_guid_5g_60.source_guid",
+        "kpi_relation_source_target_guid_5g_60.target_guid",
+        "kpi_relation_source_target_guid_5g_60.oss_id",
+        "kpi_relation_source_target_guid_5g_60.fdn"
+      ],
+      "filter": [
+        "kpi_db://kpi_relation_source_target_guid_5g_60.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "source_nr_name_hr",
+      "alias": "relation_source_target_guid_5g",
+      "expression": "FIRST(nr_cell.name) FROM kpi_db://kpi_relation_source_target_guid_5g_60 INNER JOIN cm://nr_cell ON kpi_relation_source_target_guid_5g_60.source_guid = nr_cell.id",
+      "object_type": "STRING",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "kpi_relation_source_target_guid_5g_60.guid",
+        "kpi_relation_source_target_guid_5g_60.source_guid",
+        "kpi_relation_source_target_guid_5g_60.target_guid",
+        "kpi_relation_source_target_guid_5g_60.oss_id",
+        "kpi_relation_source_target_guid_5g_60.fdn"
+      ],
+      "filter": [
+        "kpi_db://kpi_relation_source_target_guid_5g_60.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "target_nci_hr",
+      "alias": "relation_source_target_guid_5g",
+      "expression": "FIRST(nr_cell.nci) FROM kpi_db://kpi_relation_source_target_guid_5g_60 INNER JOIN cm://nr_cell ON kpi_relation_source_target_guid_5g_60.target_guid = nr_cell.id",
+      "object_type": "STRING",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "kpi_relation_source_target_guid_5g_60.guid",
+        "kpi_relation_source_target_guid_5g_60.source_guid",
+        "kpi_relation_source_target_guid_5g_60.target_guid",
+        "kpi_relation_source_target_guid_5g_60.oss_id",
+        "kpi_relation_source_target_guid_5g_60.fdn"
+      ],
+      "filter": [
+        "kpi_db://kpi_relation_source_target_guid_5g_60.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "target_nr_name_hr",
+      "alias": "relation_source_target_guid_5g",
+      "expression": "FIRST(nr_cell.name) FROM kpi_db://kpi_relation_source_target_guid_5g_60 INNER JOIN cm://nr_cell ON kpi_relation_source_target_guid_5g_60.target_guid = nr_cell.id",
+      "object_type": "STRING",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "kpi_relation_source_target_guid_5g_60.guid",
+        "kpi_relation_source_target_guid_5g_60.source_guid",
+        "kpi_relation_source_target_guid_5g_60.target_guid",
+        "kpi_relation_source_target_guid_5g_60.oss_id",
+        "kpi_relation_source_target_guid_5g_60.fdn"
+      ],
+      "filter": [
+        "kpi_db://kpi_relation_source_target_guid_5g_60.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "lte_prb_utilization_numerator_hr",
+      "alias": "cell_guid_4g",
+      "expression": "SUM(5 * cell_guid_4g.pm_prb_util_dl_hr[0]) + SUM(15 * cell_guid_4g.pm_prb_util_dl_hr[1]) + SUM(25 * cell_guid_4g.pm_prb_util_dl_hr[2]) + SUM(35 * cell_guid_4g.pm_prb_util_dl_hr[3]) + SUM(45 * cell_guid_4g.pm_prb_util_dl_hr[4]) + SUM(55 * cell_guid_4g.pm_prb_util_dl_hr[5]) + SUM(65 * cell_guid_4g.pm_prb_util_dl_hr[6]) + SUM(75 * cell_guid_4g.pm_prb_util_dl_hr[7]) + SUM(85 * cell_guid_4g.pm_prb_util_dl_hr[8]) + SUM(95 * cell_guid_4g.pm_prb_util_dl_hr[9]) FROM kpi://cell_guid_4g",
+      "object_type": "LONG",
+      "aggregation_type": "SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "cell_guid_4g.guid",
+        "cell_guid_4g.oss_id",
+        "cell_guid_4g.fdn"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "lte_prb_utilization_denominator_hr",
+      "alias": "cell_guid_4g",
+      "expression": "FIRST(cell_guid_4g.pm_prb_util_dl_hr[0]) + FIRST(cell_guid_4g.pm_prb_util_dl_hr[1]) + FIRST(cell_guid_4g.pm_prb_util_dl_hr[2]) + FIRST(cell_guid_4g.pm_prb_util_dl_hr[3]) + FIRST(cell_guid_4g.pm_prb_util_dl_hr[4]) + FIRST(cell_guid_4g.pm_prb_util_dl_hr[5]) + FIRST(cell_guid_4g.pm_prb_util_dl_hr[6]) + FIRST(cell_guid_4g.pm_prb_util_dl_hr[7]) + FIRST(cell_guid_4g.pm_prb_util_dl_hr[8]) + FIRST(cell_guid_4g.pm_prb_util_dl_hr[9]) FROM kpi://cell_guid_4g",
+      "object_type": "LONG",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "cell_guid_4g.guid",
+        "cell_guid_4g.oss_id",
+        "cell_guid_4g.fdn"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "lte_prb_utilization_hr",
+      "alias": "cell_guid_4g",
+      "expression": "FIRST(kpi_cell_guid_4g_60.lte_prb_utilization_numerator_hr) / FIRST(kpi_cell_guid_4g_60.lte_prb_utilization_denominator_hr) FROM kpi_db://kpi_cell_guid_4g_60",
+      "object_type": "FLOAT",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "kpi_cell_guid_4g_60.guid",
+        "kpi_cell_guid_4g_60.oss_id",
+        "kpi_cell_guid_4g_60.fdn"
+      ],
+      "filter": [
+        "kpi_db://kpi_cell_guid_4g_60.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "num_samples_ta_hr",
+      "alias": "cell_guid_5g",
+      "expression": "INDEXED_ARRAY_INDEX_SUM(synthetic_counters_cell_5g.ctrNumSamplesTa) FROM pm_events://synthetic_counters_cell_5g",
+      "object_type": "INTEGER[][]",
+      "aggregation_type": "INDEXED_ARRAY_INDEX_SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "synthetic_counters_cell_5g.guid",
+        "synthetic_counters_cell_5g.oss_id",
+        "synthetic_counters_cell_5g.fdn"
+      ],
+      "filter": [
+        "pm_events://synthetic_counters_cell_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "low_serving_distance_hr",
+      "alias": "cell_guid_5g",
+      "expression": "PERCENTILE_TA_DISTANCE(FIRST(cell_guid_5g.num_samples_ta_hr), 5) FROM kpi://cell_guid_5g",
+      "object_type": "FLOAT",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "cell_guid_5g.guid",
+        "cell_guid_5g.oss_id",
+        "cell_guid_5g.fdn"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "mid_serving_distance_hr",
+      "alias": "cell_guid_5g",
+      "expression": "PERCENTILE_TA_DISTANCE(FIRST(cell_guid_5g.num_samples_ta_hr), 50) FROM kpi://cell_guid_5g",
+      "object_type": "FLOAT",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "cell_guid_5g.guid",
+        "cell_guid_5g.oss_id",
+        "cell_guid_5g.fdn"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "high_serving_distance_hr",
+      "alias": "cell_guid_5g",
+      "expression": "PERCENTILE_TA_DISTANCE(FIRST(cell_guid_5g.num_samples_ta_hr), 95) FROM kpi://cell_guid_5g",
+      "object_type": "FLOAT",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "cell_guid_5g.guid",
+        "cell_guid_5g.oss_id",
+        "cell_guid_5g.fdn"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "num_samples_ta_pmi_hr",
+      "alias": "cell_guid_5g",
+      "expression": "INDEXED_ARRAY_INDEX_SUM(synthetic_counters_cell_5g.ctrNumSamplesTaPmi) FROM pm_events://synthetic_counters_cell_5g",
+      "object_type": "INTEGER[][]",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "synthetic_counters_cell_5g.guid",
+        "synthetic_counters_cell_5g.oss_id",
+        "synthetic_counters_cell_5g.fdn"
+      ],
+      "filter": [
+        "pm_events://synthetic_counters_cell_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "nr_ue_spatial_grid_hr",
+      "alias": "cell_guid_5g",
+      "expression": "CALCULATE_PERCENTAGE_SPATIAL_GRID_32(FIRST(kpi_cell_guid_5g_60.num_samples_ta_pmi_hr), FIRST(kpi_cell_guid_5g_60.high_serving_distance_hr)) FROM kpi_db://kpi_cell_guid_5g_60",
+      "object_type": "FLOAT[]",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "kpi_cell_guid_5g_60.guid",
+        "kpi_cell_guid_5g_60.oss_id",
+        "kpi_cell_guid_5g_60.fdn"
+      ],
+      "filter": [
+        "kpi_db://kpi_cell_guid_5g_60.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "num_samples_pmi_hr",
+      "alias": "cell_guid_5g",
+      "expression": "ARRAY_INDEX_SUM(synthetic_counters_cell_5g.ctrNumSamplesPmi) FROM pm_events://synthetic_counters_cell_5g",
+      "object_type": "INTEGER[32]",
+      "aggregation_type": "ARRAY_INDEX_SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "synthetic_counters_cell_5g.guid",
+        "synthetic_counters_cell_5g.oss_id",
+        "synthetic_counters_cell_5g.fdn"
+      ],
+      "filter": [
+        "pm_events://synthetic_counters_cell_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "low_serving_azimuth_hr",
+      "alias": "cell_guid_5g",
+      "expression": "CALCULATE_AZIMUTH_PERCENTILE(FIRST(cell_guid_5g.num_samples_pmi_hr), 5) FROM kpi://cell_guid_5g",
+      "object_type": "INTEGER",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "cell_guid_5g.guid",
+        "cell_guid_5g.oss_id",
+        "cell_guid_5g.fdn"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "mid_serving_azimuth_hr",
+      "alias": "cell_guid_5g",
+      "expression": "CALCULATE_AZIMUTH_PERCENTILE(FIRST(cell_guid_5g.num_samples_pmi_hr), 50) FROM kpi://cell_guid_5g",
+      "object_type": "INTEGER",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "cell_guid_5g.guid",
+        "cell_guid_5g.oss_id",
+        "cell_guid_5g.fdn"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "high_serving_azimuth_hr",
+      "alias": "cell_guid_5g",
+      "expression": "CALCULATE_AZIMUTH_PERCENTILE(FIRST(cell_guid_5g.num_samples_pmi_hr), 95) FROM kpi://cell_guid_5g",
+      "object_type": "INTEGER",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "cell_guid_5g.guid",
+        "cell_guid_5g.oss_id",
+        "cell_guid_5g.fdn"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "num_samples_rsrp_hr",
+      "alias": "relation_source_target_guid_5g",
+      "expression": "SUM(synthetic_counters_relation_5g.ctrNumRsrpSamples) FROM pm_events://synthetic_counters_relation_5g",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "synthetic_counters_relation_5g.guid",
+        "synthetic_counters_relation_5g.source_guid",
+        "synthetic_counters_relation_5g.target_guid",
+        "synthetic_counters_relation_5g.oss_id",
+        "synthetic_counters_relation_5g.fdn"
+      ],
+      "filter": [
+        "pm_events://synthetic_counters_relation_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "sum_serv_rsrp_hr",
+      "alias": "relation_source_target_guid_5g",
+      "expression": "SUM(synthetic_counters_relation_5g.ctrSumServRsrp) FROM pm_events://synthetic_counters_relation_5g",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "synthetic_counters_relation_5g.guid",
+        "synthetic_counters_relation_5g.source_guid",
+        "synthetic_counters_relation_5g.target_guid",
+        "synthetic_counters_relation_5g.oss_id",
+        "synthetic_counters_relation_5g.fdn"
+      ],
+      "filter": [
+        "pm_events://synthetic_counters_relation_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "sum_serv_sinr_hr",
+      "alias": "relation_source_target_guid_5g",
+      "expression": "SUM(synthetic_counters_relation_5g.ctrSumServSinr) FROM pm_events://synthetic_counters_relation_5g",
+      "object_type": "FLOAT",
+      "aggregation_type": "SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "synthetic_counters_relation_5g.guid",
+        "synthetic_counters_relation_5g.source_guid",
+        "synthetic_counters_relation_5g.target_guid",
+        "synthetic_counters_relation_5g.oss_id",
+        "synthetic_counters_relation_5g.fdn"
+      ],
+      "filter": [
+        "pm_events://synthetic_counters_relation_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "sum_targ_rsrp_hr",
+      "alias": "relation_source_target_guid_5g",
+      "expression": "SUM(synthetic_counters_relation_5g.ctrSumTargRsrp) FROM pm_events://synthetic_counters_relation_5g",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "synthetic_counters_relation_5g.guid",
+        "synthetic_counters_relation_5g.source_guid",
+        "synthetic_counters_relation_5g.target_guid",
+        "synthetic_counters_relation_5g.oss_id",
+        "synthetic_counters_relation_5g.fdn"
+      ],
+      "filter": [
+        "pm_events://synthetic_counters_relation_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "num_samples_rsrp_periodic_ta_pmi_hr",
+      "alias": "cell_guid_5g",
+      "expression": "INDEXED_ARRAY_INDEX_SUM(synthetic_counters_cell_5g.ctrNumSamplesRsrpPeriodicTaPmi) FROM pm_events://synthetic_counters_cell_5g",
+      "object_type": "INTEGER[][]",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "synthetic_counters_cell_5g.guid",
+        "synthetic_counters_cell_5g.oss_id",
+        "synthetic_counters_cell_5g.fdn"
+      ],
+      "filter": [
+        "pm_events://synthetic_counters_cell_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "sum_serv_rsrp_ta_pmi_hr",
+      "alias": "cell_guid_5g",
+      "expression": "INDEXED_ARRAY_INDEX_SUM(synthetic_counters_cell_5g.ctrSumServRsrpTaPmi) FROM pm_events://synthetic_counters_cell_5g",
+      "object_type": "INTEGER[][]",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "synthetic_counters_cell_5g.guid",
+        "synthetic_counters_cell_5g.oss_id",
+        "synthetic_counters_cell_5g.fdn"
+      ],
+      "filter": [
+        "pm_events://synthetic_counters_cell_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "sum_serv_sinr_ta_pmi_hr",
+      "alias": "cell_guid_5g",
+      "expression": "INDEXED_ARRAY_INDEX_SUM(synthetic_counters_cell_5g.ctrSumServSinrTaPmi) FROM pm_events://synthetic_counters_cell_5g",
+      "object_type": "INTEGER[][]",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "synthetic_counters_cell_5g.guid",
+        "synthetic_counters_cell_5g.oss_id",
+        "synthetic_counters_cell_5g.fdn"
+      ],
+      "filter": [
+        "pm_events://synthetic_counters_cell_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "sum_serv_rsrp_intermediate_spatial_grid_hr",
+      "alias": "cell_guid_5g",
+      "expression": "CALCULATE_SUM_SPATIAL_GRID_32(FIRST(kpi_cell_guid_5g_60.sum_serv_rsrp_ta_pmi_hr), FIRST(kpi_cell_guid_5g_60.high_serving_distance_hr), false) FROM kpi_db://kpi_cell_guid_5g_60",
+      "object_type": "FLOAT[]",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "kpi_cell_guid_5g_60.guid",
+        "kpi_cell_guid_5g_60.oss_id",
+        "kpi_cell_guid_5g_60.fdn"
+      ],
+      "filter": [
+        "kpi_db://kpi_cell_guid_5g_60.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "num_samples_rsrp_intermediate_spatial_grid_hr",
+      "alias": "cell_guid_5g",
+      "expression": "CALCULATE_SUM_SPATIAL_GRID_32(FIRST(kpi_cell_guid_5g_60.num_samples_rsrp_periodic_ta_pmi_hr), FIRST(kpi_cell_guid_5g_60.high_serving_distance_hr), false) FROM kpi_db://kpi_cell_guid_5g_60",
+      "object_type": "FLOAT[]",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "kpi_cell_guid_5g_60.guid",
+        "kpi_cell_guid_5g_60.oss_id",
+        "kpi_cell_guid_5g_60.fdn"
+      ],
+      "filter": [
+        "kpi_db://kpi_cell_guid_5g_60.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "sum_serv_sinr_intermediate_spatial_grid_hr",
+      "alias": "cell_guid_5g",
+      "expression": "CALCULATE_SUM_SPATIAL_GRID_32(FIRST(kpi_cell_guid_5g_60.sum_serv_sinr_ta_pmi_hr), FIRST(kpi_cell_guid_5g_60.high_serving_distance_hr), true) FROM kpi_db://kpi_cell_guid_5g_60",
+      "object_type": "FLOAT[]",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "kpi_cell_guid_5g_60.guid",
+        "kpi_cell_guid_5g_60.oss_id",
+        "kpi_cell_guid_5g_60.fdn"
+      ],
+      "filter": [
+        "kpi_db://kpi_cell_guid_5g_60.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "nr_rsrp_spatial_grid_hr",
+      "alias": "cell_guid_5g",
+      "expression": "ARRAY_DIVISION(FIRST(kpi_cell_guid_5g_60.sum_serv_rsrp_intermediate_spatial_grid_hr), FIRST(kpi_cell_guid_5g_60.num_samples_rsrp_intermediate_spatial_grid_hr)) FROM kpi_db://kpi_cell_guid_5g_60",
+      "object_type": "FLOAT[]",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "kpi_cell_guid_5g_60.guid",
+        "kpi_cell_guid_5g_60.oss_id",
+        "kpi_cell_guid_5g_60.fdn"
+      ],
+      "filter": [
+        "kpi_db://kpi_cell_guid_5g_60.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "nr_sinr_spatial_grid_hr",
+      "alias": "cell_guid_5g",
+      "expression": "ARRAY_DIVISION(FIRST(kpi_cell_guid_5g_60.sum_serv_sinr_intermediate_spatial_grid_hr), FIRST(kpi_cell_guid_5g_60.num_samples_rsrp_intermediate_spatial_grid_hr)) FROM kpi_db://kpi_cell_guid_5g_60",
+      "object_type": "FLOAT[]",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "kpi_cell_guid_5g_60.guid",
+        "kpi_cell_guid_5g_60.oss_id",
+        "kpi_cell_guid_5g_60.fdn"
+      ],
+      "filter": [
+        "kpi_db://kpi_cell_guid_5g_60.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "num_samples_rsrp_bin_hr",
+      "alias": "cell_guid_5g",
+      "expression": "ARRAY_INDEX_SUM(synthetic_counters_cell_5g.ctrNumSamplesRsrpBin) FROM pm_events://synthetic_counters_cell_5g",
+      "object_type": "INTEGER[127]",
+      "aggregation_type": "ARRAY_INDEX_SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "synthetic_counters_cell_5g.guid",
+        "synthetic_counters_cell_5g.oss_id",
+        "synthetic_counters_cell_5g.fdn"
+      ],
+      "filter": [
+        "pm_events://synthetic_counters_cell_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "num_samples_sinr_bin_hr",
+      "alias": "cell_guid_5g",
+      "expression": "ARRAY_INDEX_SUM(synthetic_counters_cell_5g.ctrNumSamplesSinrBin) FROM pm_events://synthetic_counters_cell_5g",
+      "object_type": "INTEGER[128]",
+      "aggregation_type": "ARRAY_INDEX_SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "synthetic_counters_cell_5g.guid",
+        "synthetic_counters_cell_5g.oss_id",
+        "synthetic_counters_cell_5g.fdn"
+      ],
+      "filter": [
+        "pm_events://synthetic_counters_cell_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "low_serving_rsrp_hr",
+      "alias": "cell_guid_5g",
+      "expression": "CALCULATE_AZIMUTH_PERCENTILE(FIRST(cell_guid_5g.num_samples_rsrp_bin_hr), 5) - 156 FROM kpi://cell_guid_5g",
+      "object_type": "INTEGER",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "cell_guid_5g.guid",
+        "cell_guid_5g.oss_id",
+        "cell_guid_5g.fdn"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "mid_serving_rsrp_hr",
+      "alias": "cell_guid_5g",
+      "expression": "CALCULATE_AZIMUTH_PERCENTILE(FIRST(cell_guid_5g.num_samples_rsrp_bin_hr), 50) - 156 FROM kpi://cell_guid_5g",
+      "object_type": "INTEGER",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "cell_guid_5g.guid",
+        "cell_guid_5g.oss_id",
+        "cell_guid_5g.fdn"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "high_serving_rsrp_hr",
+      "alias": "cell_guid_5g",
+      "expression": "CALCULATE_AZIMUTH_PERCENTILE(FIRST(cell_guid_5g.num_samples_rsrp_bin_hr), 95) - 156 FROM kpi://cell_guid_5g",
+      "object_type": "INTEGER",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "cell_guid_5g.guid",
+        "cell_guid_5g.oss_id",
+        "cell_guid_5g.fdn"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "low_serving_sinr_hr",
+      "alias": "cell_guid_5g",
+      "expression": "(CALCULATE_AZIMUTH_PERCENTILE(FIRST(cell_guid_5g.num_samples_sinr_bin_hr), 5) - 46) / 2 FROM kpi://cell_guid_5g",
+      "object_type": "FLOAT",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "cell_guid_5g.guid",
+        "cell_guid_5g.oss_id",
+        "cell_guid_5g.fdn"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "mid_serving_sinr_hr",
+      "alias": "cell_guid_5g",
+      "expression": "(CALCULATE_AZIMUTH_PERCENTILE(FIRST(cell_guid_5g.num_samples_sinr_bin_hr), 50) - 46) / 2 FROM kpi://cell_guid_5g",
+      "object_type": "FLOAT",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "cell_guid_5g.guid",
+        "cell_guid_5g.oss_id",
+        "cell_guid_5g.fdn"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "high_serving_sinr_hr",
+      "alias": "cell_guid_5g",
+      "expression": "(CALCULATE_AZIMUTH_PERCENTILE(FIRST(cell_guid_5g.num_samples_sinr_bin_hr), 95) - 46) / 2 FROM kpi://cell_guid_5g",
+      "object_type": "FLOAT",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "cell_guid_5g.guid",
+        "cell_guid_5g.oss_id",
+        "cell_guid_5g.fdn"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "num_samples_ue_thp_hr",
+      "alias": "cell_guid_5g",
+      "expression": "ARRAY_INDEX_SUM(synthetic_counters_cell_5g.ctrNumSamplesUeThp) FROM pm_events://synthetic_counters_cell_5g",
+      "object_type": "INTEGER[501]",
+      "aggregation_type": "ARRAY_INDEX_SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "synthetic_counters_cell_5g.guid",
+        "synthetic_counters_cell_5g.oss_id",
+        "synthetic_counters_cell_5g.fdn"
+      ],
+      "filter": [
+        "pm_events://synthetic_counters_cell_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "sum_array_ue_thp_hr",
+      "alias": "cell_guid_5g",
+      "expression": "FIRST(aggregate(cell_guid_5g.num_samples_ue_thp_hr, 0, (acc, x) -> acc + x)) FROM kpi://cell_guid_5g",
+      "object_type": "INTEGER",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "cell_guid_5g.guid",
+        "cell_guid_5g.oss_id",
+        "cell_guid_5g.fdn"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "low_serving_ue_thp_conditional_hr",
+      "alias": "cell_guid_5g",
+      "expression": "(CALCULATE_AZIMUTH_PERCENTILE(FIRST(cell_guid_5g.num_samples_ue_thp_hr), 5) + 1 ) FROM kpi://cell_guid_5g",
+      "object_type": "INTEGER",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "cell_guid_5g.guid",
+        "cell_guid_5g.oss_id",
+        "cell_guid_5g.fdn"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "low_serving_ue_thp_hr",
+      "alias": "cell_guid_5g",
+      "expression": "FIRST(CASE WHEN cell_guid_5g.sum_array_ue_thp_hr = 0 THEN null ELSE cell_guid_5g.low_serving_ue_thp_conditional_hr END) FROM kpi://cell_guid_5g",
+      "object_type": "INTEGER",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "cell_guid_5g.guid",
+        "cell_guid_5g.oss_id",
+        "cell_guid_5g.fdn"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "low10_serving_ue_thp_conditional_hr",
+      "alias": "cell_guid_5g",
+      "expression": "(CALCULATE_AZIMUTH_PERCENTILE(FIRST(cell_guid_5g.num_samples_ue_thp_hr), 10) + 1 ) FROM kpi://cell_guid_5g",
+      "object_type": "INTEGER",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "cell_guid_5g.guid",
+        "cell_guid_5g.oss_id",
+        "cell_guid_5g.fdn"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "low10_serving_ue_thp_hr",
+      "alias": "cell_guid_5g",
+      "expression": "FIRST(CASE WHEN cell_guid_5g.sum_array_ue_thp_hr = 0 THEN null ELSE cell_guid_5g.low10_serving_ue_thp_conditional_hr END) FROM kpi://cell_guid_5g",
+      "object_type": "INTEGER",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "cell_guid_5g.guid",
+        "cell_guid_5g.oss_id",
+        "cell_guid_5g.fdn"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "mid_serving_ue_thp_conditional_hr",
+      "alias": "cell_guid_5g",
+      "expression": "(CALCULATE_AZIMUTH_PERCENTILE(FIRST(cell_guid_5g.num_samples_ue_thp_hr), 50) + 1 ) FROM kpi://cell_guid_5g",
+      "object_type": "INTEGER",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "cell_guid_5g.guid",
+        "cell_guid_5g.oss_id",
+        "cell_guid_5g.fdn"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "mid_serving_ue_thp_hr",
+      "alias": "cell_guid_5g",
+      "expression": "FIRST(CASE WHEN cell_guid_5g.sum_array_ue_thp_hr = 0 THEN null ELSE cell_guid_5g.mid_serving_ue_thp_conditional_hr END) FROM kpi://cell_guid_5g",
+      "object_type": "INTEGER",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "cell_guid_5g.guid",
+        "cell_guid_5g.oss_id",
+        "cell_guid_5g.fdn"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "high_serving_ue_thp_conditional_hr",
+      "alias": "cell_guid_5g",
+      "expression": "(CALCULATE_AZIMUTH_PERCENTILE(FIRST(cell_guid_5g.num_samples_ue_thp_hr), 95) + 1 ) FROM kpi://cell_guid_5g",
+      "object_type": "INTEGER",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "cell_guid_5g.guid",
+        "cell_guid_5g.oss_id",
+        "cell_guid_5g.fdn"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "high_serving_ue_thp_hr",
+      "alias": "cell_guid_5g",
+      "expression": "FIRST(CASE WHEN cell_guid_5g.sum_array_ue_thp_hr = 0 THEN null ELSE cell_guid_5g.high_serving_ue_thp_conditional_hr END) FROM kpi://cell_guid_5g",
+      "object_type": "INTEGER",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "cell_guid_5g.guid",
+        "cell_guid_5g.oss_id",
+        "cell_guid_5g.fdn"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "sum_cell_serv_rsrp_hr",
+      "alias": "cell_guid_5g",
+      "expression": "SUM(synthetic_counters_cell_5g.ctrSumCellServRsrp) FROM pm_events://synthetic_counters_cell_5g",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "synthetic_counters_cell_5g.guid",
+        "synthetic_counters_cell_5g.oss_id",
+        "synthetic_counters_cell_5g.fdn"
+      ],
+      "filter": [
+        "pm_events://synthetic_counters_cell_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "num_samples_sinr_at_or_below_neg_6_hr",
+      "alias": "cell_guid_5g",
+      "expression": "SUM(synthetic_counters_cell_5g.ctrNumSamplesSinrAtOrBelowNeg6) FROM pm_events://synthetic_counters_cell_5g",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "synthetic_counters_cell_5g.guid",
+        "synthetic_counters_cell_5g.oss_id",
+        "synthetic_counters_cell_5g.fdn"
+      ],
+      "filter": [
+        "pm_events://synthetic_counters_cell_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "relational_bad_coverage_count_hr",
+      "alias": "relation_source_target_guid_5g",
+      "expression": "SUM(synthetic_counters_relation_5g.ctrRelationalBadCoverageCount) FROM pm_events://synthetic_counters_relation_5g",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "synthetic_counters_relation_5g.guid",
+        "synthetic_counters_relation_5g.source_guid",
+        "synthetic_counters_relation_5g.target_guid",
+        "synthetic_counters_relation_5g.oss_id",
+        "synthetic_counters_relation_5g.fdn"
+      ],
+      "filter": [
+        "pm_events://synthetic_counters_relation_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "num_samples_sinr_at_or_below_neg_6_and_poor_coverage_hr",
+      "alias": "cell_guid_5g",
+      "expression": "SUM(synthetic_counters_cell_5g.ctrNumSamplesServSinrAtOrBelowNeg6AndPoorCoverage) FROM pm_events://synthetic_counters_cell_5g",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "synthetic_counters_cell_5g.guid",
+        "synthetic_counters_cell_5g.oss_id",
+        "synthetic_counters_cell_5g.fdn"
+      ],
+      "filter": [
+        "pm_events://synthetic_counters_cell_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "num_samples_sinr_at_or_below_neg_6_and_poor_coverage",
+      "alias": "cell_guid_5g",
+      "expression": "SUM(synthetic_counters_cell_5g.ctrNumSamplesServSinrAtOrBelowNeg6AndPoorCoverage) FROM pm_events://synthetic_counters_cell_5g",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "synthetic_counters_cell_5g.guid",
+        "synthetic_counters_cell_5g.oss_id",
+        "synthetic_counters_cell_5g.fdn"
+      ],
+      "filter": [
+        "pm_events://synthetic_counters_cell_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "pm_endc_rel_ue_abnormal_menb_act_hr",
+      "alias": "cell_guid_5g",
+      "expression": "SUM(counters_cell_5g.pmEndcRelUeAbnormalMenbAct) FROM pm_stats://counters_cell_5g",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "counters_cell_5g.guid",
+        "counters_cell_5g.oss_id",
+        "counters_cell_5g.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "pm_endc_rel_ue_abnormal_sgnb_act_hr",
+      "alias": "cell_guid_5g",
+      "expression": "SUM(counters_cell_5g.pmEndcRelUeAbnormalSgnbAct) FROM pm_stats://counters_cell_5g",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "counters_cell_5g.guid",
+        "counters_cell_5g.oss_id",
+        "counters_cell_5g.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "pm_endc_rel_ue_normal_hr",
+      "alias": "cell_guid_5g",
+      "expression": "SUM(counters_cell_5g.pmEndcRelUeNormal) FROM pm_stats://counters_cell_5g",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "counters_cell_5g.guid",
+        "counters_cell_5g.oss_id",
+        "counters_cell_5g.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "pm_endc_rel_ue_abnormal_menb_hr",
+      "alias": "cell_guid_5g",
+      "expression": "SUM(counters_cell_5g.pmEndcRelUeAbnormalMenb) FROM pm_stats://counters_cell_5g",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "counters_cell_5g.guid",
+        "counters_cell_5g.oss_id",
+        "counters_cell_5g.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "pm_endc_rel_ue_abnormal_sgnb_hr",
+      "alias": "cell_guid_5g",
+      "expression": "SUM(counters_cell_5g.pmEndcRelUeAbnormalSgnb) FROM pm_stats://counters_cell_5g",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "counters_cell_5g.guid",
+        "counters_cell_5g.oss_id",
+        "counters_cell_5g.fdn"
+      ],
+      "filter": [
+        "pm_stats://counters_cell_5g.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "endc_ue_rel_abnormal_act_hr",
+      "alias": "cell_guid_5g",
+      "expression": "FIRST(kpi_cell_guid_5g_60.pm_endc_rel_ue_abnormal_menb_act_hr) + FIRST(kpi_cell_guid_5g_60.pm_endc_rel_ue_abnormal_sgnb_act_hr) FROM kpi_db://kpi_cell_guid_5g_60",
+      "object_type": "FLOAT",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "kpi_cell_guid_5g_60.guid",
+        "kpi_cell_guid_5g_60.oss_id",
+        "kpi_cell_guid_5g_60.fdn"
+      ],
+      "filter": [
+        "kpi_db://kpi_cell_guid_5g_60.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "endc_ue_rel_total_hr",
+      "alias": "cell_guid_5g",
+      "expression": "FIRST(kpi_cell_guid_5g_60.pm_endc_rel_ue_normal_hr) + FIRST(kpi_cell_guid_5g_60.pm_endc_rel_ue_abnormal_menb_hr) + FIRST(kpi_cell_guid_5g_60.pm_endc_rel_ue_abnormal_sgnb_hr) FROM kpi_db://kpi_cell_guid_5g_60",
+      "object_type": "FLOAT",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "kpi_cell_guid_5g_60.guid",
+        "kpi_cell_guid_5g_60.oss_id",
+        "kpi_cell_guid_5g_60.fdn"
+      ],
+      "filter": [
+        "kpi_db://kpi_cell_guid_5g_60.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "nr_droprate_hr",
+      "alias": "cell_guid_5g",
+      "expression": "100 * FIRST(kpi_cell_guid_5g_60.endc_ue_rel_abnormal_act_hr) / FIRST(kpi_cell_guid_5g_60.endc_ue_rel_total_hr) FROM kpi_db://kpi_cell_guid_5g_60",
+      "object_type": "FLOAT",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "kpi_cell_guid_5g_60.guid",
+        "kpi_cell_guid_5g_60.oss_id",
+        "kpi_cell_guid_5g_60.fdn"
+      ],
+      "filter": [
+        "kpi_db://kpi_cell_guid_5g_60.local_timestamp BETWEEN TO_TIMESTAMP(''${param.kpi_date} 00:00:00'') AND TO_TIMESTAMP(''${param.kpi_date} 23:59:59'')"
+      ],
+      "is_visible": true
+    }
+  ]
+}

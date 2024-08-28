@@ -1,0 +1,2 @@
+description,event_stats_delay,ptfData,emfData,cellCount,nodeCount,relationCount,siteCount,sectorCount,trxpointCount,retCount,pm_files_processed,numOptimizationElementGroups,batch_relation_count,batch_cell_count
+15K_Data_Set,15,physicalTopologies15K,externalMapping15K,17242,3210,755510,3035,16727,16727,14969,127,699,5510,7242

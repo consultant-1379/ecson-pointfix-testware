@@ -1,0 +1,14 @@
+<suite name="Resource Configuration Tests" verbose="2">
+
+    <listeners>
+        <listener
+            class-name="com.ericsson.oss.services.eson.test.custom.report.CustomAdvanceReport" />
+    </listeners>
+
+    <test name="VERIFY RESOURCE CONFIGURATION">
+        <classes>
+            <class
+                name="com.ericsson.oss.services.eson.test.cases.scenario.ResourceConfigurationScenario" />
+        </classes>
+    </test>
+</suite>

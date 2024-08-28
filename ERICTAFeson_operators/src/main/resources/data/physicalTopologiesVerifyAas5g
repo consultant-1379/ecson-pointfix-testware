@@ -1,0 +1,86 @@
+{
+  "operation": "UPDATE_5G",
+  "physicalTopologies": [
+    {
+      "cgi": "234-15-46497807",
+      "trxpAzimuth": "90",
+      "trxpHbw": 86.5,
+      "trxpInstallation": "Outdoor",
+      "trxpLatitude": 51.90515,
+      "trxpLongitude": -2.12413,
+      "trxpType": "Macro"
+    },
+    {
+      "cgi": "234-15-39321625",
+      "trxpAzimuth": "210",
+      "trxpHbw": 86.5,
+      "trxpInstallation": "Indoor",
+      "trxpLatitude": 51.90514,
+      "trxpLongitude":  -2.12702,
+      "trxpType": "Macro"
+    },
+    {
+      "cgi": "234-15-39321635",
+      "trxpAzimuth": 90,
+      "trxpHbw": 10,
+      "trxpInstallation": "outdoor",
+      "trxpLatitude": 51.90514,
+      "trxpLongitude": -2.12718,
+      "trxpType": "macro"
+    },
+    {
+      "cgi": "234-15-41484303",
+      "trxpAzimuth": 120,
+      "trxpHbw": 20,
+      "trxpInstallation": "outdoor",
+      "trxpLatitude": 51.90417,
+      "trxpLongitude": -2.12692,
+      "trxpType": "macro"
+    },
+	 {
+      "cgi": "234-15-41484313",
+      "trxpAzimuth": 90,
+      "trxpHbw": 20,
+      "trxpInstallation": "outdoor",
+      "trxpLatitude": 51.90288,
+      "trxpLongitude":  -2.1252,
+      "trxpType": "macro"
+    },
+    {
+      "cgi": "234-15-41484323",
+      "trxpAzimuth": 180,
+      "trxpHbw": 50,
+      "trxpInstallation": "outdoor",
+      "trxpLatitude": 51.90289,
+      "trxpLongitude": -2.12474,
+      "trxpType": "macro"
+    },
+    {
+      "cgi": "234-15-7716879",
+      "trxpAzimuth": 180,
+      "trxpHbw": 50,
+      "trxpInstallation": "outdoor",
+      "trxpLatitude": 51.90268,
+      "trxpLongitude": -2.12502,
+      "trxpType": "macro"
+    },
+    {
+      "cgi": "234-15-7716889",
+      "trxpAzimuth": 180,
+      "trxpHbw": 50,
+      "trxpInstallation": "outdoor",
+      "trxpLatitude": 52.19843,
+      "trxpLongitude": 2.46284,
+      "trxpType": "macro"
+    },
+    {
+      "cgi": "234-15-7716899",
+      "trxpAzimuth": 180,
+      "trxpHbw": 50,
+      "trxpInstallation": "outdoor",
+      "trxpLatitude": 52.19916,
+      "trxpLongitude": -2.44601,
+      "trxpType": "macro"
+    }
+  ]
+}

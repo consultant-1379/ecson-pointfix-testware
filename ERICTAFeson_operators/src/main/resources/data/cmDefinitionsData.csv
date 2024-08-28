@@ -1,0 +1,2 @@
+testCaseId,cm_definition_file,message-pod,message-container,topic
+SONP-37761_VerifyCommon,CommonRequiredElements.json,eric-data-message-bus-kf,messagebuskf,cmMediation

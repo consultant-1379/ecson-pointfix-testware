@@ -1,0 +1,45 @@
+{
+  "source": "RET_5G",
+  "elements": [
+    {
+      "name": "nr_cell",
+      "attributes": [
+        "oss_id",
+        "fdn",
+        "mnc",
+        "cellType",
+        "cgi",
+        "nci",
+        "name",
+        "nodeType",
+        "pci",
+        "mcc",
+        "arfcn",
+        "installationType",
+        "timezone",
+        "nrCellDUFdn"
+      ]
+    },
+    {
+      "name": "nr_relation",
+      "attributes": [
+        "nodeType",
+        "relationType",
+        "source_cell_id",
+        "sourceNci",
+        "target_cell_id",
+        "targetNci",
+        "name"
+      ]
+    },
+    {
+      "name": "nr_commonbeamforming",
+      "attributes": [
+        "usedDigitalTilt",
+        "usedCoverageShape",
+        "customComBfwWideBeam",
+        "nr_cell_fdn"
+      ]
+    }
+  ]
+}

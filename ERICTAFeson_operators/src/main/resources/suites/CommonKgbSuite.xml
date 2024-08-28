@@ -1,0 +1,43 @@
+<suite name="Common KGB Tests" verbose="2">
+
+    <!-- Reset Environment -->
+    <test name="Truncate relevant tables">
+        <classes>
+            <class name="com.ericsson.oss.services.eson.test.cases.common.ResetEnvironment"/>
+        </classes>
+    </test>
+
+    <!-- Installation Verification -->
+    <test name="Verify deployment of SON OM Software.">
+        <classes>
+            <class name="com.ericsson.oss.services.eson.test.cases.common.VerifyCommonSuccessfulInstallation"/>
+        </classes>
+    </test>
+
+    <!-- TAF users verification -->
+    <test name="Verify TAF users.">
+        <classes>
+            <class name="com.ericsson.oss.services.eson.test.teststeps.VerifyTAFUsersTestSteps"/>
+        </classes>
+    </test>
+
+    <!-- Verify client -->
+    <test name="Verify client.">
+        <classes>
+            <class name="com.ericsson.oss.services.eson.test.cases.authorization.InitClient"/>
+        </classes>
+    </test>
+
+    <test name="Verify REST End Points Are Available.">
+        <classes>
+            <class name="com.ericsson.oss.services.eson.test.cases.common.VerifyCommonRestEndPointsAvailable"/>
+        </classes>
+    </test>
+
+    <test name="Verify SON Common.">
+        <classes>
+            <class name="com.ericsson.oss.services.eson.test.cases.common.VerifyCommon"/>
+        </classes>
+    </test>
+
+</suite>

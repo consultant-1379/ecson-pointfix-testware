@@ -1,0 +1,2 @@
+testCaseId,description,kpi_definition_file,kpi_verification_file,event_stats_delay,ptfData,topology_object_names_before_file_upload,topology_object_counts_before_file_upload,topology_object_names_after_file_upload,topology_object_counts_after_file_upload,pm_files_processed
+IDUN-7785_VerifyRet5G,3.5K_Data_Set,ret5G/RequiredKpisRet5G.json,ret5G/RequiredKpisRet5G.json,5,physicalTopologiesRet5G,nr_cell;nr_relation,63;442,nr_site;nr_sector;nr_trxpoint,5;8;9,2

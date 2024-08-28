@@ -1,0 +1,8 @@
+{
+  "collectionName": "son-mediation",
+  "topologyType": "node",
+  "criteria": [
+    "fdn==\"SubNetwork=ONRM_ROOT_MO,SubNetwork=MKT_144*\"",
+    "fdn==\"SubNetwork=ONRM_ROOT_MO,SubNetwork=MKT_145*\""
+  ]
+}

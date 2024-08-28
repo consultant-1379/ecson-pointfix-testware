@@ -1,0 +1,2 @@
+testCaseId,db_connection_details,db_tables,db_table_count_values,polling_timeout
+IDUN-10534_ScheduleAasAndVerifyExecution,pm_events_service_db;pm_events_service_user;32107;eric-pm-events-processor-er,synthetic_counters_cell_5g,650,40

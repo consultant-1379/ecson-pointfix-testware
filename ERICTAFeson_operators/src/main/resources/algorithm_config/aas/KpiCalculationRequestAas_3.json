@@ -1,0 +1,14 @@
+{
+  "source": "AAS",
+  "kpi_names": [
+    "nr_rsrp_spatial_grid",
+    "nr_sinr_spatial_grid",
+    "nr_droprate",
+    "nr_rsrp_spatial_grid_hr",
+    "nr_sinr_spatial_grid_hr",
+    "nr_droprate_hr"
+  ],
+  "parameters": {
+    "param.kpi_date": "${param.value}"
+  }
+}

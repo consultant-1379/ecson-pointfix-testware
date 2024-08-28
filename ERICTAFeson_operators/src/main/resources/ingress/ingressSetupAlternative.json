@@ -1,0 +1,409 @@
+[
+  {
+    "apiVersion":"networking.k8s.io/v1",
+    "kind":"Ingress",
+    "metadata":{
+      "name":"eric-cm-son-topology-data-v2-ingress"
+    },
+    "spec":{
+      "defaultBackend":{
+        "service":{
+          "name":"eric-cm-son-topology-data-v2-nodeport",
+          "port":{
+            "number":32105
+          }
+        }
+      }
+    }
+  },
+  {
+    "apiVersion":"networking.k8s.io/v1",
+    "kind":"Ingress",
+    "metadata":{
+      "name":"eric-pm-stats-processor-data-ingress"
+    },
+    "spec":{
+      "defaultBackend":{
+        "service":{
+          "name":"eric-pm-stats-processor-data-nodeport",
+          "port":{
+            "number":32106
+          }
+        }
+      }
+
+    }
+  },
+  {
+    "apiVersion":"networking.k8s.io/v1",
+    "kind":"Ingress",
+    "metadata":{
+      "name":"eric-pm-events-processor-data-ingress"
+    },
+    "spec":{
+      "defaultBackend":{
+        "service":{
+          "name":"eric-pm-events-processor-data-nodeport",
+          "port":{
+            "number":32107
+          }
+        }
+      }
+
+    }
+  },
+  {
+    "apiVersion":"networking.k8s.io/v1",
+    "kind":"Ingress",
+    "metadata":{
+      "name":"eric-son-ret-data-ingress"
+    },
+    "spec":{
+      "defaultBackend":{
+        "service":{
+          "name":"eric-son-ret-data-nodeport",
+          "port":{
+            "number":32108
+          }
+        }
+      }
+    }
+  },
+  {
+    "apiVersion":"networking.k8s.io/v1",
+    "kind":"Ingress",
+    "metadata":{
+      "name":"eric-nm-repository-data-ingress"
+    },
+    "spec":{
+      "defaultBackend":{
+        "service":{
+          "name":"eric-nm-repository-data-nodeport",
+          "port":{
+            "number":32109
+          }
+        }
+      }
+    }
+  },
+  {
+    "apiVersion":"networking.k8s.io/v1",
+    "kind":"Ingress",
+    "metadata":{
+      "name":"eric-pm-kpi-data-ingress"
+    },
+    "spec":{
+      "defaultBackend":{
+        "service":{
+          "name":"eric-pm-kpi-data-nodeport",
+          "port":{
+            "number":32104
+          }
+        }
+      }
+    }
+  },
+  {
+    "apiVersion":"networking.k8s.io/v1",
+    "kind":"Ingress",
+    "metadata":{
+      "name":"eric-son-flm-data-ingress"
+    },
+    "spec":{
+      "defaultBackend":{
+        "service":{
+          "name":"eric-son-flm-data-nodeport",
+          "port":{
+            "number":32103
+          }
+        }
+      }
+    }
+  },
+  {
+    "apiVersion": "networking.k8s.io/v1",
+    "kind": "Ingress",
+    "metadata": {
+      "name": "eric-son-ret-5g-poc-data-ingress"
+    },
+    "spec":{
+      "defaultBackend":{
+        "service":{
+          "name":"eric-son-ret-5g-poc-data-nodeport",
+          "port":{
+            "number":32142
+          }
+        }
+      }
+    }
+  },
+  {
+    "apiVersion":"networking.k8s.io/v1",
+    "kind":"Ingress",
+    "metadata":{
+      "name":"search-engine-ingress",
+      "annotations":{
+        "kubernetes.io/ingress.class":"nginx",
+        "nginx.ingress.kubernetes.io/proxy-body-size":"1m"
+      }
+    },
+    "spec":{
+      "rules":[
+        {
+          "host":"searchengine.ericsson.com",
+          "http":{
+            "paths":[
+              {
+                "defaultBackend":{
+                  "service":{
+                    "name":"eric-data-search-engine",
+                    "port":{
+                      "number":9200
+                    }
+                  }
+                },
+                "path":"/",
+                "pathType":"ImplementationSpecific"
+
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "apiVersion": "networking.k8s.io/v1",
+    "kind": "Ingress",
+    "metadata": {
+      "name": "kpi-calculator-ingress",
+      "annotations": {
+        "kubernetes.io/ingress.class": "nginx",
+        "nginx.ingress.kubernetes.io/proxy-body-size": "1m"
+      }
+    },
+    "spec": {
+      "rules": [
+        {
+          "host": "cd-server.ecson.com",
+          "http": {
+            "paths": [
+              {
+                "defaultBackend":{
+                  "service":{
+                    "name":"eric-pm-kpi-calculator",
+                    "port":{
+                      "number":8080
+                    }
+                  }
+                },
+                "path": "/son-om/kpi/v1",
+                "pathType":"ImplementationSpecific"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "kind": "Service",
+    "apiVersion": "v1",
+    "metadata": {
+      "labels": {
+        "app": "eric-cm-son-topology-data"
+      },
+      "name": "eric-cm-son-topology-data-nodeport"
+    },
+    "spec": {
+      "selector": {
+        "app": "eric-cm-son-topology-data-v2"
+      },
+      "ports": [
+        {
+          "name": "jdbc",
+          "port": 5432,
+          "protocol": "TCP",
+          "targetPort": 5432,
+          "nodePort": 32135
+        }
+      ],
+      "type": "NodePort"
+    }
+  },
+  {
+    "kind": "Service",
+    "apiVersion": "v1",
+    "metadata": {
+      "labels": {
+        "app": "eric-pm-stats-processor-data"
+      },
+      "name": "eric-pm-stats-processor-data-nodeport"
+    },
+    "spec": {
+      "selector": {
+        "app": "eric-pm-stats-processor-data-v2"
+      },
+      "ports": [
+        {
+          "name": "jdbc",
+          "port": 5433,
+          "protocol": "TCP",
+          "targetPort": 5432,
+          "nodePort": 32136
+        }
+      ],
+      "type": "NodePort"
+    }
+  },
+  {
+    "kind": "Service",
+    "apiVersion": "v1",
+    "metadata": {
+      "labels": {
+        "app": "eric-pm-events-processor-data"
+      },
+      "name": "eric-pm-events-processor-data-nodeport"
+    },
+    "spec": {
+      "selector": {
+        "app": "eric-pm-events-processor-data-v2"
+      },
+      "ports": [
+        {
+          "name": "jdbc",
+          "port": 5434,
+          "protocol": "TCP",
+          "targetPort": 5432,
+          "nodePort": 32137
+        }
+      ],
+      "type": "NodePort"
+    }
+  },
+  {
+    "kind": "Service",
+    "apiVersion": "v1",
+    "metadata": {
+      "labels": {
+        "app": "eric-son-ret-data"
+      },
+      "name": "eric-son-ret-data-nodeport"
+    },
+    "spec": {
+      "selector": {
+        "app": "eric-son-ret-data-v2"
+      },
+      "ports": [
+        {
+          "name": "jdbc",
+          "port": 5435,
+          "protocol": "TCP",
+          "targetPort": 5432,
+          "nodePort": 32138
+        }
+      ],
+      "type": "NodePort"
+    }
+  },
+  {
+    "kind": "Service",
+    "apiVersion": "v1",
+    "metadata": {
+      "labels": {
+        "app": "eric-nm-repository-data"
+      },
+      "name": "eric-nm-repository-data-nodeport"
+    },
+    "spec": {
+      "selector": {
+        "app": "eric-nm-repository-data-v2"
+      },
+      "ports": [
+        {
+          "name": "jdbc",
+          "port": 5436,
+          "protocol": "TCP",
+          "targetPort": 5432,
+          "nodePort": 32139
+        }
+      ],
+      "type": "NodePort"
+    }
+  },
+  {
+    "kind": "Service",
+    "apiVersion": "v1",
+    "metadata": {
+      "labels": {
+        "app": "eric-pm-kpi-data"
+      },
+      "name": "eric-pm-kpi-data-nodeport"
+    },
+    "spec": {
+      "selector": {
+        "app": "eric-pm-kpi-data-v2"
+      },
+      "ports": [
+        {
+          "name": "jdbc",
+          "port": 5437,
+          "protocol": "TCP",
+          "targetPort": 5432,
+          "nodePort": 32140
+        }
+      ],
+      "type": "NodePort"
+    }
+  },
+  {
+    "kind": "Service",
+    "apiVersion": "v1",
+    "metadata": {
+      "labels": {
+        "app": "eric-son-flm-data"
+      },
+      "name": "eric-son-flm-data-nodeport"
+    },
+    "spec": {
+      "selector": {
+        "app": "eric-son-flm-data-v2"
+      },
+      "ports": [
+        {
+          "name": "jdbc",
+          "port": 5438,
+          "protocol": "TCP",
+          "targetPort": 5432,
+          "nodePort": 32141
+        }
+      ],
+      "type": "NodePort"
+    }
+  },
+  {
+    "kind": "Service",
+    "apiVersion": "v1",
+    "metadata": {
+      "labels": {
+        "app": "eric-son-ret-5g-poc-data"
+      },
+      "name": "eric-son-ret-5g-poc-data-nodeport"
+    },
+    "spec": {
+      "selector": {
+        "app": "eric-son-ret-5g-poc-data-v2"
+      },
+      "ports": [
+        {
+          "name": "jdbc",
+          "port": 5439,
+          "protocol": "TCP",
+          "targetPort": 5432,
+          "nodePort": 32142
+        }
+      ],
+      "type": "NodePort"
+    }
+  }
+]

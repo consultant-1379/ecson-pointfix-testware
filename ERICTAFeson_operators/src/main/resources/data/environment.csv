@@ -1,0 +1,7 @@
+testCaseId,testCaseTitle,ingressHost,namespace,releaseName,installDirectory
+SONP-32625_ScheduleRetAndVerifyProposedChange,"Schedule RET Algorithm and Verify proposed Change",cd-server.sonom.com,sonom,eric-oss-ec-son-ret,"/tmp/ecson_charts/eric-oss-ec-son-ret"
+SONP-37570_VerifyFlmSuccessfulInstallation,"Verify successful installation of EC-SON FLM",cd-server.sonom.com,sonom,eric-oss-ec-son-flm,"/tmp/ecson_charts/eric-oss-ec-son-flm"
+SONP-37761_VerifyCommon,"Verify Common",cd-server.sonom.com,sonom,eric-oss-ec-son-common,"/tmp/ecson_charts/eric-oss-ec-son-common"
+IDUN-7785_VerifyRet5GSuccessfulInstallation,"Verify successful installation of EC-SON RET 5G",cd-server.sonom.com,sonom,eric-oss-ec-son-ret-5g-poc,"/tmp/ecson_charts/eric-oss-ec-son-ret-5g-poc"
+IDUN-10534_VerifyAas,"Verify successful installation of EC-SON common for AAS",cd-server.sonom.com,sonom,eric-oss-ec-son-common,"/tmp/ecson_charts/eric-oss-ec-son-common"
+IDUN-12526_ExecuteAas,"Verify successful installation of EC-SON common for AAS",cd-server.sonom.com,sonom,eric-oss-ec-son-common,"/tmp/ecson_charts/eric-oss-ec-son-common"

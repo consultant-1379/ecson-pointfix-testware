@@ -1,0 +1,9 @@
+{
+  "collectionName": "ecson-cell-filter-group",
+  "topologyType": "cell",
+  "criteria": [
+    "freqBand=lt=5",
+    "bandwidth=gt=20000",
+    "cgi==\"333-444-333-444\""
+  ]
+}

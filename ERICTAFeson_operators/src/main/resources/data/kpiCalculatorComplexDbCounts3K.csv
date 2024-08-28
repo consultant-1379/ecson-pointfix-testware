@@ -1,0 +1,2 @@
+db_connection_details,db_tables,db_table_count_values,polling_timeout
+kpi_service_db;kpi_service_user;32110;eric-pm-kpi-calculator,complex_kpi_with_thresholds,7664,20

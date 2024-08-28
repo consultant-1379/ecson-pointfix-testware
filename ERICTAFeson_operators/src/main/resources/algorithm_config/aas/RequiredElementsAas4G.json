@@ -1,0 +1,53 @@
+{
+  "source": "AAS",
+  "elements": [
+    {
+      "name": "cell",
+      "attributes": [
+        "administrativeState",
+        "areaCode",
+        "carrier",
+        "cellBarred",
+        "cellType",
+        "cgi",
+        "eci",
+        "name",
+        "pci",
+        "technologyId",
+        "timezone",
+        "vendorId"
+      ]
+    },
+    {
+      "name": "node",
+      "attributes": [
+        "identity",
+        "name",
+        "nodeId",
+        "plmn",
+        "revision",
+        "timezone"
+      ]
+    },
+    {
+      "name": "relation",
+      "attributes": [
+        "relationType",
+        "source_cell_id",
+        "source_cell_cgi",
+        "target_cell_id",
+        "target_cell_cgi"
+      ]
+    },
+    {
+      "name": "trxpoint",
+      "attributes": [
+        "altitude",
+        "azimuth",
+        "mechanicalTilt",
+        "latitude",
+        "longitude"
+      ]
+    }
+  ]
+}

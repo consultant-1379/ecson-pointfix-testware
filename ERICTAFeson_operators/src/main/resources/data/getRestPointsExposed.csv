@@ -1,0 +1,11 @@
+testCaseId,testCaseTitle,url
+SONP-32623_VerifyRestEndPointsAvailable,"Verify REST Endpoints are working using default ingress",son-om/cm-topology/v2/topology-objects/cell
+SONP-32623_VerifyRestEndPointsAvailable,"Verify REST Endpoints are working using default ingress",son-om/cm-change/v1/changes
+SONP-32623_VerifyRestEndPointsAvailable,"Verify REST Endpoints are working using default ingress",son-om/algorithms/ret/v1/executions
+SONP-32623_VerifyRestEndPointsAvailable,"Verify REST Endpoints are working using default ingress",son-om/algorithms/ret/v1/configurations
+SONP-32623_VerifyRestEndPointsAvailable,"Verify REST Endpoints are working using default ingress",son-om/nm-repository/v1/types
+SONP-32623_VerifyRestEndPointsAvailable,"Verify REST Endpoints are working using default ingress",son-om/nm-repository/v1/oss
+SONP-37761_VerifyCommon,"Verify REST Endpoints are working using default ingress",son-om/cm-topology/v2/topology-objects/cell
+SONP-37761_VerifyCommon,"Verify REST Endpoints are working using default ingress",son-om/cm-change/v1/changes
+SONP-37761_VerifyCommon,"Verify REST Endpoints are working using default ingress",son-om/nm-repository/v1/types
+SONP-37761_VerifyCommon,"Verify REST Endpoints are working using default ingress",son-om/nm-repository/v1/oss

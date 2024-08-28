@@ -1,0 +1,24 @@
+[
+  {
+    "kind": "Service",
+    "apiVersion": "v1",
+    "metadata": {
+      "labels": {
+        "app": "eric-cm-son-topology-data"
+      },
+      "name": "eric-cm-son-topology-data-lb"
+    },
+    "spec": {
+      "selector": {
+        "app": "eric-cm-son-topology-data-v2"
+      },
+      "ports": [
+        {
+          "port": 5432,
+          "targetPort": 5432
+        }
+      ],
+      "type": "LoadBalancer"
+    }
+  }
+]

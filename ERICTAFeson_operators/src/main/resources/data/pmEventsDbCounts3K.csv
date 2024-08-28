@@ -1,0 +1,4 @@
+testCaseId,db_connection_details,db_tables,db_table_count_values,polling_timeout
+SONP-37761_VerifyCommon,pm_events_service_db;pm_events_service_user;32107;eric-pm-events-processor-er,synthetic_counters_cell;synthetic_counters_relation,4817;40727,40
+SONP-38799_ScheduleFlmAndVerifyExecution,pm_events_service_db;pm_events_service_user;32107;eric-pm-events-processor-er,synthetic_counters_cell,4817,40
+IDUN-7785_VerifyRet5G,pm_events_service_db;pm_events_service_user;32107;eric-pm-events-processor-er,synthetic_counters_cell_5g;synthetic_counters_relation_5g,3;15,40

@@ -1,0 +1,6 @@
+testCaseId,db_connection_details,db_tables,db_table_count_values,polling_timeout
+SONP-37761_VerifyCommon,cm_service_db;cm_service_user;32105;eric-cm-topology-model-sn,cell;ret;node;cell_trxpoint;cell_ret;idlemodeprioatrelease;cell_idlemodeprioatrelease;node_idlemodeprioatrelease,15434;12771;2188;14939;12689;6068;12734;6068,45
+SONP-32625_ScheduleRetAndVerifyProposedChange,cm_service_db;cm_service_user;32105;eric-cm-topology-model-sn,cell;ret;node;cell_trxpoint;cell_ret,15434;12771;2188;14939;12689,45
+SONP-38799_ScheduleFlmAndVerifyExecution,cm_service_db;cm_service_user;32105;eric-cm-topology-model-sn,cell;node;cell_trxpoint;idlemodeprioatrelease;cell_idlemodeprioatrelease;node_idlemodeprioatrelease;eutranfrequency;idlemodeprioatrelease_eutranfrequency;node_eutranfrequency,15434;2188;14939;6068;12734;6068;13752;21612;13752;,45
+IDUN-7785_VerifyRet5G,cm_service_db;cm_service_user;32105;eric-cm-topology-model-sn,nr_cell;nr_cell_nr_trxpoint,63;9,45
+IDUN-10534_VerifyAas,cm_service_db;cm_service_user;32105;eric-cm-topology-model-sn,cell;relation;nr_cell;nr_relation;nr_first_tier_neighbor;nr_site;nr_sector;nr_trxpoint,198;16262;63;442;42;5;8;9,45

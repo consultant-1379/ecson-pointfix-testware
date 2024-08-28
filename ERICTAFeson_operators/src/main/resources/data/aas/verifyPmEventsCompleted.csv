@@ -1,0 +1,2 @@
+testCaseId,pm_db_connection_details,pm_query_details,where_clause_columns,where_clause_values,times_to_poll_to_verify
+IDUN-12526_ExecuteAas,pm_events_service_db;pm_events_service_user;32107;eric-pm-events-processor-er,synthetic_counters_cell_5g,utc_timestamp,%today_minus_two 23:00:00;%today_minus_one 22:45:00,10

@@ -1,0 +1,17 @@
+serviceName,url,userName,expectedResponseCode,operationMode
+flm-service,/son-om/algorithms/flm/v1/configurations,tafsuperuser,200,GET
+flm-service,/son-om/algorithms/flm/v1/executions,tafsuperuser,200,GET
+cm-service,son-om/cm-topology/v2/topology-objects/cell,tafsuperuser,200,GET
+cm-service,son-om/cm-change/v1/changes,tafsuperuser,200,GET
+nm-service,son-om/nm-repository/v1/types,tafsuperuser,200,GET
+nm-service,son-om/nm-repository/v1/oss,tafsuperuser,200,GET
+nm-service,son-om/nm-repository/v1/oss,tafsuperuser,201,POST
+cm-service,son-om/cm-change/v1/changes,tafsuperuser,200,PUT
+flm-service,/son-om/algorithms/flm/v1/configurations/1,tafsuperuser,200,PUT
+flm-service,/son-om/algorithms/flm/v1/configurations,tafreadonlyuser,200,GET
+flm-service,/son-om/algorithms/flm/v1/executions,tafreadonlyuser,200,GET
+cm-service,son-om/cm-topology/v2/topology-objects/cell,tafreadonlyuser,200,GET
+cm-service,son-om/cm-change/v1/changes,tafreadonlyuser,200,GET
+cm-service,son-om/cm-change/v1/changes,tafreadonlyuser,403,PUT
+flm-service,/son-om/algorithms/flm/v1/configurations/1,tafreadonlyuser,403,PUT
+flm-service,/son-om/algorithms/flm/v1/executions,unauthorized_user,401,GET

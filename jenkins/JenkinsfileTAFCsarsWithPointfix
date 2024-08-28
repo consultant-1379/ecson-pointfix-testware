@@ -1,0 +1,159 @@
+@Library('son-dev-utils-shared-library')
+import jenkins.utils.*
+import java.text.SimpleDateFormat
+
+logging = new logging() // https://gerrit.ericsson.se/gitweb?p=OSS/com.ericsson.oss.services.sonom/son-dev-utils.git;a=blob_plain;f=src/jenkins/utils/logging.groovy;hb=master
+utils = new utils()     // https://gerrit.ericsson.se/gitweb?p=OSS/com.ericsson.oss.services.sonom/son-dev-utils.git;a=blob_plain;f=src/jenkins/utils/utils.groovy;hb=master
+
+def remote = [:]
+remote.name = 'eSON_RELEASES'
+remote.host = REMOTE_FTP_SERVER
+remote.allowAnyHosts = true
+
+pipeline {
+    agent {
+        node {
+            label 'son_mesos_latest_podj'
+        }
+    }
+    tools {
+        jdk 'jdk8'
+        maven 'maven'
+    }
+    options {
+        skipDefaultCheckout true
+        timestamps()
+        disableConcurrentBuilds()
+        timeout(time: 240, unit: 'MINUTES')
+        buildDiscarder(logRotator(numToKeepStr: '20', artifactNumToKeepStr: '20'))
+    }
+    parameters {
+        string(name: 'DIRECTOR_IP', defaultValue: "${DIRECTOR_IP}", description: 'Enter the IP of the ECCD instance to test the package on?')
+        string(name: 'LB_IP', defaultValue: "${LB_IP}", description: 'Enter the loadbalancer IP?')
+        string(name: 'EXTERNAL_NODE_IP', defaultValue: "${EXTERNAL_NODE_IP}", description: 'Enter the External node/worker IP of one of the nodes/workers?')
+        string(name: 'PACKAGE_VERSIONS', defaultValue: '', description: "Enter the list of package versions to test, e.g. '[eric-oss-ec-son-common-0.0.31.csar, eric-oss-ec-son-mediation-0.0.35.csar, eric-oss-ec-son-ret-0.0.29.csar, eric-oss-ec-son-flm-0.1.42.csar]'")
+        string(name: 'POINTFIX_VERSIONS', defaultValue: '', description: "Enter the list of pointfix versions to upload in ftp, e.g. '[eric-oss-ec-son-common-0.0.31.csar]'")
+        string(name: 'SETTINGS_CONFIG_FILE_NAME', defaultValue: 'eson_settings.xml')
+        string(name: 'KUBE_CONFIG_PF_TAF', defaultValue: "${KUBE_CONFIG_PF_TAF}", description: 'Enter kube config file id') 
+    }
+    environment {
+        HELM_CMD = "docker run --rm -v ${WORKSPACE}/resources/hosts:/etc/hosts -v ${WORKSPACE}/.kube/config:/root/.kube/config -v ${WORKSPACE}/helm-home:/root/.helm -v ${WORKSPACE}:${WORKSPACE} ${env.HELM_DOCKER_IMAGE}"
+        KUBECTL_CMD = "docker run --rm -v ${WORKSPACE}/resources/hosts:/etc/hosts -v ${WORKSPACE}/.kube/config:/root/.kube/config -v ${WORKSPACE}:${WORKSPACE} linkyard/kubectl kubectl "
+    }
+    stages {
+
+        stage('Check package entered') {
+            steps {
+                script {
+                    if ((params.PACKAGE_VERSIONS == "") || (params.PACKAGE_VERSIONS == [])) {
+                        error("Build failed because package versions not specified")
+                    }
+                    if ((params.POINTFIX_VERSIONS == "") || (params.POINTFIX_VERSIONS == [])) {
+                        error("Build failed because pointfix package versions not specified")
+                    }
+                    // Modify the build description
+                    currentBuild.description = "${params.PACKAGE_VERSIONS}"
+                }
+            }
+        }
+
+        stage('Clean up Workspace From Previous Build') {
+            steps {
+                script {
+                    sh 'sudo chmod -fR 777 "${WORKSPACE}" &&\
+                        sudo rm -Rf ./*'
+                }
+            }
+        }
+        stage('SCM Checkout') {
+            steps {
+                checkout scm
+
+            }
+        }
+        stage('Inject Maven Settings.xml') {
+            steps {
+                sh 'echo Injecting Maven Settings.xml'
+                configFileProvider([configFile(fileId: "eson_settings.xml", targetLocation: "${HOME}/.m2/settings.xml")]) {
+                }
+            }
+        }
+        stage('Inject K8s Config File') {
+            steps {
+                script {
+                    sh 'echo Injecting Kubernetes config file'
+                    configFileProvider([configFile(fileId: "$KUBE_CONFIG_PF_TAF", targetLocation: "${env.WORKSPACE}/.kube/")]) {
+                    }
+                    sh 'echo Injecting Hosts file to identify ECCD cluster'
+                    configFileProvider([configFile(fileId: "$HOSTS_FILE_TAF", targetLocation: "${env.WORKSPACE}/resources/")]) {
+                    }
+                }
+            }
+        }
+
+
+        stage('Build Testware') {
+            steps {
+                sh "mvn clean install -V -B -Deccd_director_ip=${DIRECTOR_IP} -Deccd_lb_ip=${LB_IP} -Dext_node_ip=${EXTERNAL_NODE_IP} -Dinstall_dir='/tmp/ec-son_base_pointfix_csars/eric-oss-ec-son-mediation/Scripts/utils/eric-oss-ec-son-mediation' -Drelease_name='eric-oss-ec-son-mediation' -Dsuites=CsarKgbSuite.xml -Dsuitethreadpoolsize=12 -Dtaf.tms.api.test-case=https://taftm.seli.wh.rnd.internal.ericsson.com/tm-server/api/test-cases/%s?view=detailed"
+            }
+        }
+
+        stage('Publish') {
+            steps {
+                sh 'echo Publishing artifact to be used by spinnaker pipeline'
+                sh 'echo \
+                    "PACKAGE_VERSIONS=${PACKAGE_VERSIONS}"\
+                > artifact.properties'
+                sh 'echo \
+                    "POINTFIX_VERSIONS=${POINTFIX_VERSIONS}"\
+                >> artifact.properties'
+
+                archiveArtifacts allowEmptyArchive: true, artifacts: 'artifact.properties'
+            }
+        }
+    }
+    post {
+        always {
+            archiveArtifacts artifacts: '**/DB_Assertions.txt'
+            step([$class: 'Publisher', reportFilenamePattern: '**/testng-results.xml'])
+            script {
+                allure([
+                        includeProperties: false,
+                        jdk              : '',
+                        properties       : [],
+                        reportBuildPolicy: 'ALWAYS',
+                        results          : [[path: 'test-pom-eson/target/allure-results']]
+                ])
+                logging.get_logs_for_each_namespace("sonom")
+            }
+            echo 'Cleanup Workspace'
+            cleanWs()
+        }
+        success {
+            script {
+                withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'FTPServerCredentials', usernameVariable: 'RELEASE_SERVER_USER', passwordVariable: 'RELEASE_SERVER_PASSWORD']]) {
+                    remote.user = RELEASE_SERVER_USER
+                    remote.password = RELEASE_SERVER_PASSWORD
+                    def pointfix_versions = sh(returnStdout: true, script: "echo ${params.POINTFIX_VERSIONS}| sed 's/[][]//g'")
+                    pointfix_versions.tokenize(",").each { item ->
+                        pointfix_version = item.trim()
+                        package_folder = item.replaceAll('-[0-9].*.', "").trim()
+                        //Clean up older builds in KGB folder
+                        sshCommand remote: remote, command: "ls -d -1tr /e/eSON/Releases/Pointfix/${package_folder}/csars/*.csar | head -n -7 | xargs -d '\n' rm -f *.csar||true"
+                        //Copy csar to KGB folder
+                        sshCommand remote: remote, command: "cp -n /e/eSON/Releases/Pointfix/${package_folder}/csars/${pointfix_version} /e/eSON/Releases/Pointfix/Pointfix_CSARS_KGB/${package_folder}/${pointfix_version}"
+                        //Create KGB file containing KGB release version
+                        sh "echo ${pointfix_version} >> latest_kgb.txt"
+                        sshPut remote: remote, from: "latest_kgb.txt", into: "${FTP_HOME_DIRECTORY}/Pointfix/Pointfix_CSARS_KGB/${package_folder}", override: true
+                        sh "rm -rf latest_kgb.txt"
+                    }
+                }
+            }
+        }
+        failure {
+            step([$class: 'ClaimPublisher'])
+            // Send email to MS Teams channel
+            // emailext to: 'dc2a2734.ericsson.onmicrosoft.com@emea.teams.ms', recipientProviders: [culprits(), developers(), requestor(), brokenBuildSuspects()], subject: "TAF FAILURE: ${currentBuild.fullDisplayName}", body: "<b>TAF job failed for ${params.PACKAGE_VERSIONS}:</b><br><br>Job Name: ${env.JOB_NAME}<br>Build Number: ${env.BUILD_NUMBER}<br>${env.BUILD_URL}", mimeType: 'text/html'
+        }
+    }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "custom",
+  "id": 1,
+  "weekendDays": "",
+  "enabled": true,
+  "schedule": "0 0 * 19 05 ? 2021",
+  "openLoop": false,
+  "enablePA": true,
+  "customizedGlobalSettings": {
+    "maxLbdarStepsize": "[{\"BW\":\"1400\", \"value\":\"1\"}, {\"BW\":\"3000\", \"value\":\"2\"}, {\"BW\":\"5000\", \"value\":\"5\"}, {\"BW\":\"10000\", \"value\":\"20\"}, {\"BW\":\"15000\", \"value\":\"25\"}, {\"BW\":\"20000\", \"value\":\"30\"}]",
+    "paKpiSettings": "{\"eRabRetainabilityPercentageLostQci1Hourly\":{\"enableKPI\":true,\"confidenceInterval\":\"93.10\",\"relevanceThreshold\":\"0.01\"},\"eRabRetainabilityPercentageLostHourly\":{\"enableKPI\":true,\"confidenceInterval\":\"99.90\",\"relevanceThreshold\":\"0.12\"},\"avgDlPdcpThroughputSector\":{\"enableKPI\":true,\"confidenceInterval\":\"90.40\"},\"initialAndAddedERabEstabSrQci1Hourly\":{\"enableKPI\":true,\"confidenceInterval\":\"95.10\",\"relevanceThreshold\":\"99.91\"},\"cellHandoverSuccessRate\":{\"enableKPI\":true,\"confidenceInterval\":\"98.10\",\"relevanceThreshold\":\"99.89\"},\"avgUlPdcpThroughputSector\":{\"enableKPI\":true,\"confidenceInterval\":\"92.70\"},\"initialAndAddedERabEstabSrHourly\":{\"enableKPI\":true,\"confidenceInterval\":\"97.10\",\"relevanceThreshold\":\"99.90\"}}",
+    "numberOfKpiDegradedHoursThreshold": "1"
+  },
+  "customizedDefaultSettings": {
+    "deltaGFSOptimizationThreshold": "0.3",
+    "sourceTargetSamplesOverlapThreshold": "70.0",
+    "targetSourceContiguityRatioThreshold": "0.9",
+    "minimumSourceRetained": "20",
+    "minRopsForAppCovReliability": "1",
+    "minConnectedUsers": "0"
+  }
+}

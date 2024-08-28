@@ -1,0 +1,2 @@
+testCaseId,counter_definition_file,message-pod,message-container,topic
+SONP-37761_VerifyCommon,RequiredCounters.json,eric-data-message-bus-kf,messagebuskf,pmMediation

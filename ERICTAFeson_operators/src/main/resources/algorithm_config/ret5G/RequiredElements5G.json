@@ -1,0 +1,34 @@
+{
+  "source": "RET_5G",
+  "elements": [
+    {
+      "name": "nr_cell",
+      "attributes": [
+        "arfcn",
+        "pci",
+        "nci",
+        "mcc",
+        "mnc",
+        "cgi",
+        "name",
+        "oss_id",
+        "fdn",
+        "timezone"
+      ]
+    },
+    {
+      "name": "nr_relation",
+      "attributes": [
+        "fdn",
+        "name",
+        "oss_id",
+        "nodeType",
+        "relationType",
+        "source_cell_id",
+        "sourceNci",
+        "target_cell_id",
+        "targetNci"
+      ]
+    }
+  ]
+}
